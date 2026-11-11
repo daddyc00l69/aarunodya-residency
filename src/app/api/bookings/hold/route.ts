@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { getDb } from '@/lib/db';
 import { razorpayService } from '@/lib/services/razorpay';
+import { signPayload } from '@/lib/utils/tokens';
 
 const HoldSchema = z.object({
   roomTypeId: z.string().min(1, 'Room type is required'),
@@ -72,10 +73,18 @@ export async function POST(req: NextRequest) {
       }
     });
 
-    return NextResponse.json({
+    // Cryptographically sign the hold state so it can be restored across isolated serverless lambdas
+    const bookingToken = signPayload({
+      booking,
+      guest: booking.guest,
+      roomType: booking.roomType
+    });
+
+    const response = NextResponse.json({
       success: true,
       bookingReference: reference,
       booking,
+      bookingToken,
       order: {
         id: order.id,
         amount: order.amount,
@@ -85,6 +94,25 @@ export async function POST(req: NextRequest) {
       keyId: razorpayService.getKeyId(),
       holdExpiresAt: booking.holdExpiresAt
     });
+
+    // Set client and server accessible cookies for continuity
+    response.cookies.set(`arn_booking_${reference}`, bookingToken, {
+      path: '/',
+      httpOnly: false,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'lax',
+      maxAge: 30 * 24 * 60 * 60
+    });
+
+    response.cookies.set('arn_latest_ref', reference, {
+      path: '/',
+      httpOnly: false,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'lax',
+      maxAge: 30 * 24 * 60 * 60
+    });
+
+    return response;
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : 'Unable to reserve booking hold';
     return NextResponse.json({ error: message }, { status: 400 });

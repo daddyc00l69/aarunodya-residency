@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import os from 'os';
 import { 
   Property, 
   RoomType, 
@@ -35,9 +36,34 @@ interface DatabaseSchema {
   auditLogs: AuditLog[];
 }
 
-// Storage path: local JSON data file persisted in the project directory
-const DATA_DIR = path.join(process.cwd(), 'data');
-const DB_FILE = path.join(DATA_DIR, 'lodge_database.json');
+// Serverless detection & writable storage path resolution
+function isServerlessEnvironment(): boolean {
+  return Boolean(
+    process.env.VERCEL ||
+    process.env.AWS_LAMBDA_FUNCTION_NAME ||
+    process.env.LAMBDA_TASK_ROOT ||
+    process.env.NETLIFY ||
+    (process.env.NODE_ENV === 'production' && !fs.existsSync(path.join(process.cwd(), '.git')))
+  );
+}
+
+function getDatabaseFilePath(): { dir: string; file: string; isServerless: boolean } {
+  if (isServerlessEnvironment()) {
+    const tmpDir = os.tmpdir();
+    return {
+      dir: tmpDir,
+      file: path.join(tmpDir, 'lodge_database.json'),
+      isServerless: true
+    };
+  }
+
+  const localDir = path.join(process.cwd(), 'data');
+  return {
+    dir: localDir,
+    file: path.join(localDir, 'lodge_database.json'),
+    isServerless: false
+  };
+}
 
 class LodgeRepository {
   private inMemoryDb: DatabaseSchema | null = null;
@@ -53,27 +79,47 @@ class LodgeRepository {
       return this.inMemoryDb;
     }
 
+    const { dir, file, isServerless } = getDatabaseFilePath();
+
     try {
-      if (!fs.existsSync(DATA_DIR)) {
-        fs.mkdirSync(DATA_DIR, { recursive: true });
+      if (!fs.existsSync(/*turbopackIgnore: true*/ dir)) {
+        fs.mkdirSync(dir, { recursive: true });
       }
 
-      if (fs.existsSync(DB_FILE)) {
-        const raw = fs.readFileSync(DB_FILE, 'utf-8');
+      if (fs.existsSync(/*turbopackIgnore: true*/ file)) {
+        const raw = fs.readFileSync(/*turbopackIgnore: true*/ file, 'utf-8');
         this.inMemoryDb = JSON.parse(raw) as DatabaseSchema;
       } else {
-        // Seed default database
-        this.inMemoryDb = {
-          property: INITIAL_PROPERTY,
-          roomTypes: INITIAL_ROOM_TYPES,
-          rooms: INITIAL_ROOMS,
-          guests: INITIAL_GUESTS,
-          bookings: INITIAL_BOOKINGS,
-          payments: INITIAL_PAYMENTS,
-          staffUsers: INITIAL_STAFF_USERS,
-          auditLogs: []
-        };
-        fs.writeFileSync(DB_FILE, JSON.stringify(this.inMemoryDb, null, 2), 'utf-8');
+        // In serverless, if /tmp is fresh, copy from bundled seed data
+        const bundledFile = path.join(process.cwd(), 'data', 'lodge_database.json');
+        if (isServerless && fs.existsSync(bundledFile)) {
+          try {
+            const bundledRaw = fs.readFileSync(bundledFile, 'utf-8');
+            this.inMemoryDb = JSON.parse(bundledRaw) as DatabaseSchema;
+          } catch {
+            this.inMemoryDb = null;
+          }
+        }
+
+        if (!this.inMemoryDb) {
+          // Seed default database
+          this.inMemoryDb = {
+            property: INITIAL_PROPERTY,
+            roomTypes: INITIAL_ROOM_TYPES,
+            rooms: INITIAL_ROOMS,
+            guests: INITIAL_GUESTS,
+            bookings: INITIAL_BOOKINGS,
+            payments: INITIAL_PAYMENTS,
+            staffUsers: INITIAL_STAFF_USERS,
+            auditLogs: []
+          };
+        }
+
+        try {
+          fs.writeFileSync(file, JSON.stringify(this.inMemoryDb, null, 2), 'utf-8');
+        } catch (writeErr) {
+          console.warn('Initial storage write notice:', writeErr);
+        }
       }
     } catch {
       // In-memory fallback if file system write is constrained
@@ -96,10 +142,11 @@ class LodgeRepository {
   private async persist(): Promise<void> {
     if (!this.inMemoryDb) return;
     try {
-      if (!fs.existsSync(DATA_DIR)) {
-        fs.mkdirSync(DATA_DIR, { recursive: true });
+      const { dir, file } = getDatabaseFilePath();
+      if (!fs.existsSync(/*turbopackIgnore: true*/ dir)) {
+        fs.mkdirSync(dir, { recursive: true });
       }
-      fs.writeFileSync(DB_FILE, JSON.stringify(this.inMemoryDb, null, 2), 'utf-8');
+      fs.writeFileSync(/*turbopackIgnore: true*/ file, JSON.stringify(this.inMemoryDb, null, 2), 'utf-8');
     } catch (err) {
       console.warn('Repository file persist warning:', err);
     }
@@ -379,9 +426,23 @@ class LodgeRepository {
     razorpaySignature?: string;
     paymentMethod?: Payment['paymentMethod'];
     gatewayResponse?: Record<string, unknown>;
+    fallbackBooking?: Booking;
+    fallbackGuest?: Guest;
   }): Promise<Booking> {
     const db = this.ensureInitialized();
-    const booking = db.bookings.find(b => b.bookingReference === params.bookingReference);
+    let booking = db.bookings.find(
+      b => b.bookingReference.toUpperCase() === params.bookingReference.toUpperCase()
+    );
+
+    // If serverless container isolation caused hold to not be in this container's memory,
+    // seamlessly restore from cryptographically verified fallback booking
+    if (!booking && params.fallbackBooking) {
+      booking = params.fallbackBooking;
+      db.bookings.push(booking);
+      if (params.fallbackGuest && !db.guests.some(g => g.id === params.fallbackGuest!.id)) {
+        db.guests.push(params.fallbackGuest);
+      }
+    }
 
     if (!booking) {
       throw new Error(`Booking reference ${params.bookingReference} not found`);
@@ -442,6 +503,57 @@ class LodgeRepository {
     await this.persist();
 
     return booking;
+  }
+
+  /**
+   * Syncs / restores a booking record into the database across serverless lambdas
+   */
+  async syncBookingRecord(data: {
+    booking: Booking;
+    guest?: Guest;
+    payments?: Payment[];
+    roomType?: RoomType;
+  }): Promise<Booking> {
+    const db = this.ensureInitialized();
+    const ref = data.booking.bookingReference.toUpperCase();
+    const existingIndex = db.bookings.findIndex(b => b.bookingReference.toUpperCase() === ref);
+
+    if (existingIndex >= 0) {
+      db.bookings[existingIndex] = {
+        ...db.bookings[existingIndex],
+        ...data.booking,
+        updatedAt: new Date().toISOString()
+      };
+    } else {
+      db.bookings.push(data.booking);
+    }
+
+    if (data.guest) {
+      const gIndex = db.guests.findIndex(
+        g => g.id === data.guest!.id || g.email.toLowerCase() === data.guest!.email.toLowerCase()
+      );
+      if (gIndex >= 0) {
+        db.guests[gIndex] = { ...db.guests[gIndex], ...data.guest };
+      } else {
+        db.guests.push(data.guest);
+      }
+    }
+
+    if (data.payments && data.payments.length > 0) {
+      for (const p of data.payments) {
+        const pIndex = db.payments.findIndex(
+          item => item.id === p.id || item.transactionReference === p.transactionReference
+        );
+        if (pIndex >= 0) {
+          db.payments[pIndex] = { ...db.payments[pIndex], ...p };
+        } else {
+          db.payments.push(p);
+        }
+      }
+    }
+
+    await this.persist();
+    return data.booking;
   }
 
   // --- BOOKING RETRIEVAL & LOOKUP ---

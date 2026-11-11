@@ -140,6 +140,21 @@ function CheckoutContent() {
       setHoldSecondsLeft(15 * 60);
       setCurrentOrderData(data);
 
+      // Cache booking hold in client storage for multi-lambda continuity
+      try {
+        if (typeof window !== 'undefined') {
+          if (data.bookingToken) {
+            localStorage.setItem(`arn_token_${data.bookingReference}`, data.bookingToken);
+          }
+          if (data.booking) {
+            localStorage.setItem(`arn_booking_${data.bookingReference}`, JSON.stringify(data.booking));
+            localStorage.setItem('arn_latest_ref', data.bookingReference);
+          }
+        }
+      } catch (storageErr) {
+        console.warn('Local storage notice:', storageErr);
+      }
+
       if (typeof window !== 'undefined' && window.Razorpay && !data.order.isMock) {
         const options = {
           key: data.keyId,
@@ -196,6 +211,12 @@ function CheckoutContent() {
     razorpaySignature: string;
   }) => {
     try {
+      // Retrieve cryptographic token from state or localStorage
+      let bookingToken = currentOrderData?.bookingToken;
+      if (!bookingToken && typeof window !== 'undefined') {
+        bookingToken = localStorage.getItem(`arn_token_${bookingReference}`) || undefined;
+      }
+
       const verifyRes = await fetch('/api/payments/verify', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -203,7 +224,8 @@ function CheckoutContent() {
           bookingReference,
           razorpayOrderId,
           razorpayPaymentId,
-          razorpaySignature
+          razorpaySignature,
+          bookingToken
         })
       });
 
@@ -213,7 +235,24 @@ function CheckoutContent() {
         throw new Error(verifyData.error || 'Payment signature verification failed.');
       }
 
-      router.push(`/booking/confirmation/${bookingReference}`);
+      // Persist confirmed booking state in client storage for offline/multi-lambda resiliency
+      if (typeof window !== 'undefined') {
+        try {
+          if (verifyData.booking) {
+            localStorage.setItem(`arn_booking_${bookingReference}`, JSON.stringify(verifyData.booking));
+            localStorage.setItem('arn_latest_booking', JSON.stringify(verifyData.booking));
+          }
+          if (verifyData.bookingToken) {
+            localStorage.setItem(`arn_token_${bookingReference}`, verifyData.bookingToken);
+            localStorage.setItem('arn_latest_token', verifyData.bookingToken);
+          }
+          localStorage.setItem('arn_latest_ref', bookingReference);
+        } catch (storageErr) {
+          console.warn('Storage persist notice:', storageErr);
+        }
+      }
+
+      router.push(`/booking/confirmation/${encodeURIComponent(bookingReference)}`);
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : 'Verification failed';
       setErrorMessage(msg);
