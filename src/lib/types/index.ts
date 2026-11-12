@@ -207,6 +207,8 @@ export interface Booking {
   totalPricePaise?: number; // alias for totalAmountPaise
   paidAmountPaise: number;
   remainingBalancePaise?: number; // totalAmountPaise - paidAmountPaise
+  balanceDuePaise?: number; // alias for remaining balance due
+  source?: 'online' | 'walkin';
 
   // Coupon application
   couponCode?: string;

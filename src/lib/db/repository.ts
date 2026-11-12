@@ -753,14 +753,26 @@ class LodgeRepository {
     occupancyPercent: number;
     totalRooms: number;
     occupiedRooms: number;
+    availableRooms: number;
     todaysArrivals: number;
     todaysDepartures: number;
     totalRevenuePaise: number;
+    todayCollectionPaise: number;
+    monthlyRevenuePaise: number;
+    pendingBalancePaise: number;
+    totalBookingsCount: number;
+    walkinBookingsCount: number;
+    onlineBookingsCount: number;
+    cashBookingsCount: number;
+    couponRedemptionsCount: number;
     activeBookingsCount: number;
+    cleanRoomsCount: number;
     dirtyRoomsCount: number;
+    inspectingRoomsCount: number;
   }> {
     const db = this.ensureInitialized();
     const today = new Date().toISOString().split('T')[0];
+    const currentMonth = today.substring(0, 7);
 
     const operationalRooms = db.rooms.filter(r => r.isOperational);
     const totalRooms = operationalRooms.length;
@@ -768,6 +780,7 @@ class LodgeRepository {
     // Occupied rooms currently checked-in
     const checkedInBookings = db.bookings.filter(b => b.status === 'checked_in');
     const occupiedRooms = checkedInBookings.length;
+    const availableRooms = Math.max(0, totalRooms - occupiedRooms);
     const occupancyPercent = totalRooms > 0 ? Math.round((occupiedRooms / totalRooms) * 100) : 0;
 
     // Today's arrivals: confirmed bookings checking in today
@@ -780,26 +793,84 @@ class LodgeRepository {
       b.checkOutDate === today && b.status === 'checked_in'
     ).length;
 
-    // Total revenue from captured payments
-    const totalRevenuePaise = db.payments
+    // Total revenue from captured payments and cash transactions
+    const onlineRevenuePaise = db.payments
       .filter(p => p.status === 'captured')
       .reduce((sum, p) => sum + p.amountPaise, 0);
 
+    const cashRevenuePaise = (db.cashTransactions || [])
+      .filter(tx => tx.transactionType === 'payment')
+      .reduce((sum, tx) => sum + tx.amountPaise, 0);
+
+    const totalRevenuePaise = onlineRevenuePaise + cashRevenuePaise;
+
+    // Today's collections (both cash inflow and online settlements today)
+    const todayCashCollectionPaise = (db.cashTransactions || [])
+      .filter(tx => tx.transactionType === 'payment' && tx.createdAt.startsWith(today))
+      .reduce((sum, tx) => sum + tx.amountPaise, 0);
+
+    const todayOnlineCollectionPaise = db.payments
+      .filter(p => p.status === 'captured' && p.createdAt.startsWith(today))
+      .reduce((sum, p) => sum + p.amountPaise, 0);
+
+    const todayCollectionPaise = todayCashCollectionPaise + todayOnlineCollectionPaise;
+
+    // Monthly revenue
+    const monthlyRevenuePaise = 
+      db.payments
+        .filter(p => p.status === 'captured' && p.createdAt.startsWith(currentMonth))
+        .reduce((sum, p) => sum + p.amountPaise, 0) +
+      (db.cashTransactions || [])
+        .filter(tx => tx.transactionType === 'payment' && tx.createdAt.startsWith(currentMonth))
+        .reduce((sum, tx) => sum + tx.amountPaise, 0);
+
+    // Pending balances across active stays
+    const pendingBalancePaise = db.bookings
+      .filter(b => ['confirmed', 'checked_in'].includes(b.status))
+      .reduce((sum, b) => {
+        const balance = b.balanceDuePaise ?? b.remainingBalancePaise ?? Math.max(0, b.totalAmountPaise - (b.paidAmountPaise || 0));
+        return sum + balance;
+      }, 0);
+
+    // Booking channel counts
+    const totalBookingsCount = db.bookings.length;
+    const walkinBookingsCount = db.bookings.filter(b => 
+      b.source === 'walkin' || b.bookingReference.startsWith('ARN-WALK')
+    ).length;
+    const onlineBookingsCount = Math.max(0, totalBookingsCount - walkinBookingsCount);
+    const cashBookingsCount = db.bookings.filter(b => 
+      (b as any).cashPaidPaise > 0 || (b as any).paymentMethod === 'cash' || b.source === 'walkin' || b.bookingReference.startsWith('ARN-WALK')
+    ).length;
+
+    const couponRedemptionsCount = (db.couponRedemptions || []).length;
     const activeBookingsCount = db.bookings.filter(b => 
       ['confirmed', 'checked_in'].includes(b.status)
     ).length;
 
+    const cleanRoomsCount = db.rooms.filter(r => r.housekeepingStatus === 'clean').length;
     const dirtyRoomsCount = db.rooms.filter(r => r.housekeepingStatus === 'dirty').length;
+    const inspectingRoomsCount = db.rooms.filter(r => r.housekeepingStatus === 'inspecting').length;
 
     return {
       occupancyPercent,
       totalRooms,
       occupiedRooms,
+      availableRooms,
       todaysArrivals,
       todaysDepartures,
       totalRevenuePaise,
+      todayCollectionPaise,
+      monthlyRevenuePaise,
+      pendingBalancePaise,
+      totalBookingsCount,
+      walkinBookingsCount,
+      onlineBookingsCount,
+      cashBookingsCount,
+      couponRedemptionsCount,
       activeBookingsCount,
-      dirtyRoomsCount
+      cleanRoomsCount,
+      dirtyRoomsCount,
+      inspectingRoomsCount
     };
   }
 

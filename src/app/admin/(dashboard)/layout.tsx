@@ -2,6 +2,7 @@ import React from 'react';
 import { redirect } from 'next/navigation';
 import { getCurrentAdminSession } from '@/lib/auth/session';
 import { AdminSidebar } from '@/components/admin/AdminSidebar';
+import { AdminMobileBottomNav } from '@/components/admin/AdminMobileBottomNav';
 
 export default async function AdminDashboardLayout({
   children
@@ -16,11 +17,11 @@ export default async function AdminDashboardLayout({
 
   return (
     <div className="min-h-screen bg-white text-[#1d1d1f] flex flex-col md:flex-row font-sans selection:bg-[#0071e3] selection:text-white">
-      {/* Sidebar Navigation */}
+      {/* Sidebar Navigation (Desktop sidebar + Mobile drawer) */}
       <AdminSidebar session={session} />
 
       {/* Main Content Area */}
-      <div className="flex-1 flex flex-col min-w-0 overflow-y-auto">
+      <div className="flex-1 flex flex-col min-w-0 overflow-y-auto pb-24 md:pb-0">
         {/* Top Header (Desktop only) */}
         <header className="hidden md:flex h-14 bg-white/80 backdrop-blur-md border-b border-black/[0.06] px-6 sm:px-8 items-center justify-between sticky top-0 z-30">
           <div className="flex items-center space-x-2.5">
@@ -31,15 +32,18 @@ export default async function AdminDashboardLayout({
           </div>
 
           <div className="text-xs text-[#86868b]">
-            IST (2026-11-11)
+            IST (2026-11-12)
           </div>
         </header>
 
         {/* Page Content */}
-        <main className="p-6 sm:p-8 flex-1 bg-[#fafafa]">
+        <main className="p-3.5 sm:p-6 md:p-8 flex-1 bg-[#fafafa]">
           {children}
         </main>
       </div>
+
+      {/* Persistent Mobile Bottom Navigation (Phone/Tablet) */}
+      <AdminMobileBottomNav session={session} />
     </div>
   );
 }

@@ -5,7 +5,9 @@ import Link from 'next/link';
 import { 
   Search, 
   ChevronRight, 
-  Loader2 
+  Loader2,
+  Phone,
+  ArrowUpRight
 } from 'lucide-react';
 import { Booking } from '@/lib/types';
 import { formatPaise } from '@/lib/utils/currency';
@@ -128,104 +130,194 @@ export default function ReservationsPage() {
             No reservations matching the search criteria.
           </div>
         ) : (
-          <div className="overflow-x-auto text-xs">
-            <table className="w-full text-left">
-              <thead className="text-[#86868b] uppercase tracking-wider font-semibold border-b border-black/[0.06]">
-                <tr>
-                  <th className="py-3 px-4">Ref</th>
-                  <th className="py-3 px-4">Guest</th>
-                  <th className="py-3 px-4">Suite / Room</th>
-                  <th className="py-3 px-4">Stay Dates</th>
-                  <th className="py-3 px-4">Status</th>
-                  <th className="py-3 px-4">Total</th>
-                  <th className="py-3 px-4 text-right">Desk Action</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-black/[0.04] text-[#1d1d1f]">
-                {filteredBookings.map((b) => (
-                  <tr key={b.id} className="hover:bg-[#f5f5f7] transition-colors">
-                    <td className="py-3.5 px-4">
-                      <span className="font-mono text-[#0071e3] font-semibold block">
-                        {b.bookingReference}
-                      </span>
-                      <span className="text-[10px] text-[#86868b]">
-                        {new Date(b.createdAt).toLocaleDateString('en-IN')}
-                      </span>
-                    </td>
+          <>
+            {/* Mobile Cards Layout (< 768px, zero horizontal scrolling) */}
+            <div className="md:hidden p-3.5 space-y-3">
+              {filteredBookings.map((b) => (
+                <div
+                  key={b.id}
+                  className="p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.04] space-y-3 shadow-sm"
+                >
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <div className="flex items-center space-x-2">
+                        <span className="font-bold text-sm text-[#1d1d1f]">{b.guest?.fullName}</span>
+                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-stone-200 text-stone-800">
+                          Room #{b.assignedRoomNumber || '—'}
+                        </span>
+                      </div>
+                      <div className="flex items-center space-x-2 mt-0.5">
+                        <span className="font-mono text-xs font-semibold text-[#0071e3]">
+                          {b.bookingReference}
+                        </span>
+                        <span className="text-[10px] text-[#86868b]">• {b.roomType?.name}</span>
+                      </div>
+                    </div>
 
-                    <td className="py-3.5 px-4 space-y-0.5">
-                      <strong className="text-[#1d1d1f] block font-semibold">{b.guest?.fullName}</strong>
-                      <span className="text-[11px] text-[#86868b] block">{b.guest?.email}</span>
-                      <span className="text-[11px] text-[#86868b] block">{b.guest?.phone}</span>
-                    </td>
-
-                    <td className="py-3.5 px-4 space-y-0.5">
-                      <span className="text-[#1d1d1f] block font-medium">{b.roomType?.name}</span>
-                      <span className="text-[#86868b] text-[11px] block">
-                        {b.assignedRoomNumber ? `Room #${b.assignedRoomNumber}` : 'Unassigned'}
-                      </span>
-                    </td>
-
-                    <td className="py-3.5 px-4 space-y-0.5">
-                      <span className="block font-medium text-[#1d1d1f]">
-                        {formatDisplayDate(b.checkInDate)}
-                      </span>
-                      <span className="text-[#86868b] block">
-                        to {formatDisplayDate(b.checkOutDate)} ({b.numNights}N)
-                      </span>
-                    </td>
-
-                    <td className="py-3.5 px-4">
-                      <span
-                        className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider ${
-                          b.status === 'confirmed'
-                            ? 'bg-emerald-50 text-emerald-700'
-                            : b.status === 'checked_in'
-                            ? 'bg-blue-50 text-[#0071e3]'
-                            : b.status === 'checked_out'
-                            ? 'bg-stone-100 text-stone-600'
-                            : b.status === 'hold'
-                            ? 'bg-amber-50 text-amber-700'
-                            : 'bg-red-50 text-red-700'
-                        }`}
+                    {b.guest?.phone && (
+                      <a
+                        href={`tel:${b.guest.phone}`}
+                        className="w-8 h-8 rounded-full bg-white border border-black/[0.08] flex items-center justify-center text-emerald-700 shadow-sm active:scale-95"
+                        title="Call Devotee"
                       >
-                        {b.status.replace('_', ' ')}
-                      </span>
-                    </td>
+                        <Phone className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                  </div>
 
-                    <td className="py-3.5 px-4 space-y-0.5 font-medium">
-                      <span className="block font-semibold">
+                  <div className="grid grid-cols-2 gap-2 text-xs py-2 px-3 rounded-xl bg-white border border-black/[0.04]">
+                    <div>
+                      <span className="text-[10px] text-[#86868b] block">Stay Duration</span>
+                      <span className="font-semibold text-[#1d1d1f]">
+                        {formatDisplayDate(b.checkInDate)} → {formatDisplayDate(b.checkOutDate)} ({b.numNights}N)
+                      </span>
+                    </div>
+                    <div className="text-right">
+                      <span className="text-[10px] text-[#86868b] block">Total Tariff</span>
+                      <span className="font-bold text-sm text-[#1d1d1f]">
                         {formatPaise(b.totalAmountPaise)}
                       </span>
-                      <span className="text-[10px] text-[#86868b] block">
-                        Paid: {formatPaise(b.paidAmountPaise)}
-                      </span>
-                    </td>
+                    </div>
+                  </div>
 
-                    <td className="py-3.5 px-4 text-right space-y-1">
-                      <ReservationStatusButtons
-                        bookingId={b.id}
-                        currentStatus={b.status}
-                        guestName={b.guest?.fullName || ''}
-                        assignedRoomId={b.assignedRoomId}
-                      />
-                      <div className="flex items-center justify-end space-x-2 pt-1 text-[11px]">
-                        <GuestFolioModal booking={b} />
-                        <span className="text-stone-300">•</span>
-                        <Link
-                          href={`/booking/invoice/${b.bookingReference}`}
-                          target="_blank"
-                          className="text-[#0071e3] hover:underline"
-                        >
-                          GST Invoice &gt;
-                        </Link>
-                      </div>
-                    </td>
+                  <div className="flex items-center justify-between pt-1">
+                    <span
+                      className={`inline-block px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${
+                        b.status === 'confirmed'
+                          ? 'bg-emerald-100 text-emerald-800'
+                          : b.status === 'checked_in'
+                          ? 'bg-blue-100 text-blue-800'
+                          : b.status === 'checked_out'
+                          ? 'bg-stone-200 text-stone-700'
+                          : 'bg-amber-100 text-amber-800'
+                      }`}
+                    >
+                      {b.status.replace('_', ' ')}
+                    </span>
+
+                    <ReservationStatusButtons
+                      bookingId={b.id}
+                      currentStatus={b.status}
+                      guestName={b.guest?.fullName || ''}
+                      assignedRoomId={b.assignedRoomId}
+                    />
+                  </div>
+
+                  <div className="flex items-center justify-between pt-2 border-t border-black/[0.04] text-xs">
+                    <GuestFolioModal booking={b} />
+                    <Link
+                      href={`/booking/invoice/${b.bookingReference}`}
+                      target="_blank"
+                      className="text-xs text-[#0071e3] font-semibold hover:underline inline-flex items-center space-x-1"
+                    >
+                      <span>GST Invoice</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop Table View (>= 768px) */}
+            <div className="hidden md:block overflow-x-auto text-xs">
+              <table className="w-full text-left">
+                <thead className="text-[#86868b] uppercase tracking-wider font-semibold border-b border-black/[0.06]">
+                  <tr>
+                    <th className="py-3 px-4">Ref</th>
+                    <th className="py-3 px-4">Guest</th>
+                    <th className="py-3 px-4">Suite / Room</th>
+                    <th className="py-3 px-4">Stay Dates</th>
+                    <th className="py-3 px-4">Status</th>
+                    <th className="py-3 px-4">Total</th>
+                    <th className="py-3 px-4 text-right">Desk Action</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                </thead>
+                <tbody className="divide-y divide-black/[0.04] text-[#1d1d1f]">
+                  {filteredBookings.map((b) => (
+                    <tr key={b.id} className="hover:bg-[#f5f5f7] transition-colors">
+                      <td className="py-3.5 px-4">
+                        <span className="font-mono text-[#0071e3] font-semibold block">
+                          {b.bookingReference}
+                        </span>
+                        <span className="text-[10px] text-[#86868b]">
+                          {new Date(b.createdAt).toLocaleDateString('en-IN')}
+                        </span>
+                      </td>
+
+                      <td className="py-3.5 px-4 space-y-0.5">
+                        <strong className="text-[#1d1d1f] block font-semibold">{b.guest?.fullName}</strong>
+                        <span className="text-[11px] text-[#86868b] block">{b.guest?.email}</span>
+                        <span className="text-[11px] text-[#86868b] block">{b.guest?.phone}</span>
+                      </td>
+
+                      <td className="py-3.5 px-4 space-y-0.5">
+                        <span className="text-[#1d1d1f] block font-medium">{b.roomType?.name}</span>
+                        <span className="text-[#86868b] text-[11px] block">
+                          {b.assignedRoomNumber ? `Room #${b.assignedRoomNumber}` : 'Unassigned'}
+                        </span>
+                      </td>
+
+                      <td className="py-3.5 px-4 space-y-0.5">
+                        <span className="block font-medium text-[#1d1d1f]">
+                          {formatDisplayDate(b.checkInDate)}
+                        </span>
+                        <span className="text-[#86868b] block">
+                          to {formatDisplayDate(b.checkOutDate)} ({b.numNights}N)
+                        </span>
+                      </td>
+
+                      <td className="py-3.5 px-4">
+                        <span
+                          className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider ${
+                            b.status === 'confirmed'
+                              ? 'bg-emerald-50 text-emerald-700'
+                              : b.status === 'checked_in'
+                              ? 'bg-blue-50 text-[#0071e3]'
+                              : b.status === 'checked_out'
+                              ? 'bg-stone-100 text-stone-600'
+                              : b.status === 'hold'
+                              ? 'bg-amber-50 text-amber-700'
+                              : 'bg-red-50 text-red-700'
+                          }`}
+                        >
+                          {b.status.replace('_', ' ')}
+                        </span>
+                      </td>
+
+                      <td className="py-3.5 px-4 space-y-0.5 font-medium">
+                        <span className="block font-semibold">
+                          {formatPaise(b.totalAmountPaise)}
+                        </span>
+                        <span className="text-[10px] text-[#86868b] block">
+                          Paid: {formatPaise(b.paidAmountPaise)}
+                        </span>
+                      </td>
+
+                      <td className="py-3.5 px-4 text-right space-y-1">
+                        <ReservationStatusButtons
+                          bookingId={b.id}
+                          currentStatus={b.status}
+                          guestName={b.guest?.fullName || ''}
+                          assignedRoomId={b.assignedRoomId}
+                        />
+                        <div className="flex items-center justify-end space-x-2 pt-1 text-[11px]">
+                          <GuestFolioModal booking={b} />
+                          <span className="text-stone-300">•</span>
+                          <Link
+                            href={`/booking/invoice/${b.bookingReference}`}
+                            target="_blank"
+                            className="text-[#0071e3] hover:underline"
+                          >
+                            GST Invoice &gt;
+                          </Link>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </>
         )}
       </div>
     </div>

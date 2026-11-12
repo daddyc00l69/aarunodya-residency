@@ -17,7 +17,9 @@ import {
   Users,
   FileText,
   Clock,
-  ArrowRight
+  ArrowRight,
+  Share2,
+  MessageCircle
 } from 'lucide-react';
 import { formatPaise } from '@/lib/utils/currency';
 
@@ -501,26 +503,59 @@ export default function ReceptionWalkinPage() {
             </div>
           )}
 
-          <div className="flex flex-wrap items-center gap-3 pt-2">
+          <div className="flex flex-wrap items-center gap-2.5 pt-2">
+            <button
+              type="button"
+              onClick={() => {
+                const b = confirmedBooking.booking;
+                const rc = confirmedBooking.cashTransaction?.receiptNumber || 'RCP-ARN-WALK';
+                const cleanPhone = b.guest?.phone ? b.guest.phone.replace(/\D/g, '').slice(-10) : '';
+                const text = encodeURIComponent(
+                  `*Aarunodya Residency Bhakt Niwas, Pandharpur*\n` +
+                  `Namaste ${b.guest?.fullName} ji,\n` +
+                  `Your walk-in reservation is confirmed!\n\n` +
+                  `*Booking Ref:* ${b.bookingReference}\n` +
+                  `*Room Assigned:* Room #${b.assignedRoomNumber}\n` +
+                  `*Receipt Voucher:* ${rc}\n` +
+                  `*Check-In:* ${b.checkInDate}\n` +
+                  `*Check-Out:* ${b.checkOutDate}\n` +
+                  `*Total Tariff:* ${formatPaise(b.totalPricePaise)}\n` +
+                  `*Cash Received:* ${formatPaise(b.amountPaidPaise)}\n` +
+                  `*Balance Due:* ${formatPaise(b.balanceDuePaise)}\n\n` +
+                  `View official digital receipt: https://devtushar.uk/booking/invoice/${b.bookingReference}\n\n` +
+                  `Host Contact: Yuvaraj Malave (8530000820 / 9172464746)\n` +
+                  `1563 Ghongade Galli, Nath Chowk, Pandharpur.\n` +
+                  `May Lord Vitthal bless your stay!`
+                );
+                window.open(`https://api.whatsapp.com/send?phone=91${cleanPhone}&text=${text}`, '_blank');
+              }}
+              className="flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-xs shadow-sm active:scale-95 transition-all"
+            >
+              <MessageCircle className="w-4 h-4" />
+              <span>Share Receipt via WhatsApp</span>
+            </button>
+
             <Link
               href={`/booking/invoice/${confirmedBooking.booking.bookingReference}`}
               target="_blank"
-              className="flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-[#1d1d1f] text-white hover:bg-black font-medium text-xs shadow-sm transition-all"
+              className="flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-[#1d1d1f] text-white hover:bg-black font-medium text-xs shadow-sm active:scale-95 transition-all"
             >
               <Printer className="w-4 h-4" />
-              <span>Print Official Receipt</span>
+              <span>Print Voucher</span>
             </Link>
+
             <button
               onClick={handleResetForm}
-              className="px-5 py-2.5 rounded-xl bg-white border border-black/[0.1] text-[#1d1d1f] hover:bg-stone-50 font-medium text-xs shadow-sm transition-all"
+              className="px-4 py-2.5 rounded-xl bg-white border border-black/[0.1] text-[#1d1d1f] hover:bg-stone-50 font-medium text-xs shadow-sm active:scale-95 transition-all"
             >
-              Start Another Walk-in
+              Another Walk-in
             </button>
+
             <Link
               href="/admin/reservations"
-              className="px-5 py-2.5 rounded-xl text-stone-600 hover:text-stone-900 font-medium text-xs transition-all ml-auto"
+              className="px-4 py-2.5 rounded-xl text-stone-600 hover:text-stone-900 font-medium text-xs transition-all ml-auto"
             >
-              Go to Reservations Desk →
+              Reservations Desk →
             </Link>
           </div>
         </div>

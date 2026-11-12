@@ -229,97 +229,171 @@ export default function CustomersPage() {
             <p className="text-xs text-[#86868b]">Register a new guest or perform a walk-in at reception</p>
           </div>
         ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs">
-              <thead>
-                <tr className="border-b border-black/[0.04] bg-stone-50/70 text-[11px] font-semibold uppercase tracking-wider text-[#86868b]">
-                  <th className="py-3.5 px-4">Devotee Name</th>
-                  <th className="py-3.5 px-4">Contact</th>
-                  <th className="py-3.5 px-4">Origin / City</th>
-                  <th className="py-3.5 px-4">ID Documents</th>
-                  <th className="py-3.5 px-4 text-center">Visits</th>
-                  <th className="py-3.5 px-4 text-right">Lifetime Spend</th>
-                  <th className="py-3.5 px-4 text-right">Profile</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-black/[0.04]">
-                {filteredCustomers.map((cust) => {
-                  const verifiedDocs = cust.documents.filter((d) => d.verificationStatus === 'verified').length;
-                  const totalDocs = cust.documents.length;
+          <>
+            {/* Mobile Card Layout (< 768px, zero horizontal scrolling) */}
+            <div className="md:hidden p-3.5 space-y-3">
+              {filteredCustomers.map((cust) => {
+                const verifiedDocs = cust.documents.filter((d) => d.verificationStatus === 'verified').length;
+                const totalDocs = cust.documents.length;
 
-                  return (
-                    <tr key={cust.id} className="hover:bg-stone-50/70 transition-colors">
-                      <td className="py-4 px-4">
-                        <div className="flex items-center space-x-2">
-                          <div>
-                            <div className="flex items-center space-x-1.5">
-                              <span className="font-semibold text-sm text-[#1d1d1f]">{cust.fullName}</span>
-                              {cust.vipStatus && (
-                                <span className="p-0.5 rounded bg-amber-100 text-amber-800" title="VIP Devotee">
-                                  <Star className="w-3 h-3 fill-amber-500" />
-                                </span>
-                              )}
-                            </div>
-                            <span className="text-[10px] text-[#86868b] font-mono">
-                              ID: {cust.id}
+                return (
+                  <div
+                    key={cust.id}
+                    className="p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.04] space-y-3 shadow-sm"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <div className="flex items-center space-x-1.5">
+                          <h4 className="font-bold text-sm text-[#1d1d1f]">{cust.fullName}</h4>
+                          {cust.vipStatus && (
+                            <span className="p-0.5 rounded bg-amber-100 text-amber-800" title="VIP Devotee">
+                              <Star className="w-3.5 h-3.5 fill-amber-500" />
                             </span>
-                          </div>
+                          )}
                         </div>
-                      </td>
-
-                      <td className="py-4 px-4 text-[#86868b]">
-                        <p className="font-mono text-xs font-semibold text-[#1d1d1f] flex items-center space-x-1">
-                          <Phone className="w-3 h-3 text-stone-400" />
-                          <span>{cust.phone}</span>
+                        <p className="text-[11px] text-[#86868b] mt-0.5">
+                          {cust.city ? `${cust.city}, ` : ''}{cust.state || 'Maharashtra'} • {cust.totalVisits || 1} Visits
                         </p>
-                        {cust.email && (
-                          <p className="text-[11px] truncate max-w-xs">{cust.email}</p>
-                        )}
-                      </td>
+                      </div>
 
-                      <td className="py-4 px-4 text-[#86868b]">
-                        <p className="text-xs text-[#1d1d1f]">{cust.city || '—'}</p>
-                        <p className="text-[10px]">{cust.state || 'Maharashtra'}</p>
-                      </td>
+                      <a
+                        href={`tel:${cust.phone}`}
+                        className="w-8 h-8 rounded-full bg-white border border-black/[0.08] flex items-center justify-center text-emerald-700 shadow-sm active:scale-95"
+                        title="Call Devotee"
+                      >
+                        <Phone className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
 
-                      <td className="py-4 px-4">
+                    <div className="flex items-center justify-between text-xs pt-1 border-t border-black/[0.04]">
+                      <div>
                         {totalDocs === 0 ? (
-                          <span className="text-[11px] text-stone-400 italic">No document on file</span>
+                          <span className="text-[11px] text-stone-400 italic">No ID uploaded</span>
                         ) : (
                           <span className={`inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${
                             verifiedDocs > 0
-                              ? 'bg-emerald-50 text-emerald-800 border border-emerald-200'
-                              : 'bg-amber-50 text-amber-800 border border-amber-200'
+                              ? 'bg-emerald-100 text-emerald-800'
+                              : 'bg-amber-100 text-amber-800'
                           }`}>
                             <ShieldCheck className="w-3 h-3" />
-                            <span>{verifiedDocs}/{totalDocs} Verified</span>
+                            <span>{verifiedDocs}/{totalDocs} ID Verified</span>
                           </span>
                         )}
-                      </td>
+                      </div>
 
-                      <td className="py-4 px-4 text-center font-bold text-xs text-[#1d1d1f]">
-                        {cust.totalVisits || 1}
-                      </td>
+                      <div className="text-right">
+                        <span className="text-[10px] text-[#86868b] block">Total Spend</span>
+                        <span className="font-bold text-xs text-[#1d1d1f]">
+                          {formatPaise(cust.totalSpendPaise || 0)}
+                        </span>
+                      </div>
+                    </div>
 
-                      <td className="py-4 px-4 text-right font-bold text-xs text-[#1d1d1f]">
-                        {formatPaise(cust.totalSpendPaise || 0)}
-                      </td>
+                    <Link
+                      href={`/admin/customers/${cust.id}`}
+                      className="w-full py-2.5 rounded-xl bg-white border border-black/[0.08] hover:bg-[#0071e3] hover:text-white hover:border-[#0071e3] text-[#1d1d1f] font-semibold text-xs flex items-center justify-center space-x-1 transition-all active:scale-[0.99]"
+                    >
+                      <span>Open Devotee Profile &amp; ID Vault</span>
+                      <ChevronRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
 
-                      <td className="py-4 px-4 text-right">
-                        <Link
-                          href={`/admin/customers/${cust.id}`}
-                          className="inline-flex items-center space-x-1 px-3 py-1 rounded-xl bg-stone-100 hover:bg-[#0071e3] hover:text-white text-[#1d1d1f] text-xs font-medium transition-all"
-                        >
-                          <span>Open Folio</span>
-                          <ChevronRight className="w-3.5 h-3.5" />
-                        </Link>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+            {/* Desktop Table View (>= 768px) */}
+            <div className="hidden md:block overflow-x-auto">
+              <table className="w-full text-left text-xs">
+                <thead>
+                  <tr className="border-b border-black/[0.04] bg-stone-50/70 text-[11px] font-semibold uppercase tracking-wider text-[#86868b]">
+                    <th className="py-3.5 px-4">Devotee Name</th>
+                    <th className="py-3.5 px-4">Contact</th>
+                    <th className="py-3.5 px-4">Origin / City</th>
+                    <th className="py-3.5 px-4">ID Documents</th>
+                    <th className="py-3.5 px-4 text-center">Visits</th>
+                    <th className="py-3.5 px-4 text-right">Lifetime Spend</th>
+                    <th className="py-3.5 px-4 text-right">Profile</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-black/[0.04]">
+                  {filteredCustomers.map((cust) => {
+                    const verifiedDocs = cust.documents.filter((d) => d.verificationStatus === 'verified').length;
+                    const totalDocs = cust.documents.length;
+
+                    return (
+                      <tr key={cust.id} className="hover:bg-stone-50/70 transition-colors">
+                        <td className="py-4 px-4">
+                          <div className="flex items-center space-x-2">
+                            <div>
+                              <div className="flex items-center space-x-1.5">
+                                <span className="font-semibold text-sm text-[#1d1d1f]">{cust.fullName}</span>
+                                {cust.vipStatus && (
+                                  <span className="p-0.5 rounded bg-amber-100 text-amber-800" title="VIP Devotee">
+                                    <Star className="w-3 h-3 fill-amber-500" />
+                                  </span>
+                                )}
+                              </div>
+                              <span className="text-[10px] text-[#86868b] font-mono">
+                                ID: {cust.id}
+                              </span>
+                            </div>
+                          </div>
+                        </td>
+
+                        <td className="py-4 px-4 text-[#86868b]">
+                          <p className="font-mono text-xs font-semibold text-[#1d1d1f] flex items-center space-x-1">
+                            <Phone className="w-3 h-3 text-stone-400" />
+                            <span>{cust.phone}</span>
+                          </p>
+                          {cust.email && (
+                            <p className="text-[11px] truncate max-w-xs">{cust.email}</p>
+                          )}
+                        </td>
+
+                        <td className="py-4 px-4 text-[#86868b]">
+                          <p className="text-xs text-[#1d1d1f]">{cust.city || '—'}</p>
+                          <p className="text-[10px]">{cust.state || 'Maharashtra'}</p>
+                        </td>
+
+                        <td className="py-4 px-4">
+                          {totalDocs === 0 ? (
+                            <span className="text-[11px] text-stone-400 italic">No document on file</span>
+                          ) : (
+                            <span className={`inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${
+                              verifiedDocs > 0
+                                ? 'bg-emerald-50 text-emerald-800 border border-emerald-200'
+                                : 'bg-amber-50 text-amber-800 border border-amber-200'
+                            }`}>
+                              <ShieldCheck className="w-3 h-3" />
+                              <span>{verifiedDocs}/{totalDocs} Verified</span>
+                            </span>
+                          )}
+                        </td>
+
+                        <td className="py-4 px-4 text-center font-bold text-xs text-[#1d1d1f]">
+                          {cust.totalVisits || 1}
+                        </td>
+
+                        <td className="py-4 px-4 text-right font-bold text-xs text-[#1d1d1f]">
+                          {formatPaise(cust.totalSpendPaise || 0)}
+                        </td>
+
+                        <td className="py-4 px-4 text-right">
+                          <Link
+                            href={`/admin/customers/${cust.id}`}
+                            className="inline-flex items-center space-x-1 px-3 py-1 rounded-xl bg-stone-100 hover:bg-[#0071e3] hover:text-white text-[#1d1d1f] text-xs font-medium transition-all"
+                          >
+                            <span>Open Folio</span>
+                            <ChevronRight className="w-3.5 h-3.5" />
+                          </Link>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </>
         )}
       </div>
 

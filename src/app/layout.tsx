@@ -19,12 +19,22 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   viewportFit: "cover",
-  themeColor: "#ffffff",
+  themeColor: "#1d1d1f",
 };
 
 export const metadata: Metadata = {
   title: "Aarunodya Residency Bhakt Niwas | Pandharpur | Near Vitthal Mandir",
   description: "Stay at Aarunodya Residency Bhakt Niwas at Nath Chowk, Pandharpur. Deluxe A/C, Non-A/C rooms, and group hall walking distance to Shri Vitthal-Rukmini Mandir. Host: Yuvaraj Malave (8530000820 / 9172464746).",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Aarunodya PMS"
+  },
+  icons: {
+    icon: "/icons/icon-192.svg",
+    apple: "/icons/icon-192.svg"
+  }
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

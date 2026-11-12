@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <rect width="192" height="192" rx="40" fill="#1d1d1f"/>
+  <circle cx="96" cy="96" r="70" fill="#2d2d2f"/>
+  <text x="96" y="118" font-size="76" font-family="serif" font-weight="bold" fill="#fcd34d" text-anchor="middle">आ</text>
+  <circle cx="96" cy="38" r="6" fill="#f59e0b"/>
+</svg>
+

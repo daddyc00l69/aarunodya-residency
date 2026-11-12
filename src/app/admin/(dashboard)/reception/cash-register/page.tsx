@@ -397,69 +397,126 @@ export default function CashRegisterPage() {
             </p>
           </div>
         ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs">
-              <thead>
-                <tr className="border-b border-black/[0.04] text-[11px] font-semibold uppercase tracking-wider text-[#86868b]">
-                  <th className="py-3 px-3">Time</th>
-                  <th className="py-3 px-3">Type</th>
-                  <th className="py-3 px-3">Receipt / Ref</th>
-                  <th className="py-3 px-3">Guest & Room</th>
-                  <th className="py-3 px-3">Cashier</th>
-                  <th className="py-3 px-3 text-right">Amount</th>
-                  <th className="py-3 px-3 text-right">Actions</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-black/[0.04]">
-                {transactions.map((tx) => (
-                  <tr key={tx.id} className="hover:bg-stone-50/70 transition-colors">
-                    <td className="py-3.5 px-3 text-[#86868b] whitespace-nowrap">
-                      {new Date(tx.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                    </td>
-                    <td className="py-3.5 px-3 whitespace-nowrap">
-                      <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${
-                        tx.type === 'payment'
-                          ? 'bg-emerald-50 text-emerald-800 border border-emerald-200'
-                          : 'bg-rose-50 text-rose-800 border border-rose-200'
-                      }`}>
-                        {tx.type === 'payment' ? '+ Cash In' : '- Refund'}
-                      </span>
-                    </td>
-                    <td className="py-3.5 px-3 font-mono font-bold text-[#1d1d1f] whitespace-nowrap">
-                      {tx.receiptNumber}
-                      <span className="block text-[10px] text-[#86868b] font-normal">
-                        Booking: {tx.bookingReference}
-                      </span>
-                    </td>
-                    <td className="py-3.5 px-3">
-                      <p className="font-semibold text-[#1d1d1f]">{tx.guestName}</p>
-                      <p className="text-[11px] text-[#86868b]">
-                        {tx.roomNumber ? `Room ${tx.roomNumber}` : 'Unassigned'}
+          <>
+            {/* Mobile Card Layout (< 768px, zero horizontal scrolling) */}
+            <div className="md:hidden space-y-2.5">
+              {transactions.map((tx) => (
+                <div
+                  key={tx.id}
+                  className="p-3.5 rounded-2xl bg-[#f5f5f7] border border-black/[0.04] space-y-2 shadow-sm"
+                >
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <div className="flex items-center space-x-2">
+                        <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${
+                          tx.type === 'payment'
+                            ? 'bg-emerald-100 text-emerald-800'
+                            : 'bg-rose-100 text-rose-800'
+                        }`}>
+                          {tx.type === 'payment' ? '+ Inflow' : '- Refund'}
+                        </span>
+                        <span className="font-mono text-xs font-bold text-[#1d1d1f]">
+                          {tx.receiptNumber}
+                        </span>
+                      </div>
+                      <p className="text-xs font-semibold text-[#1d1d1f] mt-1">
+                        {tx.guestName} {tx.roomNumber ? `(Room #${tx.roomNumber})` : ''}
                       </p>
-                    </td>
-                    <td className="py-3.5 px-3 text-[#86868b] whitespace-nowrap">
-                      <p className="text-[#1d1d1f] font-medium">{tx.cashierName}</p>
-                      {tx.notes && <p className="text-[10px] truncate max-w-xs">{tx.notes}</p>}
-                    </td>
-                    <td className="py-3.5 px-3 text-right font-bold text-sm whitespace-nowrap">
-                      <span className={tx.type === 'payment' ? 'text-emerald-700' : 'text-rose-700'}>
+                    </div>
+
+                    <div className="text-right">
+                      <span className={`text-base font-bold block ${
+                        tx.type === 'payment' ? 'text-emerald-700' : 'text-rose-700'
+                      }`}>
                         {tx.type === 'payment' ? '+' : '-'}{formatPaise(tx.amountPaise)}
                       </span>
-                    </td>
-                    <td className="py-3.5 px-3 text-right whitespace-nowrap">
-                      <Link
-                        href={`/booking/invoice/${tx.bookingReference}`}
-                        target="_blank"
-                        className="text-xs text-[#0071e3] hover:underline font-medium"
-                      >
-                        Receipt
-                      </Link>
-                    </td>
+                      <span className="text-[10px] text-[#86868b]">
+                        {new Date(tx.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between text-xs pt-1.5 border-t border-black/[0.04]">
+                    <span className="text-[11px] text-[#86868b]">
+                      Cashier: <strong className="text-[#1d1d1f] font-medium">{tx.cashierName}</strong>
+                    </span>
+                    <Link
+                      href={`/booking/invoice/${tx.bookingReference}`}
+                      target="_blank"
+                      className="text-xs text-[#0071e3] font-semibold hover:underline"
+                    >
+                      Receipt Voucher &gt;
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop Table View (>= 768px) */}
+            <div className="hidden md:block overflow-x-auto">
+              <table className="w-full text-left text-xs">
+                <thead>
+                  <tr className="border-b border-black/[0.04] text-[11px] font-semibold uppercase tracking-wider text-[#86868b]">
+                    <th className="py-3 px-3">Time</th>
+                    <th className="py-3 px-3">Type</th>
+                    <th className="py-3 px-3">Receipt / Ref</th>
+                    <th className="py-3 px-3">Guest & Room</th>
+                    <th className="py-3 px-3">Cashier</th>
+                    <th className="py-3 px-3 text-right">Amount</th>
+                    <th className="py-3 px-3 text-right">Actions</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                </thead>
+                <tbody className="divide-y divide-black/[0.04]">
+                  {transactions.map((tx) => (
+                    <tr key={tx.id} className="hover:bg-stone-50/70 transition-colors">
+                      <td className="py-3.5 px-3 text-[#86868b] whitespace-nowrap">
+                        {new Date(tx.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                      </td>
+                      <td className="py-3.5 px-3 whitespace-nowrap">
+                        <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${
+                          tx.type === 'payment'
+                            ? 'bg-emerald-50 text-emerald-800 border border-emerald-200'
+                            : 'bg-rose-50 text-rose-800 border border-rose-200'
+                        }`}>
+                          {tx.type === 'payment' ? '+ Cash In' : '- Refund'}
+                        </span>
+                      </td>
+                      <td className="py-3.5 px-3 font-mono font-bold text-[#1d1d1f] whitespace-nowrap">
+                        {tx.receiptNumber}
+                        <span className="block text-[10px] text-[#86868b] font-normal">
+                          Booking: {tx.bookingReference}
+                        </span>
+                      </td>
+                      <td className="py-3.5 px-3">
+                        <p className="font-semibold text-[#1d1d1f]">{tx.guestName}</p>
+                        <p className="text-[11px] text-[#86868b]">
+                          {tx.roomNumber ? `Room ${tx.roomNumber}` : 'Unassigned'}
+                        </p>
+                      </td>
+                      <td className="py-3.5 px-3 text-[#86868b] whitespace-nowrap">
+                        <p className="text-[#1d1d1f] font-medium">{tx.cashierName}</p>
+                        {tx.notes && <p className="text-[10px] truncate max-w-xs">{tx.notes}</p>}
+                      </td>
+                      <td className="py-3.5 px-3 text-right font-bold text-sm whitespace-nowrap">
+                        <span className={tx.type === 'payment' ? 'text-emerald-700' : 'text-rose-700'}>
+                          {tx.type === 'payment' ? '+' : '-'}{formatPaise(tx.amountPaise)}
+                        </span>
+                      </td>
+                      <td className="py-3.5 px-3 text-right whitespace-nowrap">
+                        <Link
+                          href={`/booking/invoice/${tx.bookingReference}`}
+                          target="_blank"
+                          className="text-xs text-[#0071e3] hover:underline font-medium"
+                        >
+                          Receipt
+                        </Link>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </>
         )}
       </div>
 
