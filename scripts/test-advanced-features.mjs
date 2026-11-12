@@ -1,5 +1,6 @@
 import assert from 'node:assert';
 import crypto from 'node:crypto';
+import fs from 'node:fs';
 
 const BASE_URL = process.env.TEST_BASE_URL || 'http://localhost:3000';
 
@@ -7,7 +8,6 @@ function getStaffCookie() {
   let secret = process.env.ADMIN_SESSION_SECRET;
   if (!secret) {
     try {
-      const fs = require('fs');
       if (fs.existsSync('.env.local')) {
         const env = fs.readFileSync('.env.local', 'utf-8');
         const m = env.match(/ADMIN_SESSION_SECRET="?([^"\r\n]+)"?/);

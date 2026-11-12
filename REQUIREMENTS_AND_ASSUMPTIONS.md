@@ -71,3 +71,4 @@ The system encompasses five advanced core business modules:
 4. **Serverless & Local Persistence:**
    - In containerized or local environments, data persists to `data/lodge_database.json`.
    - In serverless environments (AWS Lambda / Vercel), the repository automatically migrates and falls back to `/tmp/lodge_database.json` and `/tmp/secure_documents/` with cryptographic multi-lambda recovery tokens.
+

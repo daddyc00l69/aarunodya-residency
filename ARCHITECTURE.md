@@ -105,3 +105,4 @@ This eliminates binary floating-point representation bugs (e.g. `0.1 + 0.2 = 0.3
 - Uploaded files are renamed to cryptographically random UUIDs and saved outside the `public/` folder.
 - Government ID numbers are stored masked (`XXXX-XXXX-1234`).
 - Streamed file access is protected by staff authentication and records an entry in the system audit log.
+

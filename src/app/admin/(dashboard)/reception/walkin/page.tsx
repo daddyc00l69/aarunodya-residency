@@ -26,15 +26,35 @@ interface AvailableRoomType {
     id: string;
     name: string;
     slug: string;
-    category: string;
-    floor: string;
+    category?: string;
+    floor?: string;
     basePricePaise: number;
-    maxGuests: number;
-    roomNumbers: string[];
+    maxGuests?: number;
+    maxOccupancy?: number;
+    bedConfig?: string;
+    roomNumbers?: string[];
     isHall?: boolean;
   };
-  availableCount: number;
+  availableRoomsCount?: number;
+  availableCount?: number;
 }
+
+interface PhysicalRoom {
+  id: string;
+  roomTypeId: string;
+  roomNumber: string;
+  floor: number;
+  housekeepingStatus: string;
+  isOperational: boolean;
+  notes?: string;
+}
+
+const ROOM_MAP: Record<string, string[]> = {
+  'rt-deluxe-ac': ['101', '102', '201', '202', '203', '301', '302', '303', '401'],
+  'rt-comfort-non-ac': ['103', '104', '204', '205', '304', '305'],
+  'rt-family-ac-suite': ['206', '306'],
+  'rt-bhakt-niwas-hall-402': ['402 (Hall)'],
+};
 
 interface CustomerResult {
   id: string;
@@ -60,6 +80,7 @@ export default function ReceptionWalkinPage() {
   
   // Available data from API
   const [roomTypes, setRoomTypes] = useState<AvailableRoomType[]>([]);
+  const [allRooms, setAllRooms] = useState<PhysicalRoom[]>([]);
   const [occupiedRooms, setOccupiedRooms] = useState<string[]>([]);
   const [isLoadingAvailability, setIsLoadingAvailability] = useState(false);
 
@@ -102,27 +123,41 @@ export default function ReceptionWalkinPage() {
     async function loadAvailability() {
       setIsLoadingAvailability(true);
       try {
-        const res = await fetch(`/api/availability?checkIn=${checkIn}&checkOut=${checkOut}`);
-        const data = await res.json();
-        if (data.roomTypes) {
-          setRoomTypes(data.roomTypes);
-          if (data.roomTypes.length > 0 && !selectedRoomTypeId) {
-            setSelectedRoomTypeId(data.roomTypes[0].roomType.id);
+        const [availRes, roomsRes, bookingsRes] = await Promise.all([
+          fetch(`/api/availability?checkIn=${checkIn}&checkOut=${checkOut}`),
+          fetch('/api/admin/rooms').catch(() => null),
+          fetch('/api/admin/bookings').catch(() => null),
+        ]);
+
+        if (availRes && availRes.ok) {
+          const data = await availRes.json();
+          if (data.roomTypes) {
+            setRoomTypes(data.roomTypes);
+            if (data.roomTypes.length > 0 && !selectedRoomTypeId) {
+              setSelectedRoomTypeId(data.roomTypes[0].roomType.id);
+            }
           }
         }
 
-        // Fetch currently occupied rooms for these dates
-        const calRes = await fetch('/api/admin/bookings');
-        const calData = await calRes.json();
-        if (calData.bookings) {
-          const overlapping = calData.bookings
-            .filter((b: any) => 
-              b.status !== 'cancelled' && 
-              b.assignedRoomNumber &&
-              !(b.checkOutDate <= checkIn || b.checkInDate >= checkOut)
-            )
-            .map((b: any) => b.assignedRoomNumber);
-          setOccupiedRooms(overlapping);
+        if (roomsRes && roomsRes.ok) {
+          const rData = await roomsRes.json();
+          if (rData.rooms) {
+            setAllRooms(rData.rooms);
+          }
+        }
+
+        if (bookingsRes && bookingsRes.ok) {
+          const calData = await bookingsRes.json();
+          if (calData.bookings) {
+            const overlapping = calData.bookings
+              .filter((b: any) => 
+                b.status !== 'cancelled' && 
+                b.assignedRoomNumber &&
+                !(b.checkOutDate <= checkIn || b.checkInDate >= checkOut)
+              )
+              .map((b: any) => b.assignedRoomNumber);
+            setOccupiedRooms(overlapping);
+          }
         }
       } catch (err) {
         console.error('Failed to load availability:', err);
@@ -137,9 +172,13 @@ export default function ReceptionWalkinPage() {
   const activeRoomTypeObj = roomTypes.find((r) => r.roomType.id === selectedRoomTypeId);
   
   // Available room numbers for selected room type
-  const availableRoomNumbers = activeRoomTypeObj 
-    ? activeRoomTypeObj.roomType.roomNumbers.filter((rm) => !occupiedRooms.includes(rm))
-    : [];
+  const candidateRooms = allRooms.length > 0
+    ? allRooms
+        .filter((r) => r.roomTypeId === selectedRoomTypeId && r.isOperational)
+        .map((r) => r.roomNumber)
+    : (activeRoomTypeObj?.roomType?.roomNumbers || ROOM_MAP[selectedRoomTypeId] || []);
+
+  const availableRoomNumbers = candidateRooms.filter((rm) => !occupiedRooms.includes(rm));
 
   // Default first room number if not set or invalid
   useEffect(() => {
@@ -148,7 +187,7 @@ export default function ReceptionWalkinPage() {
     } else if (availableRoomNumbers.length === 0) {
       setSelectedRoomNumber('');
     }
-  }, [selectedRoomTypeId, occupiedRooms]);
+  }, [selectedRoomTypeId, occupiedRooms, allRooms, roomTypes]);
 
   // Handle Customer Search
   useEffect(() => {
@@ -191,11 +230,16 @@ export default function ReceptionWalkinPage() {
     )
   );
 
-  const basePricePaise = (activeRoomTypeObj?.roomType.basePricePaise || 0) * nights;
+  const basePricePaise = (activeRoomTypeObj?.roomType?.basePricePaise || 0) * nights;
   
+  const isHall =
+    activeRoomTypeObj?.roomType?.slug === 'bhakt-niwas-hall-room-402' ||
+    activeRoomTypeObj?.roomType?.id === 'rt-bhakt-niwas-hall-402' ||
+    Boolean((activeRoomTypeObj?.roomType as any)?.isHall);
+
   // Extra guest surcharge if guests exceed 2 in non-hall
   let extraGuestPaise = 0;
-  if (!activeRoomTypeObj?.roomType.isHall && guestCount > 2) {
+  if (!isHall && guestCount > 2) {
     extraGuestPaise = (guestCount - 2) * 30000 * nights; // ₹300 per extra guest per night
   }
 
@@ -739,7 +783,9 @@ export default function ReceptionWalkinPage() {
                 Select Room Category
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {roomTypes.map(({ roomType, availableCount }) => {
+                {roomTypes.map((item) => {
+                  const roomType = item.roomType;
+                  const availableCount = item.availableRoomsCount ?? item.availableCount ?? 0;
                   const isSelected = selectedRoomTypeId === roomType.id;
                   const isAvailable = availableCount > 0;
 
@@ -760,7 +806,7 @@ export default function ReceptionWalkinPage() {
                       <div className="flex items-start justify-between">
                         <div>
                           <p className="text-xs font-bold text-[#1d1d1f]">{roomType.name}</p>
-                          <p className="text-[11px] text-[#86868b]">{roomType.floor} • Max {roomType.maxGuests} guests</p>
+                          <p className="text-[11px] text-[#86868b]">{roomType.bedConfig || 'Standard Beds'} • Max {roomType.maxOccupancy || roomType.maxGuests || 2} guests</p>
                         </div>
                         <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
                           isAvailable ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'
@@ -1047,3 +1093,4 @@ export default function ReceptionWalkinPage() {
     </div>
   );
 }
+

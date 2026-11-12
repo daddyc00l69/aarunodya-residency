@@ -64,3 +64,4 @@ Click the **Email Preview** tab to review the exact mobile-responsive branded HT
    - In the event of temporary network interruptions or invalid email formatting, authorized staff can review the failure reason and click **Retry Email** directly from the audit table.
 4. **Resend Domain Verification:**
    - Integrated with Resend API using verified host domain `devtushar.uk`.
+

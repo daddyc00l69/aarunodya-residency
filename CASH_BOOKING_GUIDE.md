@@ -82,3 +82,4 @@ If a pilgrim must depart early due to changes in temple darshan slots:
 ### 4.4 Opening & Closing Shifts
 - **Opening:** Start each morning with the counter float (e.g., ₹2,000 in small change).
 - **Closing:** At shift handoff, physically count all currency in the drawer, enter the actual count, add handover notes, and click **Close Shift & Seal Ledger**.
+

@@ -148,3 +148,4 @@ Automated return customer marketing engine.
 ### 2.11 `audit_logs`
 Immutable compliance and security ledger.
 - `id`, `user_id`, `user_email`, `action`, `entity_type`, `entity_id`, `details`, `ip_address`, `timestamp`.
+

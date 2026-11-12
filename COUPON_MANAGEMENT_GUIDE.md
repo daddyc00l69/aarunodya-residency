@@ -66,3 +66,4 @@ The Coupon Dashboard provides real-time business metrics:
 - **Discounts Distributed:** Ledger sum of all rupee savings provided to pilgrims.
 - **Per-Coupon Progress Bar:** Visual progress tracking how many coupons remain out of the total cap (e.g. 24 / 100 used).
 - **Status Toggle:** Instantly pause or resume any campaign with a single click.
+

@@ -59,3 +59,4 @@ When devotees book over the phone or walk in under slightly different spellings 
    - Transfers all government ID documents to the primary vault.
    - Recalculates total visits and lifetime spend in integer paise.
    - Safely removes the duplicate profile and logs an entry in the system audit trail.
+
