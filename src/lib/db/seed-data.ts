@@ -1,4 +1,20 @@
-import { Property, RoomType, Room, User, Booking, Payment, Guest } from '../types';
+import { 
+  Property, 
+  RoomType, 
+  Room, 
+  User, 
+  Booking, 
+  Payment, 
+  Guest,
+  Customer,
+  Coupon,
+  CouponRedemption,
+  PostCheckoutCampaign,
+  CashTransaction,
+  CashShiftReconciliation,
+  EmailNotificationRecord,
+  DataImportJob
+} from '../types';
 
 export const INITIAL_PROPERTY: Property = {
   id: 'prop-aarunodya-01',
@@ -210,11 +226,29 @@ export const INITIAL_STAFF_USERS: User[] = [
     createdAt: '2026-01-01T00:00:00Z'
   },
   {
+    id: 'user-manager-01',
+    email: 'manager@aarunodya.com',
+    fullName: 'Operations Manager',
+    passwordHash: 'Manager@12345',
+    role: 'manager',
+    isActive: true,
+    createdAt: '2026-01-01T00:00:00Z'
+  },
+  {
     id: 'user-desk-01',
     email: 'frontdesk@aarunodya.com',
     fullName: 'Pandharpur Front Desk Reception',
     passwordHash: 'Desk@12345',
     role: 'front_desk',
+    isActive: true,
+    createdAt: '2026-01-01T00:00:00Z'
+  },
+  {
+    id: 'user-accounts-01',
+    email: 'accounts@aarunodya.com',
+    fullName: 'Front-Desk Accounts Officer',
+    passwordHash: 'Accounts@12345',
+    role: 'accounts',
     isActive: true,
     createdAt: '2026-01-01T00:00:00Z'
   },
@@ -340,5 +374,180 @@ export const INITIAL_PAYMENTS: Payment[] = [
     transactionReference: 'TXN-ARN-3190-01',
     createdAt: '2026-11-05T14:36:00Z',
     capturedAt: '2026-11-05T14:36:20Z'
+  }
+];
+
+export const INITIAL_CUSTOMERS: Customer[] = [
+  {
+    id: 'CUST-1001',
+    fullName: 'Santosh Kulkarni',
+    dateOfBirth: '1975-06-15',
+    gender: 'male',
+    phone: '+91 98220 12345',
+    altPhone: '+91 98220 54321',
+    email: 'santosh.kulkarni@example.com',
+    addressLine1: '42 Datta Mandir Road',
+    city: 'Pune',
+    state: 'Maharashtra',
+    country: 'India',
+    postalCode: '411030',
+    documents: [
+      {
+        id: 'doc-1001-01',
+        customerId: 'CUST-1001',
+        documentType: 'aadhaar',
+        documentNumberMasked: 'XXXX-XXXX-8921',
+        issuingCountry: 'India',
+        verificationStatus: 'verified',
+        verifiedByStaffName: 'Yuvaraj Malave',
+        verifiedAt: '2026-11-01T10:15:00Z',
+        createdAt: '2026-11-01T10:00:00Z'
+      }
+    ],
+    totalVisits: 1,
+    totalSpentPaise: 403200,
+    notes: 'Devotee of Shri Vitthal; prefers ground floor room for senior citizens.',
+    createdAt: '2026-11-01T10:00:00Z',
+    updatedAt: '2026-11-01T10:00:00Z'
+  },
+  {
+    id: 'CUST-1002',
+    fullName: 'Mahesh Patil & Dindi Mandal',
+    dateOfBirth: '1982-08-20',
+    gender: 'male',
+    phone: '+91 94230 67890',
+    email: 'mahesh.patil@example.com',
+    addressLine1: 'Shivaji Chowk, Dindi Road',
+    city: 'Kolhapur',
+    state: 'Maharashtra',
+    country: 'India',
+    postalCode: '416002',
+    documents: [
+      {
+        id: 'doc-1002-01',
+        customerId: 'CUST-1002',
+        documentType: 'aadhaar',
+        documentNumberMasked: 'XXXX-XXXX-3412',
+        issuingCountry: 'India',
+        verificationStatus: 'verified',
+        verifiedByStaffName: 'Yuvaraj Malave',
+        verifiedAt: '2026-11-05T14:40:00Z',
+        createdAt: '2026-11-05T14:30:00Z'
+      }
+    ],
+    totalVisits: 1,
+    totalSpentPaise: 1321600,
+    notes: 'Dindi group leader from Kolhapur; books 3rd floor hall for bhajan mandal.',
+    createdAt: '2026-11-05T14:30:00Z',
+    updatedAt: '2026-11-05T14:30:00Z'
+  }
+];
+
+export const INITIAL_COUPONS: Coupon[] = [
+  {
+    id: 'coup-vitthal10',
+    code: 'VITTHAL10',
+    description: '10% Spiritual Pilgrim Discount on all rooms',
+    discountType: 'percentage',
+    discountValue: 10,
+    maxDiscountPaise: 50000, // max ₹500 cap
+    minBookingValuePaise: 120000, // min ₹1,200 booking
+    startDate: '2026-01-01',
+    expiryDate: '2026-12-31',
+    maxTotalRedemptions: 500,
+    currentRedemptionsCount: 0,
+    maxRedemptionsPerCustomer: 2,
+    eligibleRoomTypeIds: [], // all rooms
+    customerEligibility: 'all',
+    isActive: true,
+    adminNotes: 'Annual devotee welcome promotion',
+    createdAt: '2026-01-01T00:00:00Z',
+    updatedAt: '2026-01-01T00:00:00Z'
+  },
+  {
+    id: 'coup-darshan200',
+    code: 'DARSHAN200',
+    description: 'Flat ₹200 off for Deluxe A/C Rooms',
+    discountType: 'fixed',
+    discountValue: 20000, // ₹200
+    minBookingValuePaise: 180000,
+    startDate: '2026-01-01',
+    expiryDate: '2026-12-31',
+    maxTotalRedemptions: 300,
+    currentRedemptionsCount: 0,
+    maxRedemptionsPerCustomer: 1,
+    eligibleRoomTypeIds: ['rt-deluxe-ac', 'rt-family-ac-suite'],
+    customerEligibility: 'all',
+    isActive: true,
+    adminNotes: 'Deluxe AC promotion',
+    createdAt: '2026-01-01T00:00:00Z',
+    updatedAt: '2026-01-01T00:00:00Z'
+  },
+  {
+    id: 'coup-returning15',
+    code: 'PANDHARPUR15',
+    description: '15% Loyalty Discount for Returning Devotees',
+    discountType: 'percentage',
+    discountValue: 15,
+    maxDiscountPaise: 100000, // ₹1,000 cap
+    minBookingValuePaise: 200000,
+    startDate: '2026-01-01',
+    expiryDate: '2026-12-31',
+    maxTotalRedemptions: 200,
+    currentRedemptionsCount: 0,
+    maxRedemptionsPerCustomer: 3,
+    eligibleRoomTypeIds: [],
+    customerEligibility: 'returning',
+    isActive: true,
+    adminNotes: 'Encouraging repeated pilgrimages',
+    createdAt: '2026-01-01T00:00:00Z',
+    updatedAt: '2026-01-01T00:00:00Z'
+  }
+];
+
+export const INITIAL_POST_CHECKOUT_CAMPAIGNS: PostCheckoutCampaign[] = [
+  {
+    id: 'campaign-checkout-loyalty-01',
+    name: 'Pilgrim Return Loyalty Invitation',
+    isEnabled: true,
+    discountType: 'percentage',
+    discountValue: 15, // 15% discount on next stay
+    maxDiscountPaise: 75000, // ₹750 max discount
+    minBookingValuePaise: 120000, // ₹1,200 min booking
+    validityDays: 90, // Valid for 90 days from checkout
+    emailSubject: 'Thank You for Visiting Pandharpur! Here is a Special Gift 🎁',
+    promotionalMessage: 'We deeply cherish your devotion and pilgrimage to Shri Vitthal-Rukmini Mandir. To welcome you and your family on your next Darshan, enjoy an exclusive 15% discount.',
+    generateUniqueCodePerCustomer: true,
+    allowRepeatedIssuanceAfterFutureStays: true,
+    cooldownDaysBetweenIssuance: 14,
+    createdAt: '2026-01-01T00:00:00Z',
+    updatedAt: '2026-01-01T00:00:00Z'
+  }
+];
+
+export const INITIAL_CASH_TRANSACTIONS: CashTransaction[] = [
+  {
+    id: 'ctx-sample-01',
+    receiptNumber: 'RCP-2026-8942',
+    bookingId: 'book-sample-01',
+    bookingReference: 'ARN-2026-8942',
+    transactionType: 'payment',
+    amountPaise: 403200,
+    cashierId: 'user-desk-01',
+    cashierName: 'Pandharpur Front Desk Reception',
+    notes: 'Online captured via gateway settled to bank',
+    createdAt: '2026-11-01T10:32:00Z'
+  }
+];
+
+export const INITIAL_CASH_SHIFTS: CashShiftReconciliation[] = [
+  {
+    id: 'shift-sample-01',
+    shiftDate: '2026-11-12',
+    openedByStaffId: 'user-desk-01',
+    openedByStaffName: 'Pandharpur Front Desk Reception',
+    openedAt: '2026-11-12T06:00:00Z',
+    openingFloatPaise: 500000, // ₹5,000 opening float
+    status: 'open'
   }
 ];

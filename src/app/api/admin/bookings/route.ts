@@ -32,10 +32,20 @@ export async function PATCH(req: NextRequest) {
     }
 
     const db = getDb();
-    const updated = await db.updateBookingStatus(bookingId, status as BookingStatus, {
-      assignedRoomId,
-      cancellationReason
-    });
+    let updated;
+
+    if (status === 'checked_out') {
+      const res = await db.checkoutBookingWithLoyaltyOffer(bookingId, {
+        userId: session.userId,
+        fullName: session.fullName
+      });
+      updated = res.booking;
+    } else {
+      updated = await db.updateBookingStatus(bookingId, status as BookingStatus, {
+        assignedRoomId,
+        cancellationReason
+      });
+    }
 
     if (!updated) {
       return NextResponse.json({ error: 'Booking not found' }, { status: 404 });

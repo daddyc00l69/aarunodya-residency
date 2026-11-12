@@ -51,6 +51,16 @@ function CheckoutContent() {
   const [specialRequests, setSpecialRequests] = useState('');
   const [termsAccepted, setTermsAccepted] = useState(true);
 
+  // Coupon state
+  const [couponCodeInput, setCouponCodeInput] = useState('');
+  const [appliedCoupon, setAppliedCoupon] = useState<{
+    code: string;
+    description: string;
+    discountPaise: number;
+  } | null>(null);
+  const [isValidatingCoupon, setIsValidatingCoupon] = useState(false);
+  const [couponMessage, setCouponMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+
   // Process states
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -91,6 +101,55 @@ function CheckoutContent() {
     return () => clearInterval(timer);
   }, [holdSecondsLeft]);
 
+  // Handle Apply Coupon
+  const handleApplyCoupon = async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    if (!couponCodeInput.trim() || !pricing || !roomType) return;
+    setIsValidatingCoupon(true);
+    setCouponMessage(null);
+
+    try {
+      const res = await fetch('/api/coupons/validate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          code: couponCodeInput.trim(),
+          roomTypeId: roomType.id,
+          checkInDate: checkIn,
+          checkOutDate: checkOut,
+          subtotalPaise: pricing.subtotalPaise,
+          customerEmail: email || undefined
+        })
+      });
+
+      const data = await res.json();
+      if (!data.isValid) {
+        setAppliedCoupon(null);
+        setCouponMessage({ type: 'error', text: data.reason || 'Invalid coupon code.' });
+      } else {
+        setAppliedCoupon({
+          code: data.coupon.code,
+          description: data.coupon.description,
+          discountPaise: data.discountPaise
+        });
+        setCouponMessage({
+          type: 'success',
+          text: `Coupon ${data.coupon.code} applied! Saved ${formatPaise(data.discountPaise)}.`
+        });
+      }
+    } catch {
+      setCouponMessage({ type: 'error', text: 'Unable to validate coupon.' });
+    } finally {
+      setIsValidatingCoupon(false);
+    }
+  };
+
+  const handleRemoveCoupon = () => {
+    setAppliedCoupon(null);
+    setCouponCodeInput('');
+    setCouponMessage(null);
+  };
+
   // Handle Initiate Checkout Hold & Razorpay Order
   const handleProceedToPayment = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -126,7 +185,8 @@ function CheckoutContent() {
           guestName: fullName,
           guestEmail: email,
           guestPhone: phone,
-          specialRequests
+          specialRequests,
+          couponCode: appliedCoupon?.code
         })
       });
 
@@ -412,7 +472,7 @@ function CheckoutContent() {
                 <span>
                   {isSubmitting
                     ? 'Securing Room...'
-                    : `Pay ${pricing ? formatPaise(pricing.totalAmountPaise) : '...'} & Confirm`}
+                    : `Pay ${pricing ? formatPaise(Math.max(0, pricing.totalAmountPaise - (appliedCoupon?.discountPaise || 0))) : '...'} & Confirm`}
                 </span>
               </button>
             </form>
@@ -441,11 +501,11 @@ function CheckoutContent() {
                   <div className="p-4 rounded-2xl bg-white border border-black/[0.04] space-y-2">
                     <div className="flex justify-between text-[#86868b]">
                       <span>Check-in</span>
-                      <span className="text-[#1d1d1f] font-medium">{formatDisplayDate(checkIn)} (14:00)</span>
+                      <span className="text-[#1d1d1f] font-medium">{formatDisplayDate(checkIn)} (12:00 PM)</span>
                     </div>
                     <div className="flex justify-between text-[#86868b]">
                       <span>Check-out</span>
-                      <span className="text-[#1d1d1f] font-medium">{formatDisplayDate(checkOut)} (11:00)</span>
+                      <span className="text-[#1d1d1f] font-medium">{formatDisplayDate(checkOut)} (11:00 AM)</span>
                     </div>
                     <div className="flex justify-between text-[#86868b]">
                       <span>Duration</span>
@@ -457,24 +517,83 @@ function CheckoutContent() {
                     </div>
                   </div>
 
+                  {/* Coupon Code Section */}
+                  <div className="p-4 rounded-2xl bg-white border border-black/[0.04] space-y-2.5">
+                    <span className="block text-[11px] font-semibold uppercase tracking-wider text-[#86868b]">
+                      Promotion / Pilgrim Coupon
+                    </span>
+
+                    {appliedCoupon ? (
+                      <div className="flex items-center justify-between p-2.5 rounded-xl bg-emerald-50 border border-emerald-200">
+                        <div className="space-y-0.5">
+                          <span className="font-mono font-bold text-xs text-emerald-800 tracking-wider">
+                            {appliedCoupon.code}
+                          </span>
+                          <span className="block text-[10px] text-emerald-700">
+                            {appliedCoupon.description} (-{formatPaise(appliedCoupon.discountPaise)})
+                          </span>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={handleRemoveCoupon}
+                          className="text-[11px] text-red-600 hover:text-red-700 font-medium px-2 py-1 rounded"
+                        >
+                          Remove
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="flex space-x-2">
+                        <input
+                          type="text"
+                          placeholder="e.g. VITTHAL10"
+                          value={couponCodeInput}
+                          onChange={(e) => setCouponCodeInput(e.target.value.toUpperCase())}
+                          className="flex-1 h-9 px-3 text-xs uppercase font-mono bg-[#f5f5f7] border border-black/[0.08] rounded-xl focus:outline-none focus:border-[#0071e3]"
+                        />
+                        <button
+                          type="button"
+                          disabled={isValidatingCoupon || !couponCodeInput.trim()}
+                          onClick={handleApplyCoupon}
+                          className="px-3.5 h-9 bg-[#1d1d1f] hover:bg-black text-white text-xs font-medium rounded-xl transition-all disabled:opacity-50"
+                        >
+                          {isValidatingCoupon ? 'Checking...' : 'Apply'}
+                        </button>
+                      </div>
+                    )}
+
+                    {couponMessage && (
+                      <p className={`text-[11px] ${couponMessage.type === 'success' ? 'text-emerald-600' : 'text-red-600'}`}>
+                        {couponMessage.text}
+                      </p>
+                    )}
+                  </div>
+
                   {pricing && (
                     <div className="space-y-2 pt-2 border-t border-black/[0.06] text-xs">
                       <div className="flex justify-between text-[#86868b]">
                         <span>Room Tariff ({pricing.numNights} nights)</span>
                         <span className="text-[#1d1d1f]">{formatPaise(pricing.subtotalPaise)}</span>
                       </div>
+                      {pricing.resortFeePaise > 0 && (
+                        <div className="flex justify-between text-[#86868b]">
+                          <span>Resort Service Fee</span>
+                          <span className="text-[#1d1d1f]">{formatPaise(pricing.resortFeePaise)}</span>
+                        </div>
+                      )}
                       <div className="flex justify-between text-[#86868b]">
-                        <span>Resort Service Fee (5%)</span>
-                        <span className="text-[#1d1d1f]">{formatPaise(pricing.resortFeePaise)}</span>
-                      </div>
-                      <div className="flex justify-between text-[#86868b]">
-                        <span>GST ({pricing.effectiveTaxPercent}%)</span>
+                        <span>GST (Hospitality Tax)</span>
                         <span className="text-[#1d1d1f]">{formatPaise(pricing.taxPaise)}</span>
                       </div>
+                      {appliedCoupon && (
+                        <div className="flex justify-between text-emerald-600 font-medium">
+                          <span>Coupon Discount ({appliedCoupon.code})</span>
+                          <span>-{formatPaise(appliedCoupon.discountPaise)}</span>
+                        </div>
+                      )}
                       <div className="pt-3 border-t border-black/[0.08] flex justify-between items-baseline">
-                        <span className="text-sm font-semibold text-[#1d1d1f]">Total Amount</span>
-                        <span className="text-2xl font-semibold text-[#1d1d1f] tracking-tight">
-                          {formatPaise(pricing.totalAmountPaise)}
+                        <span className="text-sm font-semibold text-[#1d1d1f]">Total Payable</span>
+                        <span className="text-2xl font-semibold text-[#0071e3] tracking-tight">
+                          {formatPaise(Math.max(0, pricing.totalAmountPaise - (appliedCoupon?.discountPaise || 0)))}
                         </span>
                       </div>
                     </div>

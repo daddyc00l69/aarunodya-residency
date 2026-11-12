@@ -40,3 +40,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# secure documents vault
+data/secure_documents/*
+!data/secure_documents/.gitkeep

@@ -367,3 +367,4 @@ export function InvoiceView({ reference, initialData }: InvoiceViewProps) {
     </div>
   );
 }
+

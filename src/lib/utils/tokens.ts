@@ -58,3 +58,4 @@ export function verifyPayload<T = Record<string, unknown>>(token: string | undef
     return null;
   }
 }
+

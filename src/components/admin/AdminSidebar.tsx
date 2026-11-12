@@ -11,6 +11,12 @@ import {
   Settings,
   ExternalLink,
   BookOpenCheck,
+  UserPlus,
+  Coins,
+  Users,
+  Tag,
+  MailCheck,
+  FolderDown,
   Menu,
   X
 } from 'lucide-react';
@@ -25,13 +31,34 @@ export function AdminSidebar({ session }: AdminSidebarProps) {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const navItems = [
-    { label: 'Executive Deck', href: '/admin', icon: LayoutDashboard },
-    { label: 'Reservations Desk', href: '/admin/reservations', icon: BookOpenCheck },
-    { label: 'Room Calendar', href: '/admin/calendar', icon: CalendarDays },
-    { label: 'Rooms & Cleaning', href: '/admin/rooms', icon: BedDouble },
-    { label: 'Financial Reports', href: '/admin/reports', icon: FileSpreadsheet },
-    { label: 'Lodge Settings', href: '/admin/settings', icon: Settings },
+  const navSections = [
+    {
+      title: 'Front Desk & Cashier',
+      items: [
+        { label: 'Executive Deck', href: '/admin', icon: LayoutDashboard },
+        { label: 'Reception Walk-in', href: '/admin/reception/walkin', icon: UserPlus },
+        { label: 'Cash Register & Shifts', href: '/admin/reception/cash-register', icon: Coins },
+        { label: 'Reservations Desk', href: '/admin/reservations', icon: BookOpenCheck },
+        { label: 'Room Calendar', href: '/admin/calendar', icon: CalendarDays },
+        { label: 'Rooms & Housekeeping', href: '/admin/rooms', icon: BedDouble },
+      ]
+    },
+    {
+      title: 'Guests & Marketing',
+      items: [
+        { label: 'Guest Database & IDs', href: '/admin/customers', icon: Users },
+        { label: 'Coupon Management', href: '/admin/coupons', icon: Tag },
+        { label: 'Post-Checkout Offers', href: '/admin/marketing/post-checkout', icon: MailCheck },
+      ]
+    },
+    {
+      title: 'Financials & Data',
+      items: [
+        { label: 'Financial Reports', href: '/admin/reports', icon: FileSpreadsheet },
+        { label: 'Excel Import / Export', href: '/admin/data/import-export', icon: FolderDown },
+        { label: 'Lodge Settings', href: '/admin/settings', icon: Settings },
+      ]
+    }
   ];
 
   return (
@@ -70,9 +97,9 @@ export function AdminSidebar({ session }: AdminSidebarProps) {
           mobileOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
         }`}
       >
-        <div className="p-5 space-y-6">
+        <div className="p-4 space-y-5 overflow-y-auto flex-1">
           {/* Brand */}
-          <div className="flex items-center justify-between pb-4 border-b border-black/[0.06]">
+          <div className="flex items-center justify-between pb-3 border-b border-black/[0.06]">
             <div className="flex items-center space-x-2.5">
               <div className="w-8 h-8 rounded-full bg-[#1d1d1f] flex items-center justify-center text-amber-300 font-bold font-serif text-sm">
                 आ
@@ -95,29 +122,38 @@ export function AdminSidebar({ session }: AdminSidebarProps) {
             </button>
           </div>
 
-          {/* Navigation */}
-          <nav className="space-y-1 text-xs">
-            {navItems.map((item) => {
-              const isActive = pathname === item.href;
-              const Icon = item.icon;
+          {/* Navigation Sections */}
+          <div className="space-y-4">
+            {navSections.map((section) => (
+              <div key={section.title} className="space-y-1">
+                <p className="px-3 text-[10px] uppercase font-bold tracking-wider text-[#86868b]/80">
+                  {section.title}
+                </p>
+                <nav className="space-y-0.5 text-xs">
+                  {section.items.map((item) => {
+                    const isActive = pathname === item.href;
+                    const Icon = item.icon;
 
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className={`flex items-center space-x-2.5 px-3 py-2.5 rounded-xl transition-all font-medium ${
-                    isActive
-                      ? 'bg-white text-[#0071e3] shadow-[0_1px_4px_rgba(0,0,0,0.06)]'
-                      : 'text-[#1d1d1f]/80 hover:text-[#1d1d1f] hover:bg-black/[0.04]'
-                  }`}
-                >
-                  <Icon className={`w-4 h-4 ${isActive ? 'text-[#0071e3]' : 'text-[#86868b]'}`} />
-                  <span className="text-sm md:text-xs">{item.label}</span>
-                </Link>
-              );
-            })}
-          </nav>
+                    return (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setMobileOpen(false)}
+                        className={`flex items-center space-x-2.5 px-3 py-2 rounded-xl transition-all font-medium ${
+                          isActive
+                            ? 'bg-white text-[#0071e3] shadow-[0_1px_4px_rgba(0,0,0,0.06)]'
+                            : 'text-[#1d1d1f]/80 hover:text-[#1d1d1f] hover:bg-black/[0.04]'
+                        }`}
+                      >
+                        <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-[#0071e3]' : 'text-[#86868b]'}`} />
+                        <span className="text-xs truncate">{item.label}</span>
+                      </Link>
+                    );
+                  })}
+                </nav>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Staff Session & Sign Out */}

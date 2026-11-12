@@ -13,7 +13,8 @@ const HoldSchema = z.object({
   guestName: z.string().min(2, 'Full guest name is required'),
   guestEmail: z.string().email('Valid email is required'),
   guestPhone: z.string().min(8, 'Valid phone number is required'),
-  specialRequests: z.string().optional()
+  specialRequests: z.string().optional(),
+  couponCode: z.string().optional()
 });
 
 export async function POST(req: NextRequest) {
@@ -37,7 +38,8 @@ export async function POST(req: NextRequest) {
       guestName,
       guestEmail,
       guestPhone,
-      specialRequests
+      specialRequests,
+      couponCode
     } = parsed.data;
 
     if (checkInDate >= checkOutDate) {
@@ -59,7 +61,8 @@ export async function POST(req: NextRequest) {
       guestName,
       guestEmail,
       guestPhone,
-      specialRequests
+      specialRequests,
+      couponCode
     });
 
     // Create Razorpay payment order

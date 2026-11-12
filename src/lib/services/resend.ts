@@ -137,6 +137,121 @@ export class ResendEmailService {
       return { success: false, error: msg };
     }
   }
+
+  /**
+   * Dispatches automated post-checkout thank-you email with exclusive return discount coupon
+   */
+  async sendPostCheckoutThankYouEmail({
+    customerName,
+    customerEmail,
+    couponCode,
+    discountDisplay,
+    expiryDate,
+    subject,
+    promotionalMessage
+  }: {
+    customerName: string;
+    customerEmail: string;
+    couponCode: string;
+    discountDisplay: string;
+    expiryDate: string;
+    subject: string;
+    promotionalMessage?: string;
+  }): Promise<{ success: boolean; id?: string; error?: string }> {
+    if (!customerEmail) {
+      return { success: false, error: 'Recipient email missing' };
+    }
+
+    const htmlContent = `
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <style>
+            body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f5f5f7; color: #1d1d1f; margin: 0; padding: 24px; }
+            .card { background-color: #ffffff; border-radius: 24px; max-width: 580px; margin: 0 auto; padding: 36px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+            .header { text-align: center; border-bottom: 1px solid #f0f0f2; padding-bottom: 24px; }
+            .badge { display: inline-block; background-color: #fff8e1; color: #b78103; font-size: 11px; font-weight: 600; padding: 5px 14px; border-radius: 20px; text-transform: uppercase; border: 1px solid #ffe082; }
+            .coupon-box { margin: 28px 0; background: linear-gradient(135deg, #f5f5f7 0%, #ebebef 100%); border: 2px dashed #0071e3; border-radius: 18px; padding: 24px; text-align: center; }
+            .coupon-code { font-family: -apple-system-ui-monospace, monospace; font-size: 26px; font-weight: 800; color: #0071e3; letter-spacing: 2px; margin: 8px 0; }
+            .discount-tag { font-size: 14px; font-weight: 600; color: #1d1d1f; }
+            .validity { font-size: 12px; color: #86868b; margin-top: 6px; }
+            .btn { display: inline-block; background-color: #0071e3; color: #ffffff !important; text-decoration: none; font-size: 13px; font-weight: 600; padding: 12px 28px; border-radius: 30px; margin-top: 20px; }
+            .footer { text-align: center; font-size: 11px; color: #86868b; margin-top: 28px; line-height: 1.5; border-top: 1px solid #f0f0f2; padding-top: 20px; }
+          </style>
+        </head>
+        <body>
+          <div class="card">
+            <div class="header">
+              <span class="badge">।। श्री विठ्ठल कृपा ।। Special Devotee Gift 🎁</span>
+              <h1 style="font-size: 24px; margin: 14px 0 4px; font-weight: 600; color: #1d1d1f;">Thank You for Staying With Us</h1>
+              <p style="margin: 0; font-size: 12px; color: #86868b;">Aarunodya Residency Bhakt Niwas • Pandharpur</p>
+            </div>
+
+            <p style="font-size: 14px; line-height: 1.6; margin-top: 24px;">
+              Namaste <strong>${customerName}</strong>,<br>
+              Thank you for choosing <strong>Aarunodya Residency Bhakt Niwas</strong> for your pilgrimage to Pandharpur. We hope you had a blessed Darshan and a comfortable stay.
+            </p>
+
+            ${promotionalMessage ? `<p style="font-size: 13px; color: #515154; line-height: 1.5;">${promotionalMessage}</p>` : ''}
+
+            <div class="coupon-box">
+              <div class="discount-tag">Special Return Invitation Discount</div>
+              <div class="coupon-code">${couponCode}</div>
+              <div style="font-size: 15px; font-weight: 700; color: #1d1d1f;">Your Privilege: ${discountDisplay} OFF</div>
+              <div class="validity">Valid for your next visit until <strong>${expiryDate}</strong></div>
+              <a href="https://aarunodya-residency.vercel.app/rooms" class="btn">Book Your Next Darshan Stay</a>
+            </div>
+
+            <p style="font-size: 12px; color: #86868b; line-height: 1.5;">
+              Simply enter coupon code <strong>${couponCode}</strong> during online checkout or present it at our front desk reception desk upon your arrival.
+            </p>
+
+            <div class="footer">
+              <p style="margin: 0 0 4px;"><strong>Aarunodya Residency Bhakt Niwas</strong></p>
+              <p style="margin: 0 0 8px;">1563 Ghongade Galli, Nath Chowk, Pandharpur • Near Vitthal Mandir</p>
+              <p style="margin: 0;">Host Yuvaraj Malave: +91 85300 00820 / +91 91724 64746</p>
+            </div>
+          </div>
+        </body>
+      </html>
+    `;
+
+    if (!this.isConfigured()) {
+      console.log(`[Mock Resend Service] Post-checkout coupon email dispatched to ${customerEmail}: Code ${couponCode}`);
+      return { success: true, id: `mock-resend-${Date.now()}` };
+    }
+
+    try {
+      const response = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${this.apiKey}`
+        },
+        body: JSON.stringify({
+          from: this.fromEmail,
+          to: [customerEmail],
+          subject: subject || 'Thank You for Staying With Us! Here is a Special Gift 🎁',
+          html: htmlContent
+        })
+      });
+
+      const resData = await response.json();
+
+      if (!response.ok) {
+        console.warn('Resend post-checkout API notice:', resData);
+        return { success: false, error: resData?.message || 'Email delivery notice' };
+      }
+
+      console.log(`Post-checkout email sent via Resend. ID: ${resData.id}`);
+      return { success: true, id: resData.id };
+    } catch (error: unknown) {
+      const msg = error instanceof Error ? error.message : 'Resend error';
+      console.error('Post-checkout email delivery error:', msg);
+      return { success: false, error: msg };
+    }
+  }
 }
 
 export const resendService = new ResendEmailService();
