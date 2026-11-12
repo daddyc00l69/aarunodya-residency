@@ -9,7 +9,9 @@ const ValidateCouponSchema = z.object({
   checkInDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Valid check-in date required'),
   checkOutDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Valid check-out date required'),
   subtotalPaise: z.number().int().min(0, 'Subtotal is required'),
-  customerEmail: z.string().email().optional().or(z.literal(''))
+  customerEmail: z.string().email().optional().or(z.literal('')),
+  customerPhone: z.string().optional().or(z.literal('')),
+  customerId: z.string().optional().or(z.literal(''))
 });
 
 export async function POST(req: NextRequest) {
@@ -23,7 +25,9 @@ export async function POST(req: NextRequest) {
       checkInDate: json.checkInDate || today,
       checkOutDate: json.checkOutDate || tomorrow,
       subtotalPaise: json.subtotalPaise ?? json.bookingAmountPaise ?? 0,
-      customerEmail: json.customerEmail || ''
+      customerEmail: json.customerEmail || json.email || '',
+      customerPhone: json.customerPhone || json.phone || json.guestPhone || '',
+      customerId: json.customerId || ''
     };
 
     const parsed = ValidateCouponSchema.safeParse(normalized);
@@ -35,7 +39,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const { code, roomTypeId, checkInDate, checkOutDate, subtotalPaise, customerEmail } = parsed.data;
+    const { code, roomTypeId, checkInDate, checkOutDate, subtotalPaise, customerEmail, customerPhone, customerId } = parsed.data;
     const nights = calculateNights(checkInDate, checkOutDate);
 
     const db = getDb();
@@ -46,7 +50,9 @@ export async function POST(req: NextRequest) {
       checkOutDate,
       numNights: nights,
       subtotalPaise,
-      customerEmail: customerEmail || undefined
+      customerEmail: customerEmail || undefined,
+      customerPhone: customerPhone || undefined,
+      customerId: customerId || undefined
     });
 
     if (!result.isValid) {

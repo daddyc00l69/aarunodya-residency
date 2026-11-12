@@ -316,6 +316,8 @@ export interface Coupon {
   customerEligibility: CustomerEligibility;
   eligibleCustomerType?: string; // alias for customerEligibility
   specificCustomerIds?: string[];
+  eligibleCustomerEmail?: string;
+  eligibleCustomerPhone?: string;
   minStayNights?: number; // e.g. minimum 2 nights
   isActive: boolean;
   adminNotes?: string;

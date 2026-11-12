@@ -118,7 +118,8 @@ function CheckoutContent() {
           checkInDate: checkIn,
           checkOutDate: checkOut,
           subtotalPaise: pricing.subtotalPaise,
-          customerEmail: email || undefined
+          customerEmail: email || undefined,
+          customerPhone: phone || undefined
         })
       });
 

@@ -1557,6 +1557,7 @@ class LodgeRepository {
     numNights: number;
     subtotalPaise: number;
     customerEmail?: string;
+    customerPhone?: string;
     customerId?: string;
   }): Promise<{
     isValid: boolean;
@@ -1616,6 +1617,39 @@ class LodgeRepository {
 
     if (coupon.currentRedemptionsCount >= coupon.maxTotalRedemptions) {
       return { isValid: false, reason: 'This coupon has reached its maximum total usage limit.', discountPaise: 0, finalPayablePaise: params.subtotalPaise };
+    }
+
+    // Strict Devotee Exclusivity: If the coupon is reserved for a specific customer
+    const hasDevoteeRestriction = 
+      (coupon.specificCustomerIds && coupon.specificCustomerIds.length > 0) ||
+      Boolean(coupon.eligibleCustomerEmail) ||
+      Boolean(coupon.eligibleCustomerPhone);
+
+    if (hasDevoteeRestriction) {
+      const emailMatches = Boolean(
+        coupon.eligibleCustomerEmail && params.customerEmail &&
+        params.customerEmail.toLowerCase().trim() === coupon.eligibleCustomerEmail.toLowerCase().trim()
+      );
+
+      const cleanParamPhone = params.customerPhone ? params.customerPhone.replace(/\D/g, '').slice(-10) : '';
+      const cleanCouponPhone = coupon.eligibleCustomerPhone ? coupon.eligibleCustomerPhone.replace(/\D/g, '').slice(-10) : '';
+      const phoneMatches = Boolean(
+        cleanCouponPhone && cleanParamPhone && cleanParamPhone === cleanCouponPhone
+      );
+
+      const idMatches = Boolean(
+        coupon.specificCustomerIds && params.customerId &&
+        coupon.specificCustomerIds.includes(params.customerId)
+      );
+
+      if (!emailMatches && !phoneMatches && !idMatches) {
+        return {
+          isValid: false,
+          reason: 'This exclusive return gift coupon is reserved for another devotee and cannot be transferred.',
+          discountPaise: 0,
+          finalPayablePaise: params.subtotalPaise
+        };
+      }
     }
 
     // Check customer-specific eligibility
@@ -1801,7 +1835,10 @@ class LodgeRepository {
         const expiryDate = new Date(Date.now() + campaign.validityDays * 24 * 60 * 60 * 1000)
           .toISOString().split('T')[0];
 
-        // Register coupon
+        // Register coupon locked exclusively to this devotee
+        const devoteeEmail = booking.guest?.email ? booking.guest.email.toLowerCase().trim() : undefined;
+        const devoteePhone = booking.guest?.phone ? booking.guest.phone.replace(/\D/g, '').slice(-10) : undefined;
+
         couponGenerated = {
           id: `coup-checkout-${Date.now()}`,
           code,
@@ -1817,8 +1854,11 @@ class LodgeRepository {
           maxRedemptionsPerCustomer: 1,
           eligibleRoomTypeIds: [],
           customerEligibility: 'returning',
+          specificCustomerIds: booking.customerId ? [booking.customerId] : [],
+          eligibleCustomerEmail: devoteeEmail,
+          eligibleCustomerPhone: devoteePhone,
           isActive: true,
-          adminNotes: `Auto-generated post-checkout offer for booking ${booking.bookingReference}`,
+          adminNotes: `Exclusive post-checkout offer reserved for ${booking.guest.fullName} (Phone: ${booking.guest.phone}, Booking: ${booking.bookingReference})`,
           campaignId: campaign.id,
           createdAt: new Date().toISOString(),
           updatedAt: new Date().toISOString()
