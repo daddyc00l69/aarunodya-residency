@@ -12,7 +12,7 @@ export function Footer() {
             Shri Vitthal-Rukmini Darshan Pilgrims Stay • Aarunodya Residency Bhakt Niwas provides 18 dedicated units including Ground Floor (101-104), 1st Floor (201-206), 2nd Floor (301-306), and 3rd Floor (401 room + 402 large group hall).
           </p>
           <p>
-            Conveniently located at Nath Chowk, Pandharpur. Free 24-hour hot water, split A/C, pure RO drinking water, and elevator lift access.
+            Conveniently located at Nath Chowk, Pandharpur. Free 24-hour hot water, split A/C, packaged drinking water bottles, and elevator lift access.
           </p>
         </div>
 

@@ -25,7 +25,7 @@
       "Elevator / Lift to All Floors",
       "Free High-Speed Wi-Fi",
       "Safe Vehicle Parking Nearby",
-      "Pure RO Drinking Water on All Floors",
+      "Packaged Drinking Water Bottles Provided",
       "CCTV Security & 24/7 Reception Desk"
     ]
   },
@@ -170,7 +170,7 @@
         "Multiple High-Speed Ceiling Fans",
         "Separate Luggage & Shoe Racks",
         "Direct Terrace Access",
-        "RO Drinking Water Station"
+        "Packaged Drinking Water Bottles Provided"
       ],
       "features": [
         "850 sq. ft.",
@@ -620,6 +620,18 @@
       "city": "Pune",
       "state": "Maharashtra",
       "createdAt": "2026-11-22T13:48:40.919Z"
+    },
+    {
+      "id": "guest-1795356186881",
+      "fullName": "Santosh B. Jagtap",
+      "email": "santosh.jagtap@example.com",
+      "phone": "9822186787",
+      "idProofType": "aadhaar",
+      "idProofNumber": "1234-5678-9012",
+      "specialRequests": "Advance payment collected at reception counter",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "createdAt": "2026-11-22T14:03:06.881Z"
     }
   ],
   "bookings": [
@@ -741,7 +753,7 @@
           "Multiple High-Speed Ceiling Fans",
           "Separate Luggage & Shoe Racks",
           "Direct Terrace Access",
-          "RO Drinking Water Station"
+          "Packaged Drinking Water Bottles Provided"
         ],
         "features": [
           "850 sq. ft.",
@@ -2723,6 +2735,101 @@
       "updatedAt": "2026-11-22T13:48:41.530Z",
       "checkedOutAt": "2026-11-22T13:48:41.530Z",
       "checkedOutByStaffName": "Appasaheb Malve (Super Admin)"
+    },
+    {
+      "id": "book-1795356186881-7bsot",
+      "bookingReference": "ARN-WALK-8636",
+      "guestId": "guest-1795356186881",
+      "customerId": "CUST-5771",
+      "guest": {
+        "id": "guest-1795356186881",
+        "fullName": "Santosh B. Jagtap",
+        "email": "santosh.jagtap@example.com",
+        "phone": "9822186787",
+        "idProofType": "aadhaar",
+        "idProofNumber": "1234-5678-9012",
+        "specialRequests": "Advance payment collected at reception counter",
+        "city": "Pune",
+        "state": "Maharashtra",
+        "createdAt": "2026-11-22T14:03:06.881Z"
+      },
+      "checkInDate": "2036-08-08",
+      "checkOutDate": "2036-08-10",
+      "numNights": 2,
+      "numAdults": 2,
+      "numChildren": 0,
+      "numRooms": 1,
+      "roomTypeId": "rt-deluxe-ac",
+      "roomType": {
+        "id": "rt-deluxe-ac",
+        "propertyId": "prop-aarunodya-01",
+        "name": "Deluxe A/C Room",
+        "slug": "deluxe-ac-room",
+        "shortDescription": "Modern air-conditioned room with king/queen bed, private western bathroom, and 24/7 hot water.",
+        "fullDescription": "Perfect for pilgrims and couples seeking a restful, cool stay after Darshan. Features high-efficiency split AC, premium spring mattress, LED TV with devotional channels, private attached bathroom with instant geyser, and daily housekeeping.",
+        "baseOccupancy": 2,
+        "maxOccupancy": 3,
+        "bedConfig": "1 King Bed + Extra Mattress on request",
+        "roomSizeSqFt": 220,
+        "viewType": "City & Mandir Pathway View",
+        "basePricePaise": 180000,
+        "extraGuestFeePaise": 30000,
+        "amenities": [
+          "Split Air Conditioner",
+          "24-Hour Hot Water Geyser",
+          "LED TV with Satellite Channels",
+          "Attached Western Toilet",
+          "Clean Linens & Sanitized Towels",
+          "Free High-Speed Wi-Fi"
+        ],
+        "features": [
+          "220 sq. ft.",
+          "Split AC",
+          "King Bed",
+          "Attached Geyser"
+        ],
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+            "alt": "Deluxe AC Room at Aarunodya Residency",
+            "isPrimary": true
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+            "alt": "Deluxe AC Room Bedding"
+          }
+        ],
+        "isActive": true
+      },
+      "assignedRoomId": "room-101",
+      "assignedRoomNumber": "101",
+      "status": "checked_out",
+      "paymentStatus": "partially_refunded",
+      "subtotalPaise": 360000,
+      "extraGuestFeePaise": 0,
+      "resortFeePaise": 0,
+      "taxPaise": 45360,
+      "discountPaise": 0,
+      "totalAmountPaise": 423360,
+      "paidAmountPaise": 373360,
+      "remainingBalancePaise": 50000,
+      "couponDiscountPaise": 0,
+      "additionalGuests": [
+        {
+          "id": "ag-0-1795356186880",
+          "bookingId": "",
+          "fullName": "Sunita Jagtap",
+          "age": 48,
+          "gender": "female"
+        }
+      ],
+      "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
+      "createdByStaffId": "usr-admin-01",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
+      "createdAt": "2026-11-22T14:03:06.881Z",
+      "updatedAt": "2026-11-22T14:03:07.125Z",
+      "checkedOutAt": "2026-11-22T14:03:07.125Z",
+      "checkedOutByStaffName": "Appasaheb Malve (Super Admin)"
     }
   ],
   "payments": [
@@ -3603,6 +3710,54 @@
       "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Appasaheb Malve (Super Admin))",
       "createdAt": "2026-11-22T13:48:41.069Z",
       "capturedAt": "2026-11-22T13:48:41.069Z"
+    },
+    {
+      "id": "pay-1795356186881-vhfk",
+      "bookingId": "book-1795356186881-7bsot",
+      "bookingReference": "ARN-WALK-8636",
+      "receiptNumber": "RCP-ARN-6881",
+      "amountPaise": 150000,
+      "currency": "INR",
+      "paymentMethod": "cash",
+      "status": "captured",
+      "transactionReference": "TXN-RCP-ARN-6881",
+      "cashierId": "usr-admin-01",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Walk-in initial collection (cash)",
+      "createdAt": "2026-11-22T14:03:06.881Z",
+      "capturedAt": "2026-11-22T14:03:06.881Z"
+    },
+    {
+      "id": "pay-1795356186910-jr9u",
+      "bookingId": "book-1795356186881-7bsot",
+      "bookingReference": "ARN-WALK-8636",
+      "receiptNumber": "RCP-ARN-6910",
+      "amountPaise": 273360,
+      "currency": "INR",
+      "paymentMethod": "cash",
+      "status": "captured",
+      "transactionReference": "TXN-RCP-ARN-6910",
+      "cashierId": "usr-admin-01",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Cleared remaining balance",
+      "createdAt": "2026-11-22T14:03:06.910Z",
+      "capturedAt": "2026-11-22T14:03:06.910Z"
+    },
+    {
+      "id": "pay-ref-1795356186941-ugqs",
+      "bookingId": "book-1795356186881-7bsot",
+      "bookingReference": "ARN-WALK-8636",
+      "receiptNumber": "REF-ARN-6941",
+      "amountPaise": -50000,
+      "currency": "INR",
+      "paymentMethod": "cash",
+      "status": "refunded",
+      "transactionReference": "TXN-REF-ARN-6941",
+      "cashierId": "usr-admin-01",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Appasaheb Malve (Super Admin))",
+      "createdAt": "2026-11-22T14:03:06.941Z",
+      "capturedAt": "2026-11-22T14:03:06.941Z"
     }
   ],
   "staffUsers": [
@@ -3635,6 +3790,174 @@
     }
   ],
   "auditLogs": [
+    {
+      "id": "audit-1795356187667-qcox",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "export_excel_data",
+      "entityType": "import_export",
+      "entityId": "coupons_2026-11-22",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 25 records for coupons. Date filter: all to all.",
+      "createdAt": "2026-11-22T14:03:07.667Z"
+    },
+    {
+      "id": "audit-1795356187652-xin1",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "export_excel_data",
+      "entityType": "import_export",
+      "entityId": "cash_ledger_2026-11-22",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 57 records for cash_ledger. Date filter: all to all.",
+      "createdAt": "2026-11-22T14:03:07.652Z"
+    },
+    {
+      "id": "audit-1795356187637-3qmu",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "export_excel_data",
+      "entityType": "import_export",
+      "entityId": "payments_2026-11-22",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 58 records for payments. Date filter: all to all.",
+      "createdAt": "2026-11-22T14:03:07.637Z"
+    },
+    {
+      "id": "audit-1795356187622-58sc",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "export_excel_data",
+      "entityType": "import_export",
+      "entityId": "reservations_2026-11-22",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 24 records for reservations. Date filter: all to all.",
+      "createdAt": "2026-11-22T14:03:07.622Z"
+    },
+    {
+      "id": "audit-1795356187606-48jj",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "export_excel_data",
+      "entityType": "import_export",
+      "entityId": "customers_2026-11-22",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 4 records for customers. Date filter: all to all.",
+      "createdAt": "2026-11-22T14:03:07.606Z"
+    },
+    {
+      "id": "audit-1795356187574-quvj",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "merge_customer_profiles",
+      "entityType": "customer",
+      "entityId": "CUST-4773",
+      "details": "Merged duplicate customer M. G. Ranade (CUST-7203) into Mahadev Govind Ranade (CUST-4773). Updated visits to 0.",
+      "createdAt": "2026-11-22T14:03:07.574Z"
+    },
+    {
+      "id": "audit-1795356187546-39jy",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "create_customer_profile",
+      "entityType": "customer",
+      "entityId": "CUST-7203",
+      "details": "Created/updated profile for M. G. Ranade (9422187534, )",
+      "createdAt": "2026-11-22T14:03:07.546Z"
+    },
+    {
+      "id": "audit-1795356187528-djkj",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "verify_customer_document",
+      "entityType": "document",
+      "entityId": "doc-1795356187499-yioe",
+      "details": "Marked document aadhaar as verified for customer Mahadev Govind Ranade (CUST-4773).",
+      "createdAt": "2026-11-22T14:03:07.528Z"
+    },
+    {
+      "id": "audit-1795356187499-98bu",
+      "action": "upload_customer_document",
+      "entityType": "document",
+      "entityId": "doc-1795356187499-yioe",
+      "details": "Uploaded aadhaar document for customer Mahadev Govind Ranade (CUST-4773). Masked number: XXXX-XXXX-5544",
+      "createdAt": "2026-11-22T14:03:07.499Z"
+    },
+    {
+      "id": "audit-1795356187467-75wn",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "create_customer_profile",
+      "entityType": "customer",
+      "entityId": "CUST-4773",
+      "details": "Created/updated profile for Mahadev Govind Ranade (9422187436, mgranade@example.com)",
+      "createdAt": "2026-11-22T14:03:07.467Z"
+    },
+    {
+      "id": "audit-1795356187410-zg7s",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "checkout_booking",
+      "entityType": "booking",
+      "entityId": "book-1795356186881-7bsot",
+      "details": "Checked out booking ARN-WALK-8636 for Santosh B. Jagtap. Housekeeping updated to dirty. Loyalty coupon: RETURN-EPU2.",
+      "createdAt": "2026-11-22T14:03:07.410Z"
+    },
+    {
+      "id": "audit-1795356187103-iy45",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "update_post_checkout_campaign",
+      "entityType": "coupon",
+      "entityId": "campaign-checkout-loyalty-01",
+      "details": "Updated post-checkout loyalty campaign \"Pilgrim Return Devotee Gift\". Enabled: true",
+      "createdAt": "2026-11-22T14:03:07.103Z"
+    },
+    {
+      "id": "audit-1795356187050-v8hh",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "create_coupon",
+      "entityType": "coupon",
+      "entityId": "coup-1795356187049-edlt",
+      "details": "Created coupon DSH87016 (25%). Valid 2026-11-22 to 2030-12-31.",
+      "createdAt": "2026-11-22T14:03:07.050Z"
+    },
+    {
+      "id": "audit-1795356187012-1diz",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "close_cash_shift",
+      "entityType": "cash_shift",
+      "entityId": "shift-1795356186992-oalc",
+      "details": "Closed cash drawer for 2026-11-22. Expected ₹9967.2, Counted ₹3500, Discrepancy: ₹-6467.2",
+      "createdAt": "2026-11-22T14:03:07.012Z"
+    },
+    {
+      "id": "audit-1795356186941-ykqj",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "process_cash_refund",
+      "entityType": "payment",
+      "entityId": "ctx-1795356186941-x04o",
+      "details": "Processed cash refund of ₹500 for ARN-WALK-8636. Auth by: Appasaheb Malve (Super Admin). Reason: Devotee temple visit shortened by 1 day",
+      "createdAt": "2026-11-22T14:03:06.941Z"
+    },
+    {
+      "id": "audit-1795356186910-2br0",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "collect_additional_payment",
+      "entityType": "payment",
+      "entityId": "pay-1795356186910-jr9u",
+      "details": "Collected ₹2733.6 (cash) for ARN-WALK-8636. New Balance: ₹0. Receipt: RCP-ARN-6910",
+      "createdAt": "2026-11-22T14:03:06.910Z"
+    },
+    {
+      "id": "audit-1795356186881-33s6",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "create_reception_booking",
+      "entityType": "booking",
+      "entityId": "book-1795356186881-7bsot",
+      "details": "Created walk-in reservation ARN-WALK-8636 for Santosh B. Jagtap in Room 101. Paid ₹1500, Balance ₹2733.6.",
+      "createdAt": "2026-11-22T14:03:06.881Z"
+    },
     {
       "id": "audit-1795355323398-fh2t",
       "userId": "usr-admin-01",
@@ -5100,16 +5423,16 @@
           "createdAt": "2026-11-12T07:14:24.399Z"
         }
       ],
-      "totalVisits": 20,
-      "totalSpentPaise": 8467200,
+      "totalVisits": 21,
+      "totalSpentPaise": 8890560,
       "notes": "Advance payment collected at reception counter",
       "createdAt": "2026-11-12T07:14:24.399Z",
-      "updatedAt": "2026-11-22T13:48:40.918Z"
+      "updatedAt": "2026-11-22T14:03:06.881Z"
     },
     {
       "id": "CUST-4773",
       "fullName": "Mahadev Govind Ranade",
-      "phone": "9422321855",
+      "phone": "9422187436",
       "email": "mgranade@example.com",
       "city": "Nashik",
       "state": "Maharashtra",
@@ -5210,19 +5533,35 @@
           "verifiedByStaffName": "Appasaheb Malve (Super Admin)",
           "verifiedAt": "2026-11-22T13:48:43.160Z",
           "createdAt": "2026-11-22T13:48:42.572Z"
+        },
+        {
+          "id": "doc-1795356187499-yioe",
+          "customerId": "CUST-4773",
+          "documentType": "aadhaar",
+          "documentNumberMasked": "XXXX-XXXX-5544",
+          "issuingCountry": "India",
+          "filePath": "C:\\Users\\aradh\\Desktop\\lodge-management-system\\data\\secure_documents\\doc_CUST-4773_1795356187499.pdf",
+          "fileMimeType": "application/pdf",
+          "fileSizeBytes": 34,
+          "originalFileName": "aadhaar_card.pdf",
+          "verificationStatus": "verified",
+          "verifiedByStaffId": "usr-admin-01",
+          "verifiedByStaffName": "Appasaheb Malve (Super Admin)",
+          "verifiedAt": "2026-11-22T14:03:07.528Z",
+          "createdAt": "2026-11-22T14:03:07.499Z"
         }
       ],
       "totalVisits": 0,
       "totalSpentPaise": 0,
       "notes": "Visiting with 6 family members for Kartiki Ekadashi\n[Merged Notes from CUST-7203]: Old duplicate profile",
       "createdAt": "2026-11-12T07:28:26.739Z",
-      "updatedAt": "2026-11-22T13:48:43.243Z",
+      "updatedAt": "2026-11-22T14:03:07.574Z",
       "vipStatus": true
     },
     {
       "id": "CUST-7203",
       "fullName": "M. G. Ranade",
-      "phone": "9422323165",
+      "phone": "9422187534",
       "email": "",
       "city": "Nashik",
       "country": "India",
@@ -5231,7 +5570,7 @@
       "totalSpentPaise": 0,
       "notes": "Old duplicate profile",
       "createdAt": "2026-11-12T07:30:45.565Z",
-      "updatedAt": "2026-11-22T13:48:43.243Z",
+      "updatedAt": "2026-11-22T14:03:07.574Z",
       "isMerged": true,
       "mergedIntoCustomerId": "CUST-4773",
       "vipStatus": false
@@ -5917,6 +6256,44 @@
       "authorizedByManagerName": "Appasaheb Malve (Super Admin)",
       "notes": "Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-22T13:48:41.069Z"
+    },
+    {
+      "id": "ctx-1795356186881-w2ty",
+      "receiptNumber": "RCP-ARN-6881",
+      "bookingId": "book-1795356186881-7bsot",
+      "bookingReference": "ARN-WALK-8636",
+      "transactionType": "payment",
+      "amountPaise": 150000,
+      "cashierId": "usr-admin-01",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Reception cash booking payment for ARN-WALK-8636",
+      "createdAt": "2026-11-22T14:03:06.881Z"
+    },
+    {
+      "id": "ctx-1795356186910-j279",
+      "receiptNumber": "RCP-ARN-6910",
+      "bookingId": "book-1795356186881-7bsot",
+      "bookingReference": "ARN-WALK-8636",
+      "transactionType": "payment",
+      "amountPaise": 273360,
+      "cashierId": "usr-admin-01",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Cleared remaining balance",
+      "createdAt": "2026-11-22T14:03:06.910Z"
+    },
+    {
+      "id": "ctx-1795356186941-x04o",
+      "receiptNumber": "REF-ARN-6941",
+      "bookingId": "book-1795356186881-7bsot",
+      "bookingReference": "ARN-WALK-8636",
+      "transactionType": "refund",
+      "amountPaise": 50000,
+      "cashierId": "usr-admin-01",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "authorizedByManagerId": "usr-admin-01",
+      "authorizedByManagerName": "Appasaheb Malve (Super Admin)",
+      "notes": "Devotee temple visit shortened by 1 day",
+      "createdAt": "2026-11-22T14:03:06.941Z"
     }
   ],
   "cashShifts": [
@@ -6110,6 +6487,22 @@
       "expectedClosingCashPaise": 623360,
       "actualClosingCashPaise": 350000,
       "discrepancyPaise": -273360,
+      "notes": "Handover complete"
+    },
+    {
+      "id": "shift-1795356186992-oalc",
+      "shiftDate": "2026-11-22",
+      "openedByStaffId": "usr-admin-01",
+      "openedByStaffName": "Appasaheb Malve (Super Admin)",
+      "openedAt": "2026-11-22T14:03:06.992Z",
+      "openingFloatPaise": 250000,
+      "status": "closed",
+      "closedByStaffId": "usr-admin-01",
+      "closedByStaffName": "Appasaheb Malve (Super Admin)",
+      "closedAt": "2026-11-22T14:03:07.012Z",
+      "expectedClosingCashPaise": 996720,
+      "actualClosingCashPaise": 350000,
+      "discrepancyPaise": -646720,
       "notes": "Handover complete"
     }
   ],
@@ -6580,6 +6973,51 @@
       "campaignId": "campaign-checkout-loyalty-01",
       "createdAt": "2026-11-22T13:48:41.530Z",
       "updatedAt": "2026-11-22T13:48:41.530Z"
+    },
+    {
+      "id": "coup-1795356187049-edlt",
+      "code": "DSH87016",
+      "description": "25% discount for Pandharpur pilgrimage devotees",
+      "discountType": "percentage",
+      "discountValue": 25,
+      "maxDiscountPaise": 50000,
+      "minBookingValuePaise": 150000,
+      "startDate": "2026-11-22",
+      "expiryDate": "2030-12-31",
+      "maxTotalRedemptions": 50,
+      "maxRedemptionsPerCustomer": 1,
+      "eligibleRoomTypeIds": [],
+      "customerEligibility": "all",
+      "minStayNights": 1,
+      "isActive": true,
+      "currentRedemptionsCount": 0,
+      "createdAt": "2026-11-22T14:03:07.049Z",
+      "updatedAt": "2026-11-22T14:03:07.049Z"
+    },
+    {
+      "id": "coup-checkout-1795356187125",
+      "code": "RETURN-EPU2",
+      "description": "Post-checkout thank you gift for Santosh B. Jagtap",
+      "discountType": "percentage",
+      "discountValue": 15,
+      "minBookingValuePaise": 120000,
+      "startDate": "2026-11-22",
+      "expiryDate": "2027-01-21",
+      "maxTotalRedemptions": 1,
+      "currentRedemptionsCount": 0,
+      "maxRedemptionsPerCustomer": 1,
+      "eligibleRoomTypeIds": [],
+      "customerEligibility": "returning",
+      "specificCustomerIds": [
+        "CUST-5771"
+      ],
+      "eligibleCustomerEmail": "santosh.jagtap@example.com",
+      "eligibleCustomerPhone": "9822186787",
+      "isActive": true,
+      "adminNotes": "Exclusive post-checkout offer reserved for Santosh B. Jagtap (Phone: 9822186787, Booking: ARN-WALK-8636)",
+      "campaignId": "campaign-checkout-loyalty-01",
+      "createdAt": "2026-11-22T14:03:07.125Z",
+      "updatedAt": "2026-11-22T14:03:07.125Z"
     }
   ],
   "couponRedemptions": [],
@@ -6598,10 +7036,23 @@
       "allowRepeatedIssuanceAfterFutureStays": true,
       "cooldownDaysBetweenIssuance": 14,
       "createdAt": "2026-01-01T00:00:00Z",
-      "updatedAt": "2026-11-22T13:48:41.469Z"
+      "updatedAt": "2026-11-22T14:03:07.101Z"
     }
   ],
   "emailNotifications": [
+    {
+      "id": "notif-1795356187125-dmua",
+      "recipientEmail": "santosh.jagtap@example.com",
+      "recipientName": "Santosh B. Jagtap",
+      "bookingReference": "ARN-WALK-8636",
+      "campaignId": "campaign-checkout-loyalty-01",
+      "couponCode": "RETURN-EPU2",
+      "subject": "Thank You for Staying With Us at Pandharpur! Special Gift 🎁",
+      "status": "failed",
+      "retryCount": 0,
+      "createdAt": "2026-11-22T14:03:07.125Z",
+      "failureReason": "Invalid `to` field. Please use our testing email address instead of domains like `example.com`. See our documentation for more information."
+    },
     {
       "id": "notif-1795355321530-0tte",
       "recipientEmail": "santosh.jagtap@example.com",

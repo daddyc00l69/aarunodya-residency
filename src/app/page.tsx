@@ -284,7 +284,7 @@ export default async function HomePage() {
             {[
               { title: '24/7 Hot Water', desc: 'Solar & instant geyser water in all rooms' },
               { title: 'Elevator / Lift', desc: 'Easy access to 1st, 2nd, and 3rd floors' },
-              { title: 'Pure RO Water', desc: 'Hygienic chilled & normal drinking water' },
+              { title: 'Drinking Water Bottles', desc: 'Complimentary sealed water bottles provided' },
               { title: 'Near Temple', desc: '5-minute walking distance to Vitthal Mandir' }
             ].map((f, i) => (
               <div key={i} className="bg-white p-6 rounded-3xl border border-black/[0.06] space-y-1">

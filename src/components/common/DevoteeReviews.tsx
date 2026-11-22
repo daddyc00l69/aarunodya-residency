@@ -37,7 +37,7 @@ export function DevoteeReviews() {
       date: 'Monthly Varkari Darshan',
       rating: 5,
       review:
-        'Very affordable, pure RO drinking water on every floor, and reliable 24/7 solar hot water. Nath Chowk location is close to Chandrabhaga Ghat as well as Vitthal Mandir.'
+        'Very affordable, clean drinking water bottles provided, and reliable 24/7 solar hot water. Nath Chowk location is close to Chandrabhaga Ghat as well as Vitthal Mandir.'
     }
   ];
 

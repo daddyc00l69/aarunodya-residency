@@ -42,7 +42,7 @@ export const INITIAL_PROPERTY: Property = {
     'Elevator / Lift to All Floors',
     'Free High-Speed Wi-Fi',
     'Safe Vehicle Parking Nearby',
-    'Pure RO Drinking Water on All Floors',
+    'Packaged Drinking Water Bottles Provided',
     'CCTV Security & 24/7 Reception Desk'
   ]
 };
@@ -173,7 +173,7 @@ export const INITIAL_ROOM_TYPES: RoomType[] = [
       'Multiple High-Speed Ceiling Fans',
       'Separate Luggage & Shoe Racks',
       'Direct Terrace Access',
-      'RO Drinking Water Station'
+      'Packaged Drinking Water Bottles Provided'
     ],
     features: ['850 sq. ft.', 'Private 3rd Floor Hall', 'Up to 20 Devotees', 'Multiple Baths'],
     images: [

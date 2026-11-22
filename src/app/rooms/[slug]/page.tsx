@@ -175,8 +175,8 @@ export default async function RoomDetailPage({ params }: RoomDetailPageProps) {
                   <span className="text-[#1d1d1f] font-medium">Included</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span>Pure RO Water on Floor</span>
-                  <span className="text-[#1d1d1f] font-medium">Included</span>
+                  <span>Packaged Drinking Water Bottles</span>
+                  <span className="text-[#1d1d1f] font-medium">Provided</span>
                 </div>
               </div>
 
