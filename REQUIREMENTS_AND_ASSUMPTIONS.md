@@ -2,7 +2,7 @@
 
 **Property:** Aarunodya Residency Bhakt Niwas  
 **Location:** 1563 Ghongade Galli, Nath Chowk, Pandharpur, Maharashtra – 413304  
-**Host / Management:** Yuvaraj Malave (Primary: +91 85300 00820, +91 91724 64746, +91 88012 42005)  
+**Host / Management:** Appasaheb Malve (Primary: +91 85300 00820, +91 91724 64746, +91 88012 42005)  
 **Capacity:** 18 physical units across 4 floors (including 3rd-floor 20-bed pilgrim hall: Room 402)
 
 ---

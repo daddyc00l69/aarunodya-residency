@@ -148,11 +148,11 @@ export default function DarshanGuidePage() {
               Book Stay Near Mandir
             </Link>
             <a
-              href="tel:+918530000820"
+              href="tel:8530000820"
               className="bg-white hover:bg-[#f5f5f7] text-[#1d1d1f] border border-black/[0.12] px-6 py-2.5 rounded-full text-xs font-medium transition-all flex items-center space-x-1.5"
             >
               <PhoneCall className="w-3.5 h-3.5 text-[#0071e3]" />
-              <span>Call Yuvaraj Malave (Host)</span>
+              <span>Call Appasaheb Malve (Host)</span>
             </a>
           </div>
         </div>
@@ -350,20 +350,32 @@ export default function DarshanGuidePage() {
           <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-black/[0.06]">
             <div className="space-y-0.5">
               <span className="text-xs font-semibold text-[#1d1d1f] block">Need Assistance or Directions?</span>
-              <span className="text-xs text-[#86868b] block">Host Yuvaraj Malave is just a phone call away</span>
+              <span className="text-xs text-[#86868b] block">Host Appasaheb Malve is just a phone call away</span>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex flex-wrap items-center gap-2">
               <a
                 href="tel:8530000820"
-                className="px-4 py-2 bg-[#0071e3] text-white rounded-full text-xs font-medium hover:bg-[#0077ed] transition-colors"
+                className="px-3.5 py-2 bg-[#0071e3] text-white rounded-full text-xs font-medium hover:bg-[#0077ed] transition-colors"
               >
-                Call: 8530000820
+                8530000820
               </a>
               <a
-                href="https://wa.me/918530000820?text=Namaskar%20Yuvaraj%20ji,%20I%20am%20coming%20to%20Pandharpur%20and%20need%20room%20information."
+                href="tel:9822298822"
+                className="px-3.5 py-2 bg-[#1d1d1f] text-white rounded-full text-xs font-medium hover:bg-[#333336] transition-colors"
+              >
+                9822298822
+              </a>
+              <a
+                href="tel:9172464746"
+                className="px-3.5 py-2 bg-[#f5f5f7] text-[#1d1d1f] border border-black/[0.08] rounded-full text-xs font-medium hover:bg-stone-200 transition-colors"
+              >
+                9172464746
+              </a>
+              <a
+                href="https://wa.me/918530000820?text=Namaskar%20Appasaheb%20ji,%20I%20am%20coming%20to%20Pandharpur%20and%20need%20room%20information."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-emerald-600 text-white rounded-full text-xs font-medium hover:bg-emerald-700 transition-colors"
+                className="px-3.5 py-2 bg-emerald-600 text-white rounded-full text-xs font-medium hover:bg-emerald-700 transition-colors"
               >
                 WhatsApp Host
               </a>

@@ -20,7 +20,7 @@ function getStaffCookie() {
     userId: 'usr-admin-01',
     email: 'admin@aarunodya.com',
     role: 'super_admin',
-    fullName: 'Yuvaraj Malave (Super Admin)',
+    fullName: 'Appasaheb Malve (Super Admin)',
     expiresAt: Date.now() + 7 * 24 * 60 * 60 * 1000
   };
   const base64Payload = Buffer.from(JSON.stringify(payload)).toString('base64url');
@@ -121,7 +121,7 @@ async function runMasterVerification() {
       bookingReference: bookingRef,
       amountPaise: 50000, // ₹500 refund
       reason: 'Devotee temple visit shortened by 1 day',
-      authorizedBy: 'Yuvaraj Malave (Owner)'
+      authorizedBy: 'Appasaheb Malve (Owner)'
     })
   });
 

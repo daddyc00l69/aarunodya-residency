@@ -206,7 +206,7 @@ export function InvoiceView({ reference, initialData }: InvoiceViewProps) {
                 1563 Ghongade Galli, Nath Chowk, Pandharpur, Maharashtra - 413304
               </p>
               <p className="text-xs text-[#86868b]">
-                Contact: +91 85300 00820 / +91 91724 64746 • Host: Yuvaraj Malave
+                Contact: +91 85300 00820 / +91 98222 98822 / +91 91724 64746 • Host: Appasaheb Malve
               </p>
               <div className="mt-2 text-[11px] font-mono text-[#1d1d1f]">
                 <span>State: Maharashtra (Code: 27)</span> • <span>GSTIN: 27AAAPA1234A1Z5</span>

@@ -27,7 +27,7 @@ export function WhatsAppShareButton({ booking, guest, roomType }: WhatsAppShareB
 • *Total Paid:* ${formatPaise(booking.totalAmountPaise)} (Paid in Full)
 
 📍 *Address:* 1563 Ghongade Galli, Nath Chowk, Pandharpur, Maharashtra - 413304 (Near Vitthal Mandir)
-📞 *Host Yuvaraj Malave:* 8530000820 / 9172464746 / 8801242005
+📞 *Host Appasaheb Malve:* 8530000820 / 9822298822 / 9172464746
 
 _जय हरी विठ्ठल! Have a blessed Darshan._`;
 

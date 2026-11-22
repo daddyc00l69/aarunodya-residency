@@ -88,7 +88,7 @@ export default function AdminLoginPage() {
                   required
                   inputMode="email"
                   autoComplete="username"
-                  placeholder="yuvaraj@aarunodya.com"
+                  placeholder="appasaheb@aarunodya.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full h-12 bg-[#f5f5f7] border border-black/[0.08] rounded-2xl pl-10 pr-4 text-base sm:text-sm text-[#1d1d1f] focus:outline-none focus:border-[#0071e3] focus:bg-white transition-all"
@@ -132,10 +132,10 @@ export default function AdminLoginPage() {
             <div className="grid grid-cols-2 gap-2 text-xs">
               <button
                 type="button"
-                onClick={() => handleQuickFill('yuvaraj@aarunodya.com', 'Admin@12345')}
+                onClick={() => handleQuickFill('appasaheb@aarunodya.com', 'Admin@12345')}
                 className="p-2.5 rounded-xl bg-[#f5f5f7] hover:bg-stone-200 text-left transition-colors"
               >
-                <strong className="block text-[#1d1d1f] text-[11px]">Yuvaraj Malave</strong>
+                <strong className="block text-[#1d1d1f] text-[11px]">Appasaheb Malve</strong>
                 <span className="text-[10px] text-[#86868b]">Owner / Super Admin</span>
               </button>
 

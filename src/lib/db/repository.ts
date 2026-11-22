@@ -737,7 +737,13 @@ class LodgeRepository {
   // --- STAFF & RBAC ---
   async authenticateStaff(email: string, passwordPlain: string): Promise<User | null> {
     const db = this.ensureInitialized();
-    const user = db.staffUsers.find(u => u.email.toLowerCase() === email.toLowerCase() && u.isActive);
+    const clean = email.toLowerCase().trim();
+    const user = db.staffUsers.find(
+      u => (u.email.toLowerCase() === clean || 
+           ((clean === 'appasaheb@aarunodya.com' || clean === 'yuvaraj@aarunodya.com') && 
+            (u.email.toLowerCase() === 'appasaheb@aarunodya.com' || u.email.toLowerCase() === 'yuvaraj@aarunodya.com' || u.id === 'user-yuvaraj-01'))) && 
+           u.isActive
+    );
     if (!user) return null;
     if (user.passwordHash !== passwordPlain) return null;
     return user;

@@ -415,7 +415,7 @@ export default function PostCheckoutOffersPage() {
 
                     <div className="pt-3 border-t border-stone-100 text-[11px] text-stone-500">
                       <p className="font-semibold text-stone-700">Warm regards & Jai Hari Vitthal,</p>
-                      <p>The Malave Family & Aarunodya Front Desk Team</p>
+                      <p>The Malve Family & Aarunodya Front Desk Team</p>
                       <p>1563 Ghongade Galli, Nath Chowk, Pandharpur</p>
                     </div>
                   </div>

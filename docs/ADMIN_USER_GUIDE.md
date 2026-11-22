@@ -4,7 +4,7 @@ Welcome to the **Aarunodya Residency Bhakt Niwas Property Management System (PMS
 
 - **Property:** Aarunodya Residency Bhakt Niwas
 - **Address:** 1563 Ghongade Galli, Nath Chowk, Pandharpur, Maharashtra - 413304
-- **Host / Super Admin:** Yuvaraj Malave (📞 8530000820 / 9172464746 / 8801242005)
+- **Host / Super Admin:** Appasaheb Malve (📞 8530000820 / 9172464746 / 9822298822)
 - **Check-in Time:** 12:00 PM (Inclusive)
 - **Check-out Time:** 11:00 AM (Exclusive)
 
@@ -16,7 +16,7 @@ The system supports four distinct operational roles:
 
 | Staff Member | Role | Portal Email | Default Password | Permissions |
 | :--- | :--- | :--- | :--- | :--- |
-| **Yuvaraj Malave** | `super_admin` (Owner) | `yuvaraj@aarunodya.com` | `Aarunodya@2026` | Full system control, financial CSV exports, tariff rules, staff management. |
+| **Appasaheb Malve** | `super_admin` (Owner) | `appasaheb@aarunodya.com` | `Aarunodya@2026` | Full system control, financial CSV exports, tariff rules, staff management. |
 | **Nitin Shinde** | `manager` (Operations) | `manager@aarunodya.com` | `Manager@2026` | Master reservations, room allocations, cancellations, refunds, reporting. |
 | **Ganesh Pawar** | `front_desk` (Lead) | `frontdesk@aarunodya.com` | `Desk@2026` | Check-in, check-out, police ID recording, walk-ins, voucher re-printing. |
 | **Sunil Jadhav** | `housekeeping` (Lead) | `housekeeping@aarunodya.com` | `Clean@2026` | Floor turnover status (`Clean`, `Dirty`, `Inspecting`, `Maintenance`), notes. |
@@ -72,7 +72,7 @@ Aarunodya Residency operates 18 physical units:
    - **Automatically flags the physical room as `Dirty`** in `/admin/rooms` so housekeeping immediately begins cleaning for the next arriving devotee!
 
 ### 3.4 Front-Desk Walk-In & Telephone Bookings
-For devotees arriving in person at Nath Chowk or calling host Yuvaraj Malave:
+For devotees arriving in person at Nath Chowk or calling host Appasaheb Malve:
 1. Click **+ Front-Desk Walk-In** button at `/admin/reservations`.
 2. Select room category, check-in, check-out dates, and number of devotees.
 3. Enter devotee name, phone, email, and ID proof number.
@@ -94,5 +94,5 @@ Housekeeping lead Sunil Jadhav manages room turnovers floor by floor:
 
 ## 5. Tax Invoices & Financial Reports (`/admin/reports`)
 
-- **GST Tax Invoices:** Accessible at `/booking/invoice/[reference]` with SAC Code `996311` (Room Accommodation Services), CGST 6%, SGST 6%, and Yuvaraj Malave signature line.
+- **GST Tax Invoices:** Accessible at `/booking/invoice/[reference]` with SAC Code `996311` (Room Accommodation Services), CGST 6%, SGST 6%, and Appasaheb Malve signature line.
 - **CSV Ledger Export:** Click **Export Ledger CSV** at `/admin/reports` to download complete transactional records for the lodge accountant.

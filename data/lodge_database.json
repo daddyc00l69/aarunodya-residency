@@ -10,7 +10,7 @@
     "state": "Maharashtra",
     "country": "India",
     "postalCode": "413304",
-    "phone": "+91 85300 00820 / +91 91724 64746 / +91 88012 42005",
+    "phone": "+91 85300 00820 / +91 98222 98822 / +91 91724 64746",
     "email": "contact@aarunodya.com",
     "checkInTime": "12:00",
     "checkOutTime": "11:00",
@@ -608,6 +608,18 @@
       "city": "Pune",
       "state": "Maharashtra",
       "createdAt": "2026-11-12T09:56:18.226Z"
+    },
+    {
+      "id": "guest-1795355320919",
+      "fullName": "Santosh B. Jagtap",
+      "email": "santosh.jagtap@example.com",
+      "phone": "9822320209",
+      "idProofType": "aadhaar",
+      "idProofNumber": "1234-5678-9012",
+      "specialRequests": "Advance payment collected at reception counter",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "createdAt": "2026-11-22T13:48:40.919Z"
     }
   ],
   "bookings": [
@@ -923,7 +935,7 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T07:14:24.399Z",
       "updatedAt": "2026-11-12T07:14:24.399Z"
     },
@@ -1016,7 +1028,7 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T07:16:00.817Z",
       "updatedAt": "2026-11-12T07:16:00.817Z"
     },
@@ -1109,7 +1121,7 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T07:16:19.397Z",
       "updatedAt": "2026-11-12T07:16:19.397Z"
     },
@@ -1202,7 +1214,7 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T07:17:57.058Z",
       "updatedAt": "2026-11-12T07:17:57.289Z"
     },
@@ -1295,7 +1307,7 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T07:18:41.179Z",
       "updatedAt": "2026-11-12T07:18:41.318Z"
     },
@@ -1388,7 +1400,7 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T07:19:38.117Z",
       "updatedAt": "2026-11-12T07:19:38.208Z"
     },
@@ -1481,7 +1493,7 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T07:21:14.988Z",
       "updatedAt": "2026-11-12T07:21:15.081Z"
     },
@@ -1574,7 +1586,7 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T07:21:35.916Z",
       "updatedAt": "2026-11-12T07:21:35.971Z"
     },
@@ -1667,7 +1679,7 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T07:22:24.062Z",
       "updatedAt": "2026-11-12T07:22:24.155Z"
     },
@@ -1760,7 +1772,7 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T07:23:06.575Z",
       "updatedAt": "2026-11-12T07:23:06.684Z"
     },
@@ -1853,7 +1865,7 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T07:24:05.606Z",
       "updatedAt": "2026-11-12T07:24:05.685Z"
     },
@@ -1946,11 +1958,11 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T07:25:23.189Z",
       "updatedAt": "2026-11-12T07:25:23.735Z",
       "checkedOutAt": "2026-11-12T07:25:23.735Z",
-      "checkedOutByStaffName": "Yuvaraj Malave (Super Admin)"
+      "checkedOutByStaffName": "Appasaheb Malve (Super Admin)"
     },
     {
       "id": "book-1794468349926-9g8de",
@@ -2041,11 +2053,11 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T07:25:49.926Z",
       "updatedAt": "2026-11-12T07:25:50.311Z",
       "checkedOutAt": "2026-11-12T07:25:50.311Z",
-      "checkedOutByStaffName": "Yuvaraj Malave (Super Admin)"
+      "checkedOutByStaffName": "Appasaheb Malve (Super Admin)"
     },
     {
       "id": "book-1794468506005-6t1ti",
@@ -2136,11 +2148,11 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T07:28:26.005Z",
       "updatedAt": "2026-11-12T07:28:26.268Z",
       "checkedOutAt": "2026-11-12T07:28:26.268Z",
-      "checkedOutByStaffName": "Yuvaraj Malave (Super Admin)"
+      "checkedOutByStaffName": "Appasaheb Malve (Super Admin)"
     },
     {
       "id": "book-1794468538582-1ci6l",
@@ -2231,11 +2243,11 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T07:28:58.582Z",
       "updatedAt": "2026-11-12T07:28:58.965Z",
       "checkedOutAt": "2026-11-12T07:28:58.965Z",
-      "checkedOutByStaffName": "Yuvaraj Malave (Super Admin)"
+      "checkedOutByStaffName": "Appasaheb Malve (Super Admin)"
     },
     {
       "id": "book-1794468565256-o1w2p",
@@ -2326,11 +2338,11 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T07:29:25.256Z",
       "updatedAt": "2026-11-12T07:29:25.485Z",
       "checkedOutAt": "2026-11-12T07:29:25.485Z",
-      "checkedOutByStaffName": "Yuvaraj Malave (Super Admin)"
+      "checkedOutByStaffName": "Appasaheb Malve (Super Admin)"
     },
     {
       "id": "book-1794468644164-4cweu",
@@ -2421,11 +2433,11 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T07:30:44.164Z",
       "updatedAt": "2026-11-12T07:30:44.473Z",
       "checkedOutAt": "2026-11-12T07:30:44.473Z",
-      "checkedOutByStaffName": "Yuvaraj Malave (Super Admin)"
+      "checkedOutByStaffName": "Appasaheb Malve (Super Admin)"
     },
     {
       "id": "book-1794468658455-qiap4",
@@ -2516,11 +2528,11 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T07:30:58.455Z",
       "updatedAt": "2026-11-12T07:30:58.860Z",
       "checkedOutAt": "2026-11-12T07:30:58.860Z",
-      "checkedOutByStaffName": "Yuvaraj Malave (Super Admin)"
+      "checkedOutByStaffName": "Appasaheb Malve (Super Admin)"
     },
     {
       "id": "book-1794477378226-kqllv",
@@ -2611,11 +2623,106 @@
       ],
       "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
       "createdByStaffId": "usr-admin-01",
-      "createdByStaffName": "Yuvaraj Malave (Super Admin)",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
       "createdAt": "2026-11-12T09:56:18.226Z",
       "updatedAt": "2026-11-12T09:56:18.582Z",
       "checkedOutAt": "2026-11-12T09:56:18.582Z",
-      "checkedOutByStaffName": "Yuvaraj Malave (Super Admin)"
+      "checkedOutByStaffName": "Appasaheb Malve (Super Admin)"
+    },
+    {
+      "id": "book-1795355320919-v95y6",
+      "bookingReference": "ARN-WALK-9024",
+      "guestId": "guest-1795355320919",
+      "customerId": "CUST-5771",
+      "guest": {
+        "id": "guest-1795355320919",
+        "fullName": "Santosh B. Jagtap",
+        "email": "santosh.jagtap@example.com",
+        "phone": "9822320209",
+        "idProofType": "aadhaar",
+        "idProofNumber": "1234-5678-9012",
+        "specialRequests": "Advance payment collected at reception counter",
+        "city": "Pune",
+        "state": "Maharashtra",
+        "createdAt": "2026-11-22T13:48:40.919Z"
+      },
+      "checkInDate": "2030-10-10",
+      "checkOutDate": "2030-10-12",
+      "numNights": 2,
+      "numAdults": 2,
+      "numChildren": 0,
+      "numRooms": 1,
+      "roomTypeId": "rt-deluxe-ac",
+      "roomType": {
+        "id": "rt-deluxe-ac",
+        "propertyId": "prop-aarunodya-01",
+        "name": "Deluxe A/C Room",
+        "slug": "deluxe-ac-room",
+        "shortDescription": "Modern air-conditioned room with king/queen bed, private western bathroom, and 24/7 hot water.",
+        "fullDescription": "Perfect for pilgrims and couples seeking a restful, cool stay after Darshan. Features high-efficiency split AC, premium spring mattress, LED TV with devotional channels, private attached bathroom with instant geyser, and daily housekeeping.",
+        "baseOccupancy": 2,
+        "maxOccupancy": 3,
+        "bedConfig": "1 King Bed + Extra Mattress on request",
+        "roomSizeSqFt": 220,
+        "viewType": "City & Mandir Pathway View",
+        "basePricePaise": 180000,
+        "extraGuestFeePaise": 30000,
+        "amenities": [
+          "Split Air Conditioner",
+          "24-Hour Hot Water Geyser",
+          "LED TV with Satellite Channels",
+          "Attached Western Toilet",
+          "Clean Linens & Sanitized Towels",
+          "Free High-Speed Wi-Fi"
+        ],
+        "features": [
+          "220 sq. ft.",
+          "Split AC",
+          "King Bed",
+          "Attached Geyser"
+        ],
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+            "alt": "Deluxe AC Room at Aarunodya Residency",
+            "isPrimary": true
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+            "alt": "Deluxe AC Room Bedding"
+          }
+        ],
+        "isActive": true
+      },
+      "assignedRoomId": "room-101",
+      "assignedRoomNumber": "101",
+      "status": "checked_out",
+      "paymentStatus": "partially_refunded",
+      "subtotalPaise": 360000,
+      "extraGuestFeePaise": 0,
+      "resortFeePaise": 0,
+      "taxPaise": 45360,
+      "discountPaise": 0,
+      "totalAmountPaise": 423360,
+      "paidAmountPaise": 373360,
+      "remainingBalancePaise": 50000,
+      "couponDiscountPaise": 0,
+      "additionalGuests": [
+        {
+          "id": "ag-0-1795355320916",
+          "bookingId": "",
+          "fullName": "Sunita Jagtap",
+          "age": 48,
+          "gender": "female"
+        }
+      ],
+      "specialRequests": "[Reception Walk-in]: Advance payment collected at reception counter",
+      "createdByStaffId": "usr-admin-01",
+      "createdByStaffName": "Appasaheb Malve (Super Admin)",
+      "createdAt": "2026-11-22T13:48:40.919Z",
+      "updatedAt": "2026-11-22T13:48:41.530Z",
+      "checkedOutAt": "2026-11-22T13:48:41.530Z",
+      "checkedOutByStaffName": "Appasaheb Malve (Super Admin)"
     }
   ],
   "payments": [
@@ -2660,7 +2767,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-4399",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T07:14:24.399Z",
       "capturedAt": "2026-11-12T07:14:24.399Z"
@@ -2676,7 +2783,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-0817",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T07:16:00.817Z",
       "capturedAt": "2026-11-12T07:16:00.817Z"
@@ -2692,7 +2799,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-9397",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T07:16:19.397Z",
       "capturedAt": "2026-11-12T07:16:19.397Z"
@@ -2708,7 +2815,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-7058",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T07:17:57.058Z",
       "capturedAt": "2026-11-12T07:17:57.058Z"
@@ -2724,7 +2831,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-7289",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:17:57.289Z",
       "capturedAt": "2026-11-12T07:17:57.289Z"
@@ -2740,7 +2847,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-1179",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T07:18:41.179Z",
       "capturedAt": "2026-11-12T07:18:41.179Z"
@@ -2756,7 +2863,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-1223",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:18:41.223Z",
       "capturedAt": "2026-11-12T07:18:41.223Z"
@@ -2772,8 +2879,8 @@
       "status": "refunded",
       "transactionReference": "TXN-REF-ARN-1318",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
-      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Yuvaraj Malave (Super Admin))",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Appasaheb Malve (Super Admin))",
       "createdAt": "2026-11-12T07:18:41.318Z",
       "capturedAt": "2026-11-12T07:18:41.318Z"
     },
@@ -2788,7 +2895,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-8117",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T07:19:38.117Z",
       "capturedAt": "2026-11-12T07:19:38.117Z"
@@ -2804,7 +2911,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-8193",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:19:38.193Z",
       "capturedAt": "2026-11-12T07:19:38.193Z"
@@ -2820,8 +2927,8 @@
       "status": "refunded",
       "transactionReference": "TXN-REF-ARN-8208",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
-      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Yuvaraj Malave (Super Admin))",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Appasaheb Malve (Super Admin))",
       "createdAt": "2026-11-12T07:19:38.208Z",
       "capturedAt": "2026-11-12T07:19:38.208Z"
     },
@@ -2836,7 +2943,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-4988",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T07:21:14.988Z",
       "capturedAt": "2026-11-12T07:21:14.988Z"
@@ -2852,7 +2959,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-5049",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:21:15.049Z",
       "capturedAt": "2026-11-12T07:21:15.049Z"
@@ -2868,8 +2975,8 @@
       "status": "refunded",
       "transactionReference": "TXN-REF-ARN-5081",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
-      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Yuvaraj Malave (Super Admin))",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Appasaheb Malve (Super Admin))",
       "createdAt": "2026-11-12T07:21:15.081Z",
       "capturedAt": "2026-11-12T07:21:15.081Z"
     },
@@ -2884,7 +2991,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-5916",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T07:21:35.916Z",
       "capturedAt": "2026-11-12T07:21:35.916Z"
@@ -2900,7 +3007,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-5936",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:21:35.936Z",
       "capturedAt": "2026-11-12T07:21:35.936Z"
@@ -2916,8 +3023,8 @@
       "status": "refunded",
       "transactionReference": "TXN-REF-ARN-5971",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
-      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Yuvaraj Malave (Super Admin))",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Appasaheb Malve (Super Admin))",
       "createdAt": "2026-11-12T07:21:35.972Z",
       "capturedAt": "2026-11-12T07:21:35.972Z"
     },
@@ -2932,7 +3039,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-4062",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T07:22:24.062Z",
       "capturedAt": "2026-11-12T07:22:24.062Z"
@@ -2948,7 +3055,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-4131",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:22:24.131Z",
       "capturedAt": "2026-11-12T07:22:24.131Z"
@@ -2964,8 +3071,8 @@
       "status": "refunded",
       "transactionReference": "TXN-REF-ARN-4155",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
-      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Yuvaraj Malave (Super Admin))",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Appasaheb Malve (Super Admin))",
       "createdAt": "2026-11-12T07:22:24.155Z",
       "capturedAt": "2026-11-12T07:22:24.155Z"
     },
@@ -2980,7 +3087,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-6575",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T07:23:06.575Z",
       "capturedAt": "2026-11-12T07:23:06.575Z"
@@ -2996,7 +3103,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-6653",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:23:06.653Z",
       "capturedAt": "2026-11-12T07:23:06.653Z"
@@ -3012,8 +3119,8 @@
       "status": "refunded",
       "transactionReference": "TXN-REF-ARN-6684",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
-      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Yuvaraj Malave (Super Admin))",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Appasaheb Malve (Super Admin))",
       "createdAt": "2026-11-12T07:23:06.684Z",
       "capturedAt": "2026-11-12T07:23:06.684Z"
     },
@@ -3028,7 +3135,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-5606",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T07:24:05.606Z",
       "capturedAt": "2026-11-12T07:24:05.606Z"
@@ -3044,7 +3151,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-5631",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:24:05.631Z",
       "capturedAt": "2026-11-12T07:24:05.631Z"
@@ -3060,8 +3167,8 @@
       "status": "refunded",
       "transactionReference": "TXN-REF-ARN-5685",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
-      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Yuvaraj Malave (Super Admin))",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Appasaheb Malve (Super Admin))",
       "createdAt": "2026-11-12T07:24:05.685Z",
       "capturedAt": "2026-11-12T07:24:05.685Z"
     },
@@ -3076,7 +3183,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-3189",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T07:25:23.189Z",
       "capturedAt": "2026-11-12T07:25:23.189Z"
@@ -3092,7 +3199,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-3219",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:25:23.219Z",
       "capturedAt": "2026-11-12T07:25:23.219Z"
@@ -3108,8 +3215,8 @@
       "status": "refunded",
       "transactionReference": "TXN-REF-ARN-3282",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
-      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Yuvaraj Malave (Super Admin))",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Appasaheb Malve (Super Admin))",
       "createdAt": "2026-11-12T07:25:23.282Z",
       "capturedAt": "2026-11-12T07:25:23.282Z"
     },
@@ -3124,7 +3231,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-9926",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T07:25:49.926Z",
       "capturedAt": "2026-11-12T07:25:49.926Z"
@@ -3140,7 +3247,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-9996",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:25:49.996Z",
       "capturedAt": "2026-11-12T07:25:49.996Z"
@@ -3156,8 +3263,8 @@
       "status": "refunded",
       "transactionReference": "TXN-REF-ARN-0018",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
-      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Yuvaraj Malave (Super Admin))",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Appasaheb Malve (Super Admin))",
       "createdAt": "2026-11-12T07:25:50.018Z",
       "capturedAt": "2026-11-12T07:25:50.018Z"
     },
@@ -3172,7 +3279,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-6005",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T07:28:26.005Z",
       "capturedAt": "2026-11-12T07:28:26.005Z"
@@ -3188,7 +3295,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-6058",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:28:26.058Z",
       "capturedAt": "2026-11-12T07:28:26.058Z"
@@ -3204,8 +3311,8 @@
       "status": "refunded",
       "transactionReference": "TXN-REF-ARN-6080",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
-      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Yuvaraj Malave (Super Admin))",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Appasaheb Malve (Super Admin))",
       "createdAt": "2026-11-12T07:28:26.080Z",
       "capturedAt": "2026-11-12T07:28:26.080Z"
     },
@@ -3220,7 +3327,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-8582",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T07:28:58.582Z",
       "capturedAt": "2026-11-12T07:28:58.582Z"
@@ -3236,7 +3343,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-8607",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:28:58.607Z",
       "capturedAt": "2026-11-12T07:28:58.607Z"
@@ -3252,8 +3359,8 @@
       "status": "refunded",
       "transactionReference": "TXN-REF-ARN-8661",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
-      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Yuvaraj Malave (Super Admin))",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Appasaheb Malve (Super Admin))",
       "createdAt": "2026-11-12T07:28:58.661Z",
       "capturedAt": "2026-11-12T07:28:58.661Z"
     },
@@ -3268,7 +3375,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-5256",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T07:29:25.256Z",
       "capturedAt": "2026-11-12T07:29:25.256Z"
@@ -3284,7 +3391,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-5276",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:29:25.276Z",
       "capturedAt": "2026-11-12T07:29:25.276Z"
@@ -3300,8 +3407,8 @@
       "status": "refunded",
       "transactionReference": "TXN-REF-ARN-5317",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
-      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Yuvaraj Malave (Super Admin))",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Appasaheb Malve (Super Admin))",
       "createdAt": "2026-11-12T07:29:25.317Z",
       "capturedAt": "2026-11-12T07:29:25.317Z"
     },
@@ -3316,7 +3423,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-4164",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T07:30:44.164Z",
       "capturedAt": "2026-11-12T07:30:44.164Z"
@@ -3332,7 +3439,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-4195",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:30:44.195Z",
       "capturedAt": "2026-11-12T07:30:44.195Z"
@@ -3348,8 +3455,8 @@
       "status": "refunded",
       "transactionReference": "TXN-REF-ARN-4240",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
-      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Yuvaraj Malave (Super Admin))",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Appasaheb Malve (Super Admin))",
       "createdAt": "2026-11-12T07:30:44.240Z",
       "capturedAt": "2026-11-12T07:30:44.240Z"
     },
@@ -3364,7 +3471,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-8455",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T07:30:58.455Z",
       "capturedAt": "2026-11-12T07:30:58.455Z"
@@ -3380,7 +3487,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-8486",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:30:58.486Z",
       "capturedAt": "2026-11-12T07:30:58.486Z"
@@ -3396,8 +3503,8 @@
       "status": "refunded",
       "transactionReference": "TXN-REF-ARN-8529",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
-      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Yuvaraj Malave (Super Admin))",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Appasaheb Malve (Super Admin))",
       "createdAt": "2026-11-12T07:30:58.529Z",
       "capturedAt": "2026-11-12T07:30:58.529Z"
     },
@@ -3412,7 +3519,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-8226",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Walk-in initial collection (cash)",
       "createdAt": "2026-11-12T09:56:18.226Z",
       "capturedAt": "2026-11-12T09:56:18.226Z"
@@ -3428,7 +3535,7 @@
       "status": "captured",
       "transactionReference": "TXN-RCP-ARN-8256",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T09:56:18.256Z",
       "capturedAt": "2026-11-12T09:56:18.256Z"
@@ -3444,17 +3551,65 @@
       "status": "refunded",
       "transactionReference": "TXN-REF-ARN-8318",
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
-      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Yuvaraj Malave (Super Admin))",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Appasaheb Malve (Super Admin))",
       "createdAt": "2026-11-12T09:56:18.318Z",
       "capturedAt": "2026-11-12T09:56:18.318Z"
+    },
+    {
+      "id": "pay-1795355320919-0wj9",
+      "bookingId": "book-1795355320919-v95y6",
+      "bookingReference": "ARN-WALK-9024",
+      "receiptNumber": "RCP-ARN-0919",
+      "amountPaise": 150000,
+      "currency": "INR",
+      "paymentMethod": "cash",
+      "status": "captured",
+      "transactionReference": "TXN-RCP-ARN-0919",
+      "cashierId": "usr-admin-01",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Walk-in initial collection (cash)",
+      "createdAt": "2026-11-22T13:48:40.919Z",
+      "capturedAt": "2026-11-22T13:48:40.919Z"
+    },
+    {
+      "id": "pay-1795355320999-a2dk",
+      "bookingId": "book-1795355320919-v95y6",
+      "bookingReference": "ARN-WALK-9024",
+      "receiptNumber": "RCP-ARN-0999",
+      "amountPaise": 273360,
+      "currency": "INR",
+      "paymentMethod": "cash",
+      "status": "captured",
+      "transactionReference": "TXN-RCP-ARN-0999",
+      "cashierId": "usr-admin-01",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Cleared remaining balance",
+      "createdAt": "2026-11-22T13:48:40.999Z",
+      "capturedAt": "2026-11-22T13:48:40.999Z"
+    },
+    {
+      "id": "pay-ref-1795355321069-iabq",
+      "bookingId": "book-1795355320919-v95y6",
+      "bookingReference": "ARN-WALK-9024",
+      "receiptNumber": "REF-ARN-1069",
+      "amountPaise": -50000,
+      "currency": "INR",
+      "paymentMethod": "cash",
+      "status": "refunded",
+      "transactionReference": "TXN-REF-ARN-1069",
+      "cashierId": "usr-admin-01",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Authorized refund: Devotee temple visit shortened by 1 day (Auth by: Appasaheb Malve (Super Admin))",
+      "createdAt": "2026-11-22T13:48:41.069Z",
+      "capturedAt": "2026-11-22T13:48:41.069Z"
     }
   ],
   "staffUsers": [
     {
       "id": "user-yuvaraj-01",
-      "email": "yuvaraj@aarunodya.com",
-      "fullName": "Yuvaraj Malave (Owner & General Manager)",
+      "email": "appasaheb@aarunodya.com",
+      "fullName": "Appasaheb Malve (Owner & General Manager)",
       "passwordHash": "Admin@12345",
       "role": "super_admin",
       "isActive": true,
@@ -3481,59 +3636,227 @@
   ],
   "auditLogs": [
     {
+      "id": "audit-1795355323398-fh2t",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "export_excel_data",
+      "entityType": "import_export",
+      "entityId": "coupons_2026-11-22",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 23 records for coupons. Date filter: all to all.",
+      "createdAt": "2026-11-22T13:48:43.398Z"
+    },
+    {
+      "id": "audit-1795355323383-9yo2",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "export_excel_data",
+      "entityType": "import_export",
+      "entityId": "cash_ledger_2026-11-22",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 54 records for cash_ledger. Date filter: all to all.",
+      "createdAt": "2026-11-22T13:48:43.383Z"
+    },
+    {
+      "id": "audit-1795355323368-9v2n",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "export_excel_data",
+      "entityType": "import_export",
+      "entityId": "payments_2026-11-22",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 55 records for payments. Date filter: all to all.",
+      "createdAt": "2026-11-22T13:48:43.368Z"
+    },
+    {
+      "id": "audit-1795355323340-su3g",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "export_excel_data",
+      "entityType": "import_export",
+      "entityId": "reservations_2026-11-22",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 23 records for reservations. Date filter: all to all.",
+      "createdAt": "2026-11-22T13:48:43.340Z"
+    },
+    {
+      "id": "audit-1795355323326-7tfl",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "export_excel_data",
+      "entityType": "import_export",
+      "entityId": "customers_2026-11-22",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 4 records for customers. Date filter: all to all.",
+      "createdAt": "2026-11-22T13:48:43.326Z"
+    },
+    {
+      "id": "audit-1795355323243-hxpy",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "merge_customer_profiles",
+      "entityType": "customer",
+      "entityId": "CUST-4773",
+      "details": "Merged duplicate customer M. G. Ranade (CUST-7203) into Mahadev Govind Ranade (CUST-4773). Updated visits to 0.",
+      "createdAt": "2026-11-22T13:48:43.243Z"
+    },
+    {
+      "id": "audit-1795355323181-crn6",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "create_customer_profile",
+      "entityType": "customer",
+      "entityId": "CUST-7203",
+      "details": "Created/updated profile for M. G. Ranade (9422323165, )",
+      "createdAt": "2026-11-22T13:48:43.181Z"
+    },
+    {
+      "id": "audit-1795355323160-7ri9",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "verify_customer_document",
+      "entityType": "document",
+      "entityId": "doc-1795355322572-viw6",
+      "details": "Marked document aadhaar as verified for customer Mahadev Govind Ranade (CUST-4773).",
+      "createdAt": "2026-11-22T13:48:43.160Z"
+    },
+    {
+      "id": "audit-1795355322572-qa86",
+      "action": "upload_customer_document",
+      "entityType": "document",
+      "entityId": "doc-1795355322572-viw6",
+      "details": "Uploaded aadhaar document for customer Mahadev Govind Ranade (CUST-4773). Masked number: XXXX-XXXX-5544",
+      "createdAt": "2026-11-22T13:48:42.572Z"
+    },
+    {
+      "id": "audit-1795355321919-wrf6",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "create_customer_profile",
+      "entityType": "customer",
+      "entityId": "CUST-4773",
+      "details": "Created/updated profile for Mahadev Govind Ranade (9422321855, mgranade@example.com)",
+      "createdAt": "2026-11-22T13:48:41.919Z"
+    },
+    {
+      "id": "audit-1795355321826-wyky",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "checkout_booking",
+      "entityType": "booking",
+      "entityId": "book-1795355320919-v95y6",
+      "details": "Checked out booking ARN-WALK-9024 for Santosh B. Jagtap. Housekeeping updated to dirty. Loyalty coupon: RETURN-2OJE.",
+      "createdAt": "2026-11-22T13:48:41.826Z"
+    },
+    {
+      "id": "audit-1795355321470-qng9",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "update_post_checkout_campaign",
+      "entityType": "coupon",
+      "entityId": "campaign-checkout-loyalty-01",
+      "details": "Updated post-checkout loyalty campaign \"Pilgrim Return Devotee Gift\". Enabled: true",
+      "createdAt": "2026-11-22T13:48:41.470Z"
+    },
+    {
+      "id": "audit-1795355321314-upku",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "create_coupon",
+      "entityType": "coupon",
+      "entityId": "coup-1795355321312-6fkv",
+      "details": "Created coupon DSH21239 (25%). Valid 2026-11-22 to 2030-12-31.",
+      "createdAt": "2026-11-22T13:48:41.314Z"
+    },
+    {
+      "id": "audit-1795355321233-xow8",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "close_cash_shift",
+      "entityType": "cash_shift",
+      "entityId": "shift-1795355321203-3r8i",
+      "details": "Closed cash drawer for 2026-11-22. Expected ₹6233.6, Counted ₹3500, Discrepancy: ₹-2733.6",
+      "createdAt": "2026-11-22T13:48:41.233Z"
+    },
+    {
+      "id": "audit-1795355321069-unly",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "process_cash_refund",
+      "entityType": "payment",
+      "entityId": "ctx-1795355321069-i1wt",
+      "details": "Processed cash refund of ₹500 for ARN-WALK-9024. Auth by: Appasaheb Malve (Super Admin). Reason: Devotee temple visit shortened by 1 day",
+      "createdAt": "2026-11-22T13:48:41.069Z"
+    },
+    {
+      "id": "audit-1795355320999-g56k",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "collect_additional_payment",
+      "entityType": "payment",
+      "entityId": "pay-1795355320999-a2dk",
+      "details": "Collected ₹2733.6 (cash) for ARN-WALK-9024. New Balance: ₹0. Receipt: RCP-ARN-0999",
+      "createdAt": "2026-11-22T13:48:40.999Z"
+    },
+    {
+      "id": "audit-1795355320919-grq8",
+      "userId": "usr-admin-01",
+      "userEmail": "Appasaheb Malve (Super Admin)",
+      "action": "create_reception_booking",
+      "entityType": "booking",
+      "entityId": "book-1795355320919-v95y6",
+      "details": "Created walk-in reservation ARN-WALK-9024 for Santosh B. Jagtap in Room 101. Paid ₹1500, Balance ₹2733.6.",
+      "createdAt": "2026-11-22T13:48:40.919Z"
+    },
+    {
       "id": "audit-1794477379406-1573",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "export_excel_data",
       "entityType": "import_export",
       "entityId": "coupons_2026-11-12",
-      "details": "Staff Yuvaraj Malave (Super Admin) exported 21 records for coupons. Date filter: all to all.",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 21 records for coupons. Date filter: all to all.",
       "createdAt": "2026-11-12T09:56:19.406Z"
     },
     {
       "id": "audit-1794477379345-3fv5",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "export_excel_data",
       "entityType": "import_export",
       "entityId": "cash_ledger_2026-11-12",
-      "details": "Staff Yuvaraj Malave (Super Admin) exported 51 records for cash_ledger. Date filter: all to all.",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 51 records for cash_ledger. Date filter: all to all.",
       "createdAt": "2026-11-12T09:56:19.345Z"
     },
     {
       "id": "audit-1794477379330-8rvf",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "export_excel_data",
       "entityType": "import_export",
       "entityId": "payments_2026-11-12",
-      "details": "Staff Yuvaraj Malave (Super Admin) exported 52 records for payments. Date filter: all to all.",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 52 records for payments. Date filter: all to all.",
       "createdAt": "2026-11-12T09:56:19.330Z"
     },
     {
       "id": "audit-1794477379284-z7r6",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "export_excel_data",
       "entityType": "import_export",
       "entityId": "reservations_2026-11-12",
-      "details": "Staff Yuvaraj Malave (Super Admin) exported 22 records for reservations. Date filter: all to all.",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 22 records for reservations. Date filter: all to all.",
       "createdAt": "2026-11-12T09:56:19.284Z"
     },
     {
       "id": "audit-1794477379253-xfo6",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "export_excel_data",
       "entityType": "import_export",
       "entityId": "customers_2026-11-12",
-      "details": "Staff Yuvaraj Malave (Super Admin) exported 4 records for customers. Date filter: all to all.",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 4 records for customers. Date filter: all to all.",
       "createdAt": "2026-11-12T09:56:19.253Z"
     },
     {
       "id": "audit-1794477379173-g76u",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "merge_customer_profiles",
       "entityType": "customer",
       "entityId": "CUST-4773",
@@ -3543,7 +3866,7 @@
     {
       "id": "audit-1794477379112-k2he",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_customer_profile",
       "entityType": "customer",
       "entityId": "CUST-7203",
@@ -3553,7 +3876,7 @@
     {
       "id": "audit-1794477379095-pwrr",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "verify_customer_document",
       "entityType": "document",
       "entityId": "doc-1794477379021-4hg4",
@@ -3571,7 +3894,7 @@
     {
       "id": "audit-1794477378943-dqih",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_customer_profile",
       "entityType": "customer",
       "entityId": "CUST-4773",
@@ -3581,7 +3904,7 @@
     {
       "id": "audit-1794477378860-jjxf",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "checkout_booking",
       "entityType": "booking",
       "entityId": "book-1794477378226-kqllv",
@@ -3591,7 +3914,7 @@
     {
       "id": "audit-1794477378521-1cba",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "update_post_checkout_campaign",
       "entityType": "coupon",
       "entityId": "campaign-checkout-loyalty-01",
@@ -3601,7 +3924,7 @@
     {
       "id": "audit-1794477378430-bnfi",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_coupon",
       "entityType": "coupon",
       "entityId": "coup-1794477378428-1um2",
@@ -3611,7 +3934,7 @@
     {
       "id": "audit-1794477378404-zj2y",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "close_cash_shift",
       "entityType": "cash_shift",
       "entityId": "shift-1794477378393-9p39",
@@ -3621,17 +3944,17 @@
     {
       "id": "audit-1794477378318-9pr8",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "process_cash_refund",
       "entityType": "payment",
       "entityId": "ctx-1794477378318-ql2b",
-      "details": "Processed cash refund of ₹500 for ARN-WALK-3847. Auth by: Yuvaraj Malave (Super Admin). Reason: Devotee temple visit shortened by 1 day",
+      "details": "Processed cash refund of ₹500 for ARN-WALK-3847. Auth by: Appasaheb Malve (Super Admin). Reason: Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T09:56:18.318Z"
     },
     {
       "id": "audit-1794477378256-7z35",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "collect_additional_payment",
       "entityType": "payment",
       "entityId": "pay-1794477378256-tele",
@@ -3641,7 +3964,7 @@
     {
       "id": "audit-1794477378226-mk36",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794477378226-kqllv",
@@ -3651,57 +3974,57 @@
     {
       "id": "audit-1794468659615-c4b8",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "export_excel_data",
       "entityType": "import_export",
       "entityId": "coupons_2026-11-12",
-      "details": "Staff Yuvaraj Malave (Super Admin) exported 19 records for coupons. Date filter: all to all.",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 19 records for coupons. Date filter: all to all.",
       "createdAt": "2026-11-12T07:30:59.615Z"
     },
     {
       "id": "audit-1794468659591-ec0j",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "export_excel_data",
       "entityType": "import_export",
       "entityId": "cash_ledger_2026-11-12",
-      "details": "Staff Yuvaraj Malave (Super Admin) exported 48 records for cash_ledger. Date filter: all to all.",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 48 records for cash_ledger. Date filter: all to all.",
       "createdAt": "2026-11-12T07:30:59.592Z"
     },
     {
       "id": "audit-1794468659537-tx64",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "export_excel_data",
       "entityType": "import_export",
       "entityId": "payments_2026-11-12",
-      "details": "Staff Yuvaraj Malave (Super Admin) exported 49 records for payments. Date filter: all to all.",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 49 records for payments. Date filter: all to all.",
       "createdAt": "2026-11-12T07:30:59.537Z"
     },
     {
       "id": "audit-1794468659515-adzp",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "export_excel_data",
       "entityType": "import_export",
       "entityId": "reservations_2026-11-12",
-      "details": "Staff Yuvaraj Malave (Super Admin) exported 21 records for reservations. Date filter: all to all.",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 21 records for reservations. Date filter: all to all.",
       "createdAt": "2026-11-12T07:30:59.515Z"
     },
     {
       "id": "audit-1794468659474-3u6d",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "export_excel_data",
       "entityType": "import_export",
       "entityId": "customers_2026-11-12",
-      "details": "Staff Yuvaraj Malave (Super Admin) exported 4 records for customers. Date filter: all to all.",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 4 records for customers. Date filter: all to all.",
       "createdAt": "2026-11-12T07:30:59.474Z"
     },
     {
       "id": "audit-1794468659433-4iq2",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "merge_customer_profiles",
       "entityType": "customer",
       "entityId": "CUST-4773",
@@ -3711,7 +4034,7 @@
     {
       "id": "audit-1794468659380-5ml4",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_customer_profile",
       "entityType": "customer",
       "entityId": "CUST-7203",
@@ -3721,7 +4044,7 @@
     {
       "id": "audit-1794468659347-ekjx",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "verify_customer_document",
       "entityType": "document",
       "entityId": "doc-1794468659267-cpn9",
@@ -3739,7 +4062,7 @@
     {
       "id": "audit-1794468659238-z1y1",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_customer_profile",
       "entityType": "customer",
       "entityId": "CUST-4773",
@@ -3749,7 +4072,7 @@
     {
       "id": "audit-1794468659150-ofzm",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "checkout_booking",
       "entityType": "booking",
       "entityId": "book-1794468658455-qiap4",
@@ -3759,7 +4082,7 @@
     {
       "id": "audit-1794468658784-tbli",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "update_post_checkout_campaign",
       "entityType": "coupon",
       "entityId": "campaign-checkout-loyalty-01",
@@ -3769,7 +4092,7 @@
     {
       "id": "audit-1794468658690-m7jn",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_coupon",
       "entityType": "coupon",
       "entityId": "coup-1794468658689-f9at",
@@ -3779,7 +4102,7 @@
     {
       "id": "audit-1794468658626-fmq2",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "close_cash_shift",
       "entityType": "cash_shift",
       "entityId": "shift-1794468658608-c1wh",
@@ -3789,17 +4112,17 @@
     {
       "id": "audit-1794468658529-lnph",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "process_cash_refund",
       "entityType": "payment",
       "entityId": "ctx-1794468658529-y7gj",
-      "details": "Processed cash refund of ₹500 for ARN-WALK-7398. Auth by: Yuvaraj Malave (Super Admin). Reason: Devotee temple visit shortened by 1 day",
+      "details": "Processed cash refund of ₹500 for ARN-WALK-7398. Auth by: Appasaheb Malve (Super Admin). Reason: Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:30:58.529Z"
     },
     {
       "id": "audit-1794468658486-c474",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "collect_additional_payment",
       "entityType": "payment",
       "entityId": "pay-1794468658486-l2ez",
@@ -3809,7 +4132,7 @@
     {
       "id": "audit-1794468658455-6mjw",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794468658455-qiap4",
@@ -3819,57 +4142,57 @@
     {
       "id": "audit-1794468646386-7whg",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "export_excel_data",
       "entityType": "import_export",
       "entityId": "coupons_2026-11-12",
-      "details": "Staff Yuvaraj Malave (Super Admin) exported 17 records for coupons. Date filter: all to all.",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 17 records for coupons. Date filter: all to all.",
       "createdAt": "2026-11-12T07:30:46.386Z"
     },
     {
       "id": "audit-1794468646323-kzsj",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "export_excel_data",
       "entityType": "import_export",
       "entityId": "cash_ledger_2026-11-12",
-      "details": "Staff Yuvaraj Malave (Super Admin) exported 45 records for cash_ledger. Date filter: all to all.",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 45 records for cash_ledger. Date filter: all to all.",
       "createdAt": "2026-11-12T07:30:46.323Z"
     },
     {
       "id": "audit-1794468646308-ak6j",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "export_excel_data",
       "entityType": "import_export",
       "entityId": "payments_2026-11-12",
-      "details": "Staff Yuvaraj Malave (Super Admin) exported 46 records for payments. Date filter: all to all.",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 46 records for payments. Date filter: all to all.",
       "createdAt": "2026-11-12T07:30:46.308Z"
     },
     {
       "id": "audit-1794468646246-8v81",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "export_excel_data",
       "entityType": "import_export",
       "entityId": "reservations_2026-11-12",
-      "details": "Staff Yuvaraj Malave (Super Admin) exported 20 records for reservations. Date filter: all to all.",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 20 records for reservations. Date filter: all to all.",
       "createdAt": "2026-11-12T07:30:46.246Z"
     },
     {
       "id": "audit-1794468646218-vcol",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "export_excel_data",
       "entityType": "import_export",
       "entityId": "customers_2026-11-12",
-      "details": "Staff Yuvaraj Malave (Super Admin) exported 4 records for customers. Date filter: all to all.",
+      "details": "Staff Appasaheb Malve (Super Admin) exported 4 records for customers. Date filter: all to all.",
       "createdAt": "2026-11-12T07:30:46.218Z"
     },
     {
       "id": "audit-1794468645717-9uph",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "merge_customer_profiles",
       "entityType": "customer",
       "entityId": "CUST-4773",
@@ -3879,7 +4202,7 @@
     {
       "id": "audit-1794468645566-26qu",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_customer_profile",
       "entityType": "customer",
       "entityId": "CUST-7203",
@@ -3889,7 +4212,7 @@
     {
       "id": "audit-1794468645541-zx7e",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "verify_customer_document",
       "entityType": "document",
       "entityId": "doc-1794468644818-xtii",
@@ -3907,7 +4230,7 @@
     {
       "id": "audit-1794468644793-mbjk",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_customer_profile",
       "entityType": "customer",
       "entityId": "CUST-4773",
@@ -3917,7 +4240,7 @@
     {
       "id": "audit-1794468644738-cq74",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "checkout_booking",
       "entityType": "booking",
       "entityId": "book-1794468644164-4cweu",
@@ -3927,7 +4250,7 @@
     {
       "id": "audit-1794468644458-6wpy",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "update_post_checkout_campaign",
       "entityType": "coupon",
       "entityId": "campaign-checkout-loyalty-01",
@@ -3937,7 +4260,7 @@
     {
       "id": "audit-1794468644381-7d8x",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_coupon",
       "entityType": "coupon",
       "entityId": "coup-1794468644380-lj8e",
@@ -3947,7 +4270,7 @@
     {
       "id": "audit-1794468644332-3130",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "close_cash_shift",
       "entityType": "cash_shift",
       "entityId": "shift-1794468644316-3dkt",
@@ -3957,17 +4280,17 @@
     {
       "id": "audit-1794468644240-3xto",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "process_cash_refund",
       "entityType": "payment",
       "entityId": "ctx-1794468644240-fjoe",
-      "details": "Processed cash refund of ₹500 for ARN-WALK-4914. Auth by: Yuvaraj Malave (Super Admin). Reason: Devotee temple visit shortened by 1 day",
+      "details": "Processed cash refund of ₹500 for ARN-WALK-4914. Auth by: Appasaheb Malve (Super Admin). Reason: Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:30:44.240Z"
     },
     {
       "id": "audit-1794468644195-xfox",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "collect_additional_payment",
       "entityType": "payment",
       "entityId": "pay-1794468644195-0sys",
@@ -3977,7 +4300,7 @@
     {
       "id": "audit-1794468644164-nd3x",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794468644164-4cweu",
@@ -3995,7 +4318,7 @@
     {
       "id": "audit-1794468565867-7brn",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_customer_profile",
       "entityType": "customer",
       "entityId": "CUST-4773",
@@ -4005,7 +4328,7 @@
     {
       "id": "audit-1794468565790-ebw7",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "checkout_booking",
       "entityType": "booking",
       "entityId": "book-1794468565256-o1w2p",
@@ -4015,7 +4338,7 @@
     {
       "id": "audit-1794468565475-8y2u",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "update_post_checkout_campaign",
       "entityType": "coupon",
       "entityId": "campaign-checkout-loyalty-01",
@@ -4025,7 +4348,7 @@
     {
       "id": "audit-1794468565412-unmx",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_coupon",
       "entityType": "coupon",
       "entityId": "coup-1794468565411-zc7n",
@@ -4035,7 +4358,7 @@
     {
       "id": "audit-1794468565397-og9b",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "close_cash_shift",
       "entityType": "cash_shift",
       "entityId": "shift-1794468565387-75hs",
@@ -4045,17 +4368,17 @@
     {
       "id": "audit-1794468565317-5od0",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "process_cash_refund",
       "entityType": "payment",
       "entityId": "ctx-1794468565317-f8u2",
-      "details": "Processed cash refund of ₹500 for ARN-WALK-9554. Auth by: Yuvaraj Malave (Super Admin). Reason: Devotee temple visit shortened by 1 day",
+      "details": "Processed cash refund of ₹500 for ARN-WALK-9554. Auth by: Appasaheb Malve (Super Admin). Reason: Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:29:25.317Z"
     },
     {
       "id": "audit-1794468565276-z82u",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "collect_additional_payment",
       "entityType": "payment",
       "entityId": "pay-1794468565276-189j",
@@ -4065,7 +4388,7 @@
     {
       "id": "audit-1794468565256-uy8i",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794468565256-o1w2p",
@@ -4083,7 +4406,7 @@
     {
       "id": "audit-1794468539336-hzid",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_customer_profile",
       "entityType": "customer",
       "entityId": "CUST-4773",
@@ -4093,7 +4416,7 @@
     {
       "id": "audit-1794468539239-989c",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "checkout_booking",
       "entityType": "booking",
       "entityId": "book-1794468538582-1ci6l",
@@ -4103,7 +4426,7 @@
     {
       "id": "audit-1794468538895-ed87",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "update_post_checkout_campaign",
       "entityType": "coupon",
       "entityId": "campaign-checkout-loyalty-01",
@@ -4113,7 +4436,7 @@
     {
       "id": "audit-1794468538802-o8yx",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_coupon",
       "entityType": "coupon",
       "entityId": "coup-1794468538801-53cs",
@@ -4123,7 +4446,7 @@
     {
       "id": "audit-1794468538738-3hv2",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "close_cash_shift",
       "entityType": "cash_shift",
       "entityId": "shift-1794468538717-7i9j",
@@ -4133,17 +4456,17 @@
     {
       "id": "audit-1794468538661-btuq",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "process_cash_refund",
       "entityType": "payment",
       "entityId": "ctx-1794468538661-p00p",
-      "details": "Processed cash refund of ₹500 for ARN-WALK-8604. Auth by: Yuvaraj Malave (Super Admin). Reason: Devotee temple visit shortened by 1 day",
+      "details": "Processed cash refund of ₹500 for ARN-WALK-8604. Auth by: Appasaheb Malve (Super Admin). Reason: Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:28:58.661Z"
     },
     {
       "id": "audit-1794468538607-ewjm",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "collect_additional_payment",
       "entityType": "payment",
       "entityId": "pay-1794468538607-9i1e",
@@ -4153,7 +4476,7 @@
     {
       "id": "audit-1794468538582-xack",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794468538582-1ci6l",
@@ -4163,7 +4486,7 @@
     {
       "id": "audit-1794468506740-p6lb",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_customer_profile",
       "entityType": "customer",
       "entityId": "CUST-4773",
@@ -4173,7 +4496,7 @@
     {
       "id": "audit-1794468506545-odf3",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "checkout_booking",
       "entityType": "booking",
       "entityId": "book-1794468506005-6t1ti",
@@ -4183,7 +4506,7 @@
     {
       "id": "audit-1794468506237-4ju5",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "update_post_checkout_campaign",
       "entityType": "coupon",
       "entityId": "campaign-checkout-loyalty-01",
@@ -4193,7 +4516,7 @@
     {
       "id": "audit-1794468506164-z3so",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_coupon",
       "entityType": "coupon",
       "entityId": "coup-1794468506162-14kv",
@@ -4203,7 +4526,7 @@
     {
       "id": "audit-1794468506144-6k5n",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "close_cash_shift",
       "entityType": "cash_shift",
       "entityId": "shift-1794468506134-m1rb",
@@ -4213,17 +4536,17 @@
     {
       "id": "audit-1794468506080-l9e5",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "process_cash_refund",
       "entityType": "payment",
       "entityId": "ctx-1794468506080-q3vz",
-      "details": "Processed cash refund of ₹500 for ARN-WALK-9538. Auth by: Yuvaraj Malave (Super Admin). Reason: Devotee temple visit shortened by 1 day",
+      "details": "Processed cash refund of ₹500 for ARN-WALK-9538. Auth by: Appasaheb Malve (Super Admin). Reason: Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:28:26.080Z"
     },
     {
       "id": "audit-1794468506058-jcv0",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "collect_additional_payment",
       "entityType": "payment",
       "entityId": "pay-1794468506058-ozwk",
@@ -4233,7 +4556,7 @@
     {
       "id": "audit-1794468506005-hnkf",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794468506005-6t1ti",
@@ -4243,7 +4566,7 @@
     {
       "id": "audit-1794468350561-8i1j",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "checkout_booking",
       "entityType": "booking",
       "entityId": "book-1794468349926-9g8de",
@@ -4253,7 +4576,7 @@
     {
       "id": "audit-1794468350294-bcmv",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "update_post_checkout_campaign",
       "entityType": "coupon",
       "entityId": "campaign-checkout-loyalty-01",
@@ -4263,7 +4586,7 @@
     {
       "id": "audit-1794468350189-xwap",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_coupon",
       "entityType": "coupon",
       "entityId": "coup-1794468350188-va5z",
@@ -4273,7 +4596,7 @@
     {
       "id": "audit-1794468350141-2isp",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "close_cash_shift",
       "entityType": "cash_shift",
       "entityId": "shift-1794468350109-qon8",
@@ -4283,17 +4606,17 @@
     {
       "id": "audit-1794468350018-u6xk",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "process_cash_refund",
       "entityType": "payment",
       "entityId": "ctx-1794468350018-9c42",
-      "details": "Processed cash refund of ₹500 for ARN-WALK-9762. Auth by: Yuvaraj Malave (Super Admin). Reason: Devotee temple visit shortened by 1 day",
+      "details": "Processed cash refund of ₹500 for ARN-WALK-9762. Auth by: Appasaheb Malve (Super Admin). Reason: Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:25:50.018Z"
     },
     {
       "id": "audit-1794468349996-ugaa",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "collect_additional_payment",
       "entityType": "payment",
       "entityId": "pay-1794468349996-lidv",
@@ -4303,7 +4626,7 @@
     {
       "id": "audit-1794468349926-m08w",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794468349926-9g8de",
@@ -4313,7 +4636,7 @@
     {
       "id": "audit-1794468324037-fxdr",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "checkout_booking",
       "entityType": "booking",
       "entityId": "book-1794468323189-5d545",
@@ -4323,7 +4646,7 @@
     {
       "id": "audit-1794468323643-8234",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "update_post_checkout_campaign",
       "entityType": "coupon",
       "entityId": "campaign-checkout-loyalty-01",
@@ -4333,7 +4656,7 @@
     {
       "id": "audit-1794468323439-3yid",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_coupon",
       "entityType": "coupon",
       "entityId": "coup-1794468323438-4wht",
@@ -4343,7 +4666,7 @@
     {
       "id": "audit-1794468323375-tix3",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "close_cash_shift",
       "entityType": "cash_shift",
       "entityId": "shift-1794468323359-bwa1",
@@ -4353,17 +4676,17 @@
     {
       "id": "audit-1794468323282-g0sr",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "process_cash_refund",
       "entityType": "payment",
       "entityId": "ctx-1794468323282-4oz5",
-      "details": "Processed cash refund of ₹500 for ARN-WALK-8810. Auth by: Yuvaraj Malave (Super Admin). Reason: Devotee temple visit shortened by 1 day",
+      "details": "Processed cash refund of ₹500 for ARN-WALK-8810. Auth by: Appasaheb Malve (Super Admin). Reason: Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:25:23.282Z"
     },
     {
       "id": "audit-1794468323219-v1el",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "collect_additional_payment",
       "entityType": "payment",
       "entityId": "pay-1794468323219-a54x",
@@ -4373,7 +4696,7 @@
     {
       "id": "audit-1794468323189-mt03",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794468323189-5d545",
@@ -4383,7 +4706,7 @@
     {
       "id": "audit-1794468245810-u3zw",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_coupon",
       "entityType": "coupon",
       "entityId": "coup-1794468245809-zaa0",
@@ -4393,7 +4716,7 @@
     {
       "id": "audit-1794468245763-daz0",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "close_cash_shift",
       "entityType": "cash_shift",
       "entityId": "shift-1794468245747-zg21",
@@ -4403,17 +4726,17 @@
     {
       "id": "audit-1794468245685-y19d",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "process_cash_refund",
       "entityType": "payment",
       "entityId": "ctx-1794468245685-n9o9",
-      "details": "Processed cash refund of ₹500 for ARN-WALK-9482. Auth by: Yuvaraj Malave (Super Admin). Reason: Devotee temple visit shortened by 1 day",
+      "details": "Processed cash refund of ₹500 for ARN-WALK-9482. Auth by: Appasaheb Malve (Super Admin). Reason: Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:24:05.685Z"
     },
     {
       "id": "audit-1794468245631-x1n4",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "collect_additional_payment",
       "entityType": "payment",
       "entityId": "pay-1794468245631-geid",
@@ -4423,7 +4746,7 @@
     {
       "id": "audit-1794468245606-5l37",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794468245606-hhoj8",
@@ -4433,7 +4756,7 @@
     {
       "id": "audit-1794468186841-r71j",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_coupon",
       "entityType": "coupon",
       "entityId": "coup-1794468186840-3wx6",
@@ -4443,7 +4766,7 @@
     {
       "id": "audit-1794468186762-knwi",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "close_cash_shift",
       "entityType": "cash_shift",
       "entityId": "shift-1794468186746-1fxy",
@@ -4453,17 +4776,17 @@
     {
       "id": "audit-1794468186684-wid9",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "process_cash_refund",
       "entityType": "payment",
       "entityId": "ctx-1794468186684-ccgh",
-      "details": "Processed cash refund of ₹500 for ARN-WALK-4885. Auth by: Yuvaraj Malave (Super Admin). Reason: Devotee temple visit shortened by 1 day",
+      "details": "Processed cash refund of ₹500 for ARN-WALK-4885. Auth by: Appasaheb Malve (Super Admin). Reason: Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:23:06.684Z"
     },
     {
       "id": "audit-1794468186653-ubxk",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "collect_additional_payment",
       "entityType": "payment",
       "entityId": "pay-1794468186653-d0jp",
@@ -4473,7 +4796,7 @@
     {
       "id": "audit-1794468186575-l3w1",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794468186575-ha1gu",
@@ -4483,7 +4806,7 @@
     {
       "id": "audit-1794468144259-l63p",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "close_cash_shift",
       "entityType": "cash_shift",
       "entityId": "shift-sample-01",
@@ -4493,17 +4816,17 @@
     {
       "id": "audit-1794468144155-chm3",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "process_cash_refund",
       "entityType": "payment",
       "entityId": "ctx-1794468144155-n5db",
-      "details": "Processed cash refund of ₹500 for ARN-WALK-4592. Auth by: Yuvaraj Malave (Super Admin). Reason: Devotee temple visit shortened by 1 day",
+      "details": "Processed cash refund of ₹500 for ARN-WALK-4592. Auth by: Appasaheb Malve (Super Admin). Reason: Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:22:24.155Z"
     },
     {
       "id": "audit-1794468144131-zo3y",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "collect_additional_payment",
       "entityType": "payment",
       "entityId": "pay-1794468144131-dpeg",
@@ -4513,7 +4836,7 @@
     {
       "id": "audit-1794468144062-0j2h",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794468144062-v8l1c",
@@ -4523,17 +4846,17 @@
     {
       "id": "audit-1794468095972-u1qz",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "process_cash_refund",
       "entityType": "payment",
       "entityId": "ctx-1794468095972-7wgn",
-      "details": "Processed cash refund of ₹500 for ARN-WALK-4726. Auth by: Yuvaraj Malave (Super Admin). Reason: Devotee temple visit shortened by 1 day",
+      "details": "Processed cash refund of ₹500 for ARN-WALK-4726. Auth by: Appasaheb Malve (Super Admin). Reason: Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:21:35.972Z"
     },
     {
       "id": "audit-1794468095936-4l8n",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "collect_additional_payment",
       "entityType": "payment",
       "entityId": "pay-1794468095936-pnlg",
@@ -4543,7 +4866,7 @@
     {
       "id": "audit-1794468095916-aoe5",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794468095916-a6atg",
@@ -4553,17 +4876,17 @@
     {
       "id": "audit-1794468075081-fww0",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "process_cash_refund",
       "entityType": "payment",
       "entityId": "ctx-1794468075081-2f5g",
-      "details": "Processed cash refund of ₹500 for ARN-WALK-7740. Auth by: Yuvaraj Malave (Super Admin). Reason: Devotee temple visit shortened by 1 day",
+      "details": "Processed cash refund of ₹500 for ARN-WALK-7740. Auth by: Appasaheb Malve (Super Admin). Reason: Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:21:15.081Z"
     },
     {
       "id": "audit-1794468075049-ldju",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "collect_additional_payment",
       "entityType": "payment",
       "entityId": "pay-1794468075049-ep1q",
@@ -4573,7 +4896,7 @@
     {
       "id": "audit-1794468074988-klcc",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794468074988-fgkis",
@@ -4583,17 +4906,17 @@
     {
       "id": "audit-1794467978208-353w",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "process_cash_refund",
       "entityType": "payment",
       "entityId": "ctx-1794467978208-b2lb",
-      "details": "Processed cash refund of ₹500 for ARN-WALK-5788. Auth by: Yuvaraj Malave (Super Admin). Reason: Devotee temple visit shortened by 1 day",
+      "details": "Processed cash refund of ₹500 for ARN-WALK-5788. Auth by: Appasaheb Malve (Super Admin). Reason: Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:19:38.208Z"
     },
     {
       "id": "audit-1794467978193-c4hv",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "collect_additional_payment",
       "entityType": "payment",
       "entityId": "pay-1794467978193-izrl",
@@ -4603,7 +4926,7 @@
     {
       "id": "audit-1794467978117-i3kh",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794467978117-dg65t",
@@ -4613,17 +4936,17 @@
     {
       "id": "audit-1794467921318-ey08",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "process_cash_refund",
       "entityType": "payment",
       "entityId": "ctx-1794467921318-eoln",
-      "details": "Processed cash refund of ₹500 for ARN-WALK-1076. Auth by: Yuvaraj Malave (Super Admin). Reason: Devotee temple visit shortened by 1 day",
+      "details": "Processed cash refund of ₹500 for ARN-WALK-1076. Auth by: Appasaheb Malve (Super Admin). Reason: Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:18:41.318Z"
     },
     {
       "id": "audit-1794467921223-ehow",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "collect_additional_payment",
       "entityType": "payment",
       "entityId": "pay-1794467921223-88uk",
@@ -4633,7 +4956,7 @@
     {
       "id": "audit-1794467921179-3xuh",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794467921179-fdowv",
@@ -4643,7 +4966,7 @@
     {
       "id": "audit-1794467877289-yh0h",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "collect_additional_payment",
       "entityType": "payment",
       "entityId": "pay-1794467877289-eblb",
@@ -4653,7 +4976,7 @@
     {
       "id": "audit-1794467877058-5k1b",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794467877058-m6b7g",
@@ -4663,7 +4986,7 @@
     {
       "id": "audit-1794467779397-naq5",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794467779397-1k8ix",
@@ -4673,7 +4996,7 @@
     {
       "id": "audit-1794467760817-onea",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794467760817-ifm79",
@@ -4683,7 +5006,7 @@
     {
       "id": "audit-1794467664399-581e",
       "userId": "usr-admin-01",
-      "userEmail": "Yuvaraj Malave (Super Admin)",
+      "userEmail": "Appasaheb Malve (Super Admin)",
       "action": "create_reception_booking",
       "entityType": "booking",
       "entityId": "book-1794467664399-zlkww",
@@ -4713,7 +5036,7 @@
           "documentNumberMasked": "XXXX-XXXX-8921",
           "issuingCountry": "India",
           "verificationStatus": "verified",
-          "verifiedByStaffName": "Yuvaraj Malave",
+          "verifiedByStaffName": "Appasaheb Malve",
           "verifiedAt": "2026-11-01T10:15:00Z",
           "createdAt": "2026-11-01T10:00:00Z"
         }
@@ -4744,7 +5067,7 @@
           "documentNumberMasked": "XXXX-XXXX-3412",
           "issuingCountry": "India",
           "verificationStatus": "verified",
-          "verifiedByStaffName": "Yuvaraj Malave",
+          "verifiedByStaffName": "Appasaheb Malve",
           "verifiedAt": "2026-11-05T14:40:00Z",
           "createdAt": "2026-11-05T14:30:00Z"
         }
@@ -4772,21 +5095,21 @@
           "issuingCountry": "India",
           "verificationStatus": "verified",
           "verifiedByStaffId": "usr-admin-01",
-          "verifiedByStaffName": "Yuvaraj Malave (Super Admin)",
+          "verifiedByStaffName": "Appasaheb Malve (Super Admin)",
           "verifiedAt": "2026-11-12T07:14:24.399Z",
           "createdAt": "2026-11-12T07:14:24.399Z"
         }
       ],
-      "totalVisits": 19,
-      "totalSpentPaise": 8043840,
+      "totalVisits": 20,
+      "totalSpentPaise": 8467200,
       "notes": "Advance payment collected at reception counter",
       "createdAt": "2026-11-12T07:14:24.399Z",
-      "updatedAt": "2026-11-12T09:56:18.226Z"
+      "updatedAt": "2026-11-22T13:48:40.918Z"
     },
     {
       "id": "CUST-4773",
       "fullName": "Mahadev Govind Ranade",
-      "phone": "9422378880",
+      "phone": "9422321855",
       "email": "mgranade@example.com",
       "city": "Nashik",
       "state": "Maharashtra",
@@ -4804,7 +5127,7 @@
           "originalFileName": "aadhaar_card.pdf",
           "verificationStatus": "verified",
           "verifiedByStaffId": "usr-admin-01",
-          "verifiedByStaffName": "Yuvaraj Malave (Super Admin)",
+          "verifiedByStaffName": "Appasaheb Malve (Super Admin)",
           "verifiedAt": "2026-11-12T07:28:59.375Z",
           "createdAt": "2026-11-12T07:28:59.376Z"
         },
@@ -4820,7 +5143,7 @@
           "originalFileName": "aadhaar_card.pdf",
           "verificationStatus": "verified",
           "verifiedByStaffId": "usr-admin-01",
-          "verifiedByStaffName": "Yuvaraj Malave (Super Admin)",
+          "verifiedByStaffName": "Appasaheb Malve (Super Admin)",
           "verifiedAt": "2026-11-12T07:29:25.899Z",
           "createdAt": "2026-11-12T07:29:25.899Z"
         },
@@ -4836,7 +5159,7 @@
           "originalFileName": "aadhaar_card.pdf",
           "verificationStatus": "verified",
           "verifiedByStaffId": "usr-admin-01",
-          "verifiedByStaffName": "Yuvaraj Malave (Super Admin)",
+          "verifiedByStaffName": "Appasaheb Malve (Super Admin)",
           "verifiedAt": "2026-11-12T07:30:45.541Z",
           "createdAt": "2026-11-12T07:30:44.818Z"
         },
@@ -4852,7 +5175,7 @@
           "originalFileName": "aadhaar_card.pdf",
           "verificationStatus": "verified",
           "verifiedByStaffId": "usr-admin-01",
-          "verifiedByStaffName": "Yuvaraj Malave (Super Admin)",
+          "verifiedByStaffName": "Appasaheb Malve (Super Admin)",
           "verifiedAt": "2026-11-12T07:30:59.347Z",
           "createdAt": "2026-11-12T07:30:59.267Z"
         },
@@ -4868,22 +5191,38 @@
           "originalFileName": "aadhaar_card.pdf",
           "verificationStatus": "verified",
           "verifiedByStaffId": "usr-admin-01",
-          "verifiedByStaffName": "Yuvaraj Malave (Super Admin)",
+          "verifiedByStaffName": "Appasaheb Malve (Super Admin)",
           "verifiedAt": "2026-11-12T09:56:19.095Z",
           "createdAt": "2026-11-12T09:56:19.021Z"
+        },
+        {
+          "id": "doc-1795355322572-viw6",
+          "customerId": "CUST-4773",
+          "documentType": "aadhaar",
+          "documentNumberMasked": "XXXX-XXXX-5544",
+          "issuingCountry": "India",
+          "filePath": "C:\\Users\\aradh\\Desktop\\lodge-management-system\\data\\secure_documents\\doc_CUST-4773_1795355322571.pdf",
+          "fileMimeType": "application/pdf",
+          "fileSizeBytes": 34,
+          "originalFileName": "aadhaar_card.pdf",
+          "verificationStatus": "verified",
+          "verifiedByStaffId": "usr-admin-01",
+          "verifiedByStaffName": "Appasaheb Malve (Super Admin)",
+          "verifiedAt": "2026-11-22T13:48:43.160Z",
+          "createdAt": "2026-11-22T13:48:42.572Z"
         }
       ],
       "totalVisits": 0,
       "totalSpentPaise": 0,
       "notes": "Visiting with 6 family members for Kartiki Ekadashi\n[Merged Notes from CUST-7203]: Old duplicate profile",
       "createdAt": "2026-11-12T07:28:26.739Z",
-      "updatedAt": "2026-11-12T09:56:19.173Z",
+      "updatedAt": "2026-11-22T13:48:43.243Z",
       "vipStatus": true
     },
     {
       "id": "CUST-7203",
       "fullName": "M. G. Ranade",
-      "phone": "9422379101",
+      "phone": "9422323165",
       "email": "",
       "city": "Nashik",
       "country": "India",
@@ -4892,7 +5231,7 @@
       "totalSpentPaise": 0,
       "notes": "Old duplicate profile",
       "createdAt": "2026-11-12T07:30:45.565Z",
-      "updatedAt": "2026-11-12T09:56:19.173Z",
+      "updatedAt": "2026-11-22T13:48:43.243Z",
       "isMerged": true,
       "mergedIntoCustomerId": "CUST-4773",
       "vipStatus": false
@@ -4919,7 +5258,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-9010",
       "createdAt": "2026-11-12T07:14:24.399Z"
     },
@@ -4931,7 +5270,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-8913",
       "createdAt": "2026-11-12T07:16:00.817Z"
     },
@@ -4943,7 +5282,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-4430",
       "createdAt": "2026-11-12T07:16:19.397Z"
     },
@@ -4955,7 +5294,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-1772",
       "createdAt": "2026-11-12T07:17:57.058Z"
     },
@@ -4967,7 +5306,7 @@
       "transactionType": "payment",
       "amountPaise": 273360,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:17:57.289Z"
     },
@@ -4979,7 +5318,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-1076",
       "createdAt": "2026-11-12T07:18:41.179Z"
     },
@@ -4991,7 +5330,7 @@
       "transactionType": "payment",
       "amountPaise": 273360,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:18:41.223Z"
     },
@@ -5003,9 +5342,9 @@
       "transactionType": "refund",
       "amountPaise": 50000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "authorizedByManagerId": "usr-admin-01",
-      "authorizedByManagerName": "Yuvaraj Malave (Super Admin)",
+      "authorizedByManagerName": "Appasaheb Malve (Super Admin)",
       "notes": "Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:18:41.318Z"
     },
@@ -5017,7 +5356,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-5788",
       "createdAt": "2026-11-12T07:19:38.117Z"
     },
@@ -5029,7 +5368,7 @@
       "transactionType": "payment",
       "amountPaise": 273360,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:19:38.193Z"
     },
@@ -5041,9 +5380,9 @@
       "transactionType": "refund",
       "amountPaise": 50000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "authorizedByManagerId": "usr-admin-01",
-      "authorizedByManagerName": "Yuvaraj Malave (Super Admin)",
+      "authorizedByManagerName": "Appasaheb Malve (Super Admin)",
       "notes": "Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:19:38.208Z"
     },
@@ -5055,7 +5394,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-7740",
       "createdAt": "2026-11-12T07:21:14.988Z"
     },
@@ -5067,7 +5406,7 @@
       "transactionType": "payment",
       "amountPaise": 273360,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:21:15.049Z"
     },
@@ -5079,9 +5418,9 @@
       "transactionType": "refund",
       "amountPaise": 50000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "authorizedByManagerId": "usr-admin-01",
-      "authorizedByManagerName": "Yuvaraj Malave (Super Admin)",
+      "authorizedByManagerName": "Appasaheb Malve (Super Admin)",
       "notes": "Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:21:15.081Z"
     },
@@ -5093,7 +5432,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-4726",
       "createdAt": "2026-11-12T07:21:35.916Z"
     },
@@ -5105,7 +5444,7 @@
       "transactionType": "payment",
       "amountPaise": 273360,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:21:35.936Z"
     },
@@ -5117,9 +5456,9 @@
       "transactionType": "refund",
       "amountPaise": 50000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "authorizedByManagerId": "usr-admin-01",
-      "authorizedByManagerName": "Yuvaraj Malave (Super Admin)",
+      "authorizedByManagerName": "Appasaheb Malve (Super Admin)",
       "notes": "Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:21:35.972Z"
     },
@@ -5131,7 +5470,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-4592",
       "createdAt": "2026-11-12T07:22:24.062Z"
     },
@@ -5143,7 +5482,7 @@
       "transactionType": "payment",
       "amountPaise": 273360,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:22:24.131Z"
     },
@@ -5155,9 +5494,9 @@
       "transactionType": "refund",
       "amountPaise": 50000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "authorizedByManagerId": "usr-admin-01",
-      "authorizedByManagerName": "Yuvaraj Malave (Super Admin)",
+      "authorizedByManagerName": "Appasaheb Malve (Super Admin)",
       "notes": "Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:22:24.155Z"
     },
@@ -5169,7 +5508,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-4885",
       "createdAt": "2026-11-12T07:23:06.575Z"
     },
@@ -5181,7 +5520,7 @@
       "transactionType": "payment",
       "amountPaise": 273360,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:23:06.653Z"
     },
@@ -5193,9 +5532,9 @@
       "transactionType": "refund",
       "amountPaise": 50000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "authorizedByManagerId": "usr-admin-01",
-      "authorizedByManagerName": "Yuvaraj Malave (Super Admin)",
+      "authorizedByManagerName": "Appasaheb Malve (Super Admin)",
       "notes": "Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:23:06.684Z"
     },
@@ -5207,7 +5546,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-9482",
       "createdAt": "2026-11-12T07:24:05.606Z"
     },
@@ -5219,7 +5558,7 @@
       "transactionType": "payment",
       "amountPaise": 273360,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:24:05.631Z"
     },
@@ -5231,9 +5570,9 @@
       "transactionType": "refund",
       "amountPaise": 50000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "authorizedByManagerId": "usr-admin-01",
-      "authorizedByManagerName": "Yuvaraj Malave (Super Admin)",
+      "authorizedByManagerName": "Appasaheb Malve (Super Admin)",
       "notes": "Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:24:05.685Z"
     },
@@ -5245,7 +5584,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-8810",
       "createdAt": "2026-11-12T07:25:23.189Z"
     },
@@ -5257,7 +5596,7 @@
       "transactionType": "payment",
       "amountPaise": 273360,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:25:23.219Z"
     },
@@ -5269,9 +5608,9 @@
       "transactionType": "refund",
       "amountPaise": 50000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "authorizedByManagerId": "usr-admin-01",
-      "authorizedByManagerName": "Yuvaraj Malave (Super Admin)",
+      "authorizedByManagerName": "Appasaheb Malve (Super Admin)",
       "notes": "Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:25:23.282Z"
     },
@@ -5283,7 +5622,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-9762",
       "createdAt": "2026-11-12T07:25:49.926Z"
     },
@@ -5295,7 +5634,7 @@
       "transactionType": "payment",
       "amountPaise": 273360,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:25:49.996Z"
     },
@@ -5307,9 +5646,9 @@
       "transactionType": "refund",
       "amountPaise": 50000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "authorizedByManagerId": "usr-admin-01",
-      "authorizedByManagerName": "Yuvaraj Malave (Super Admin)",
+      "authorizedByManagerName": "Appasaheb Malve (Super Admin)",
       "notes": "Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:25:50.018Z"
     },
@@ -5321,7 +5660,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-9538",
       "createdAt": "2026-11-12T07:28:26.005Z"
     },
@@ -5333,7 +5672,7 @@
       "transactionType": "payment",
       "amountPaise": 273360,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:28:26.058Z"
     },
@@ -5345,9 +5684,9 @@
       "transactionType": "refund",
       "amountPaise": 50000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "authorizedByManagerId": "usr-admin-01",
-      "authorizedByManagerName": "Yuvaraj Malave (Super Admin)",
+      "authorizedByManagerName": "Appasaheb Malve (Super Admin)",
       "notes": "Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:28:26.080Z"
     },
@@ -5359,7 +5698,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-8604",
       "createdAt": "2026-11-12T07:28:58.582Z"
     },
@@ -5371,7 +5710,7 @@
       "transactionType": "payment",
       "amountPaise": 273360,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:28:58.607Z"
     },
@@ -5383,9 +5722,9 @@
       "transactionType": "refund",
       "amountPaise": 50000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "authorizedByManagerId": "usr-admin-01",
-      "authorizedByManagerName": "Yuvaraj Malave (Super Admin)",
+      "authorizedByManagerName": "Appasaheb Malve (Super Admin)",
       "notes": "Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:28:58.661Z"
     },
@@ -5397,7 +5736,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-9554",
       "createdAt": "2026-11-12T07:29:25.256Z"
     },
@@ -5409,7 +5748,7 @@
       "transactionType": "payment",
       "amountPaise": 273360,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:29:25.276Z"
     },
@@ -5421,9 +5760,9 @@
       "transactionType": "refund",
       "amountPaise": 50000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "authorizedByManagerId": "usr-admin-01",
-      "authorizedByManagerName": "Yuvaraj Malave (Super Admin)",
+      "authorizedByManagerName": "Appasaheb Malve (Super Admin)",
       "notes": "Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:29:25.317Z"
     },
@@ -5435,7 +5774,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-4914",
       "createdAt": "2026-11-12T07:30:44.164Z"
     },
@@ -5447,7 +5786,7 @@
       "transactionType": "payment",
       "amountPaise": 273360,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:30:44.195Z"
     },
@@ -5459,9 +5798,9 @@
       "transactionType": "refund",
       "amountPaise": 50000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "authorizedByManagerId": "usr-admin-01",
-      "authorizedByManagerName": "Yuvaraj Malave (Super Admin)",
+      "authorizedByManagerName": "Appasaheb Malve (Super Admin)",
       "notes": "Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:30:44.240Z"
     },
@@ -5473,7 +5812,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-7398",
       "createdAt": "2026-11-12T07:30:58.455Z"
     },
@@ -5485,7 +5824,7 @@
       "transactionType": "payment",
       "amountPaise": 273360,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T07:30:58.486Z"
     },
@@ -5497,9 +5836,9 @@
       "transactionType": "refund",
       "amountPaise": 50000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "authorizedByManagerId": "usr-admin-01",
-      "authorizedByManagerName": "Yuvaraj Malave (Super Admin)",
+      "authorizedByManagerName": "Appasaheb Malve (Super Admin)",
       "notes": "Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T07:30:58.529Z"
     },
@@ -5511,7 +5850,7 @@
       "transactionType": "payment",
       "amountPaise": 150000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Reception cash booking payment for ARN-WALK-3847",
       "createdAt": "2026-11-12T09:56:18.226Z"
     },
@@ -5523,7 +5862,7 @@
       "transactionType": "payment",
       "amountPaise": 273360,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "notes": "Cleared remaining balance",
       "createdAt": "2026-11-12T09:56:18.256Z"
     },
@@ -5535,11 +5874,49 @@
       "transactionType": "refund",
       "amountPaise": 50000,
       "cashierId": "usr-admin-01",
-      "cashierName": "Yuvaraj Malave (Super Admin)",
+      "cashierName": "Appasaheb Malve (Super Admin)",
       "authorizedByManagerId": "usr-admin-01",
-      "authorizedByManagerName": "Yuvaraj Malave (Super Admin)",
+      "authorizedByManagerName": "Appasaheb Malve (Super Admin)",
       "notes": "Devotee temple visit shortened by 1 day",
       "createdAt": "2026-11-12T09:56:18.318Z"
+    },
+    {
+      "id": "ctx-1795355320919-c7hs",
+      "receiptNumber": "RCP-ARN-0919",
+      "bookingId": "book-1795355320919-v95y6",
+      "bookingReference": "ARN-WALK-9024",
+      "transactionType": "payment",
+      "amountPaise": 150000,
+      "cashierId": "usr-admin-01",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Reception cash booking payment for ARN-WALK-9024",
+      "createdAt": "2026-11-22T13:48:40.919Z"
+    },
+    {
+      "id": "ctx-1795355320999-5eaq",
+      "receiptNumber": "RCP-ARN-0999",
+      "bookingId": "book-1795355320919-v95y6",
+      "bookingReference": "ARN-WALK-9024",
+      "transactionType": "payment",
+      "amountPaise": 273360,
+      "cashierId": "usr-admin-01",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "notes": "Cleared remaining balance",
+      "createdAt": "2026-11-22T13:48:40.999Z"
+    },
+    {
+      "id": "ctx-1795355321069-i1wt",
+      "receiptNumber": "REF-ARN-1069",
+      "bookingId": "book-1795355320919-v95y6",
+      "bookingReference": "ARN-WALK-9024",
+      "transactionType": "refund",
+      "amountPaise": 50000,
+      "cashierId": "usr-admin-01",
+      "cashierName": "Appasaheb Malve (Super Admin)",
+      "authorizedByManagerId": "usr-admin-01",
+      "authorizedByManagerName": "Appasaheb Malve (Super Admin)",
+      "notes": "Devotee temple visit shortened by 1 day",
+      "createdAt": "2026-11-22T13:48:41.069Z"
     }
   ],
   "cashShifts": [
@@ -5552,7 +5929,7 @@
       "openingFloatPaise": 500000,
       "status": "closed",
       "closedByStaffId": "usr-admin-01",
-      "closedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "closedByStaffName": "Appasaheb Malve (Super Admin)",
       "closedAt": "2026-11-12T07:22:24.259Z",
       "expectedClosingCashPaise": 3240160,
       "actualClosingCashPaise": 350000,
@@ -5563,12 +5940,12 @@
       "id": "shift-1794468186746-1fxy",
       "shiftDate": "2026-11-12",
       "openedByStaffId": "usr-admin-01",
-      "openedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "openedByStaffName": "Appasaheb Malve (Super Admin)",
       "openedAt": "2026-11-12T07:23:06.746Z",
       "openingFloatPaise": 250000,
       "status": "closed",
       "closedByStaffId": "usr-admin-01",
-      "closedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "closedByStaffName": "Appasaheb Malve (Super Admin)",
       "closedAt": "2026-11-12T07:23:06.762Z",
       "expectedClosingCashPaise": 3363520,
       "actualClosingCashPaise": 350000,
@@ -5579,12 +5956,12 @@
       "id": "shift-1794468245747-zg21",
       "shiftDate": "2026-11-12",
       "openedByStaffId": "usr-admin-01",
-      "openedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "openedByStaffName": "Appasaheb Malve (Super Admin)",
       "openedAt": "2026-11-12T07:24:05.747Z",
       "openingFloatPaise": 250000,
       "status": "closed",
       "closedByStaffId": "usr-admin-01",
-      "closedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "closedByStaffName": "Appasaheb Malve (Super Admin)",
       "closedAt": "2026-11-12T07:24:05.763Z",
       "expectedClosingCashPaise": 3736880,
       "actualClosingCashPaise": 350000,
@@ -5595,12 +5972,12 @@
       "id": "shift-1794468323359-bwa1",
       "shiftDate": "2026-11-12",
       "openedByStaffId": "usr-admin-01",
-      "openedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "openedByStaffName": "Appasaheb Malve (Super Admin)",
       "openedAt": "2026-11-12T07:25:23.359Z",
       "openingFloatPaise": 250000,
       "status": "closed",
       "closedByStaffId": "usr-admin-01",
-      "closedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "closedByStaffName": "Appasaheb Malve (Super Admin)",
       "closedAt": "2026-11-12T07:25:23.375Z",
       "expectedClosingCashPaise": 4110240,
       "actualClosingCashPaise": 350000,
@@ -5611,12 +5988,12 @@
       "id": "shift-1794468350109-qon8",
       "shiftDate": "2026-11-12",
       "openedByStaffId": "usr-admin-01",
-      "openedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "openedByStaffName": "Appasaheb Malve (Super Admin)",
       "openedAt": "2026-11-12T07:25:50.109Z",
       "openingFloatPaise": 250000,
       "status": "closed",
       "closedByStaffId": "usr-admin-01",
-      "closedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "closedByStaffName": "Appasaheb Malve (Super Admin)",
       "closedAt": "2026-11-12T07:25:50.141Z",
       "expectedClosingCashPaise": 4483600,
       "actualClosingCashPaise": 350000,
@@ -5627,12 +6004,12 @@
       "id": "shift-1794468506134-m1rb",
       "shiftDate": "2026-11-12",
       "openedByStaffId": "usr-admin-01",
-      "openedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "openedByStaffName": "Appasaheb Malve (Super Admin)",
       "openedAt": "2026-11-12T07:28:26.134Z",
       "openingFloatPaise": 250000,
       "status": "closed",
       "closedByStaffId": "usr-admin-01",
-      "closedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "closedByStaffName": "Appasaheb Malve (Super Admin)",
       "closedAt": "2026-11-12T07:28:26.144Z",
       "expectedClosingCashPaise": 4856960,
       "actualClosingCashPaise": 350000,
@@ -5643,12 +6020,12 @@
       "id": "shift-1794468538717-7i9j",
       "shiftDate": "2026-11-12",
       "openedByStaffId": "usr-admin-01",
-      "openedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "openedByStaffName": "Appasaheb Malve (Super Admin)",
       "openedAt": "2026-11-12T07:28:58.717Z",
       "openingFloatPaise": 250000,
       "status": "closed",
       "closedByStaffId": "usr-admin-01",
-      "closedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "closedByStaffName": "Appasaheb Malve (Super Admin)",
       "closedAt": "2026-11-12T07:28:58.738Z",
       "expectedClosingCashPaise": 5230320,
       "actualClosingCashPaise": 350000,
@@ -5659,12 +6036,12 @@
       "id": "shift-1794468565387-75hs",
       "shiftDate": "2026-11-12",
       "openedByStaffId": "usr-admin-01",
-      "openedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "openedByStaffName": "Appasaheb Malve (Super Admin)",
       "openedAt": "2026-11-12T07:29:25.387Z",
       "openingFloatPaise": 250000,
       "status": "closed",
       "closedByStaffId": "usr-admin-01",
-      "closedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "closedByStaffName": "Appasaheb Malve (Super Admin)",
       "closedAt": "2026-11-12T07:29:25.397Z",
       "expectedClosingCashPaise": 5603680,
       "actualClosingCashPaise": 350000,
@@ -5675,12 +6052,12 @@
       "id": "shift-1794468644316-3dkt",
       "shiftDate": "2026-11-12",
       "openedByStaffId": "usr-admin-01",
-      "openedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "openedByStaffName": "Appasaheb Malve (Super Admin)",
       "openedAt": "2026-11-12T07:30:44.316Z",
       "openingFloatPaise": 250000,
       "status": "closed",
       "closedByStaffId": "usr-admin-01",
-      "closedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "closedByStaffName": "Appasaheb Malve (Super Admin)",
       "closedAt": "2026-11-12T07:30:44.332Z",
       "expectedClosingCashPaise": 5977040,
       "actualClosingCashPaise": 350000,
@@ -5691,12 +6068,12 @@
       "id": "shift-1794468658608-c1wh",
       "shiftDate": "2026-11-12",
       "openedByStaffId": "usr-admin-01",
-      "openedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "openedByStaffName": "Appasaheb Malve (Super Admin)",
       "openedAt": "2026-11-12T07:30:58.608Z",
       "openingFloatPaise": 250000,
       "status": "closed",
       "closedByStaffId": "usr-admin-01",
-      "closedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "closedByStaffName": "Appasaheb Malve (Super Admin)",
       "closedAt": "2026-11-12T07:30:58.626Z",
       "expectedClosingCashPaise": 6350400,
       "actualClosingCashPaise": 350000,
@@ -5707,16 +6084,32 @@
       "id": "shift-1794477378393-9p39",
       "shiftDate": "2026-11-12",
       "openedByStaffId": "usr-admin-01",
-      "openedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "openedByStaffName": "Appasaheb Malve (Super Admin)",
       "openedAt": "2026-11-12T09:56:18.393Z",
       "openingFloatPaise": 250000,
       "status": "closed",
       "closedByStaffId": "usr-admin-01",
-      "closedByStaffName": "Yuvaraj Malave (Super Admin)",
+      "closedByStaffName": "Appasaheb Malve (Super Admin)",
       "closedAt": "2026-11-12T09:56:18.404Z",
       "expectedClosingCashPaise": 6723760,
       "actualClosingCashPaise": 350000,
       "discrepancyPaise": -6373760,
+      "notes": "Handover complete"
+    },
+    {
+      "id": "shift-1795355321203-3r8i",
+      "shiftDate": "2026-11-22",
+      "openedByStaffId": "usr-admin-01",
+      "openedByStaffName": "Appasaheb Malve (Super Admin)",
+      "openedAt": "2026-11-22T13:48:41.203Z",
+      "openingFloatPaise": 250000,
+      "status": "closed",
+      "closedByStaffId": "usr-admin-01",
+      "closedByStaffName": "Appasaheb Malve (Super Admin)",
+      "closedAt": "2026-11-22T13:48:41.233Z",
+      "expectedClosingCashPaise": 623360,
+      "actualClosingCashPaise": 350000,
+      "discrepancyPaise": -273360,
       "notes": "Handover complete"
     }
   ],
@@ -6142,6 +6535,51 @@
       "campaignId": "campaign-checkout-loyalty-01",
       "createdAt": "2026-11-12T09:56:18.582Z",
       "updatedAt": "2026-11-12T09:56:18.582Z"
+    },
+    {
+      "id": "coup-1795355321312-6fkv",
+      "code": "DSH21239",
+      "description": "25% discount for Pandharpur pilgrimage devotees",
+      "discountType": "percentage",
+      "discountValue": 25,
+      "maxDiscountPaise": 50000,
+      "minBookingValuePaise": 150000,
+      "startDate": "2026-11-22",
+      "expiryDate": "2030-12-31",
+      "maxTotalRedemptions": 50,
+      "maxRedemptionsPerCustomer": 1,
+      "eligibleRoomTypeIds": [],
+      "customerEligibility": "all",
+      "minStayNights": 1,
+      "isActive": true,
+      "currentRedemptionsCount": 0,
+      "createdAt": "2026-11-22T13:48:41.312Z",
+      "updatedAt": "2026-11-22T13:48:41.312Z"
+    },
+    {
+      "id": "coup-checkout-1795355321530",
+      "code": "RETURN-2OJE",
+      "description": "Post-checkout thank you gift for Santosh B. Jagtap",
+      "discountType": "percentage",
+      "discountValue": 15,
+      "minBookingValuePaise": 120000,
+      "startDate": "2026-11-22",
+      "expiryDate": "2027-01-21",
+      "maxTotalRedemptions": 1,
+      "currentRedemptionsCount": 0,
+      "maxRedemptionsPerCustomer": 1,
+      "eligibleRoomTypeIds": [],
+      "customerEligibility": "returning",
+      "specificCustomerIds": [
+        "CUST-5771"
+      ],
+      "eligibleCustomerEmail": "santosh.jagtap@example.com",
+      "eligibleCustomerPhone": "9822320209",
+      "isActive": true,
+      "adminNotes": "Exclusive post-checkout offer reserved for Santosh B. Jagtap (Phone: 9822320209, Booking: ARN-WALK-9024)",
+      "campaignId": "campaign-checkout-loyalty-01",
+      "createdAt": "2026-11-22T13:48:41.530Z",
+      "updatedAt": "2026-11-22T13:48:41.530Z"
     }
   ],
   "couponRedemptions": [],
@@ -6160,10 +6598,23 @@
       "allowRepeatedIssuanceAfterFutureStays": true,
       "cooldownDaysBetweenIssuance": 14,
       "createdAt": "2026-01-01T00:00:00Z",
-      "updatedAt": "2026-11-12T09:56:18.519Z"
+      "updatedAt": "2026-11-22T13:48:41.469Z"
     }
   ],
   "emailNotifications": [
+    {
+      "id": "notif-1795355321530-0tte",
+      "recipientEmail": "santosh.jagtap@example.com",
+      "recipientName": "Santosh B. Jagtap",
+      "bookingReference": "ARN-WALK-9024",
+      "campaignId": "campaign-checkout-loyalty-01",
+      "couponCode": "RETURN-2OJE",
+      "subject": "Thank You for Staying With Us at Pandharpur! Special Gift 🎁",
+      "status": "failed",
+      "retryCount": 0,
+      "createdAt": "2026-11-22T13:48:41.530Z",
+      "failureReason": "Invalid `to` field. Please use our testing email address instead of domains like `example.com`. See our documentation for more information."
+    },
     {
       "id": "notif-1794477378582-kf72",
       "recipientEmail": "santosh.jagtap@example.com",

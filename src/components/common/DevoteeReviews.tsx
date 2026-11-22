@@ -19,7 +19,7 @@ export function DevoteeReviews() {
       date: 'Kartiki Ekadashi stay',
       rating: 5,
       review:
-        'We booked the 3rd floor Hall 402 for our 16-member bhajan mandal. Ample space, clean mattresses, two separate attached western bathrooms with geyser, and Yuvaraj ji personally helped our bus park safely.'
+        'We booked the 3rd floor Hall 402 for our 16-member bhajan mandal. Ample space, clean mattresses, two separate attached western bathrooms with geyser, and Appasaheb ji personally helped our bus park safely.'
     },
     {
       name: 'Sunita & Deepak Deshmukh',

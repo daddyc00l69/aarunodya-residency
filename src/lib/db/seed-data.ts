@@ -27,7 +27,7 @@ export const INITIAL_PROPERTY: Property = {
   state: 'Maharashtra',
   country: 'India',
   postalCode: '413304',
-  phone: '+91 85300 00820 / +91 91724 64746 / +91 88012 42005',
+  phone: '+91 85300 00820 / +91 98222 98822 / +91 91724 64746',
   email: 'contact@aarunodya.com',
   checkInTime: '12:00',
   checkOutTime: '11:00',
@@ -218,8 +218,8 @@ export const INITIAL_ROOMS: Room[] = [
 export const INITIAL_STAFF_USERS: User[] = [
   {
     id: 'user-yuvaraj-01',
-    email: 'yuvaraj@aarunodya.com',
-    fullName: 'Yuvaraj Malave (Owner & General Manager)',
+    email: 'appasaheb@aarunodya.com',
+    fullName: 'Appasaheb Malve (Owner & General Manager)',
     passwordHash: 'Admin@12345',
     role: 'super_admin',
     isActive: true,
@@ -399,7 +399,7 @@ export const INITIAL_CUSTOMERS: Customer[] = [
         documentNumberMasked: 'XXXX-XXXX-8921',
         issuingCountry: 'India',
         verificationStatus: 'verified',
-        verifiedByStaffName: 'Yuvaraj Malave',
+        verifiedByStaffName: 'Appasaheb Malve',
         verifiedAt: '2026-11-01T10:15:00Z',
         createdAt: '2026-11-01T10:00:00Z'
       }
@@ -430,7 +430,7 @@ export const INITIAL_CUSTOMERS: Customer[] = [
         documentNumberMasked: 'XXXX-XXXX-3412',
         issuingCountry: 'India',
         verificationStatus: 'verified',
-        verifiedByStaffName: 'Yuvaraj Malave',
+        verifiedByStaffName: 'Appasaheb Malve',
         verifiedAt: '2026-11-05T14:40:00Z',
         createdAt: '2026-11-05T14:30:00Z'
       }

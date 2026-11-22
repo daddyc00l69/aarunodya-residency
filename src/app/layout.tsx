@@ -24,7 +24,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "Aarunodya Residency Bhakt Niwas | Pandharpur | Near Vitthal Mandir",
-  description: "Stay at Aarunodya Residency Bhakt Niwas at Nath Chowk, Pandharpur. Deluxe A/C, Non-A/C rooms, and group hall walking distance to Shri Vitthal-Rukmini Mandir. Host: Yuvaraj Malave (8530000820 / 9172464746).",
+  description: "Stay at Aarunodya Residency Bhakt Niwas at Nath Chowk, Pandharpur. Deluxe A/C, Non-A/C rooms, and group hall walking distance to Shri Vitthal-Rukmini Mandir. Host: Appasaheb Malve (8530000820 / 9822298822 / 9172464746).",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,

@@ -95,7 +95,7 @@ export class ResendEmailService {
               <strong>📍 Address & Arrival Directions:</strong><br>
               1563 Ghongade Galli, Nath Chowk, Pandharpur, Maharashtra - 413304.<br>
               Walking distance from Shri Vitthal-Rukmini Mandir.<br>
-              📞 <strong>Host Yuvaraj Malave:</strong> 8530000820 / 9172464746 / 8801242005
+              📞 <strong>Host Appasaheb Malve:</strong> 8530000820 / 9822298822 / 9172464746
             </div>
 
             <div class="footer">
@@ -210,7 +210,7 @@ export class ResendEmailService {
             <div class="footer">
               <p style="margin: 0 0 4px;"><strong>Aarunodya Residency Bhakt Niwas</strong></p>
               <p style="margin: 0 0 8px;">1563 Ghongade Galli, Nath Chowk, Pandharpur • Near Vitthal Mandir</p>
-              <p style="margin: 0;">Host Yuvaraj Malave: +91 85300 00820 / +91 91724 64746</p>
+              <p style="margin: 0;">Host Appasaheb Malve: +91 85300 00820 / +91 98222 98822 / +91 91724 64746</p>
             </div>
           </div>
         </body>

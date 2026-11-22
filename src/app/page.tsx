@@ -62,7 +62,10 @@ export default async function HomePage() {
           </div>
 
           <p className="text-xs text-[#86868b] pt-1">
-            Managed by: <strong>Yuvaraj Malave</strong> • 8530000820 / 9172464746 / 8801242005
+            Managed by: <strong>Appasaheb Malve</strong> •{' '}
+            <a href="tel:8530000820" className="hover:text-[#0071e3] transition-colors">8530000820</a> /{' '}
+            <a href="tel:9822298822" className="hover:text-[#0071e3] transition-colors">9822298822</a> /{' '}
+            <a href="tel:9172464746" className="hover:text-[#0071e3] transition-colors">9172464746</a>
           </p>
         </div>
 
@@ -306,20 +309,27 @@ export default async function HomePage() {
             Direct Bookings &amp; Inquiries
           </h2>
           <p className="text-sm text-[#86868b] leading-relaxed">
-            For group bookings, dindi mandals, or direct room confirmation, call host <strong>Yuvaraj Malave</strong> directly.
+            For group bookings, dindi mandals, or direct room confirmation, call host <strong>Appasaheb Malve</strong> directly.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <a
               href="tel:8530000820"
-              className="bg-[#1d1d1f] hover:bg-[#333336] text-white px-6 py-3 rounded-full text-xs font-medium tracking-tight flex items-center space-x-2 transition-all"
+              className="bg-[#1d1d1f] hover:bg-[#333336] text-white px-5 py-3 rounded-full text-xs font-medium tracking-tight flex items-center space-x-2 transition-all active:scale-95 shadow-sm"
             >
               <Phone className="w-4 h-4 text-emerald-400" />
               <span>Call 8530000820</span>
             </a>
             <a
+              href="tel:9822298822"
+              className="bg-[#0071e3] hover:bg-[#0077ed] text-white px-5 py-3 rounded-full text-xs font-medium tracking-tight flex items-center space-x-2 transition-all active:scale-95 shadow-sm"
+            >
+              <Phone className="w-4 h-4 text-white" />
+              <span>Call 9822298822</span>
+            </a>
+            <a
               href="tel:9172464746"
-              className="bg-[#f5f5f7] hover:bg-stone-200 text-[#1d1d1f] px-6 py-3 rounded-full text-xs font-medium tracking-tight flex items-center space-x-2 transition-all border border-black/[0.06]"
+              className="bg-[#f5f5f7] hover:bg-stone-200 text-[#1d1d1f] px-5 py-3 rounded-full text-xs font-medium tracking-tight flex items-center space-x-2 transition-all border border-black/[0.06] active:scale-95"
             >
               <Phone className="w-4 h-4 text-emerald-600" />
               <span>Call 9172464746</span>

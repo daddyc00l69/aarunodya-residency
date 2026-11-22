@@ -261,13 +261,23 @@ export function ConfirmationView({ reference, initialData }: ConfirmationViewPro
 
             <div className="pt-4 border-t border-black/[0.08] flex flex-col sm:flex-row items-center justify-between text-xs text-[#86868b] gap-3">
               <span>Need immediate assistance?</span>
-              <a
-                href="tel:8530000820"
-                className="inline-flex items-center space-x-1.5 text-[#0071e3] font-medium hover:underline"
-              >
-                <PhoneCall className="w-3.5 h-3.5" />
-                <span>Call Host Yuvaraj: 8530000820</span>
-              </a>
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href="tel:8530000820"
+                  className="inline-flex items-center space-x-1 text-[#0071e3] font-medium hover:underline"
+                >
+                  <PhoneCall className="w-3 h-3" />
+                  <span>Call Appasaheb: 8530000820</span>
+                </a>
+                <span className="text-stone-300">•</span>
+                <a href="tel:9822298822" className="text-[#0071e3] font-medium hover:underline">
+                  9822298822
+                </a>
+                <span className="text-stone-300">•</span>
+                <a href="tel:9172464746" className="text-[#0071e3] font-medium hover:underline">
+                  9172464746
+                </a>
+              </div>
             </div>
           </div>
 
@@ -341,7 +351,7 @@ export function ConfirmationView({ reference, initialData }: ConfirmationViewPro
                   1563 Ghongade Galli, Nath Chowk, Pandharpur • Near Vitthal Mandir
                 </span>
                 <span className="block text-[11px] text-[#0071e3] print:text-black font-medium">
-                  Host: Yuvaraj Malave (8530000820 / 9172464746)
+                  Host: Appasaheb Malve (8530000820 / 9822298822 / 9172464746)
                 </span>
               </div>
             </div>

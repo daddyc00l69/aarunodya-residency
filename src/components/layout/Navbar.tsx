@@ -178,12 +178,31 @@ export function Navbar() {
             >
               Check Availability & Rates
             </Link>
-            <a
-              href="tel:8530000820"
-              className="w-full text-center text-xs text-emerald-700 bg-emerald-50 py-2 rounded-full font-medium"
-            >
-              Direct Call: 8530000820
-            </a>
+            <div className="space-y-1.5 pt-1">
+              <span className="text-[10px] uppercase tracking-wider text-[#86868b] font-semibold text-center block">
+                Direct Host Call (Appasaheb Malve)
+              </span>
+              <div className="grid grid-cols-3 gap-1.5 text-center">
+                <a
+                  href="tel:8530000820"
+                  className="text-xs text-emerald-700 bg-emerald-50 py-2 rounded-xl font-medium hover:bg-emerald-100 transition-colors"
+                >
+                  8530000820
+                </a>
+                <a
+                  href="tel:9822298822"
+                  className="text-xs text-emerald-700 bg-emerald-50 py-2 rounded-xl font-medium hover:bg-emerald-100 transition-colors"
+                >
+                  9822298822
+                </a>
+                <a
+                  href="tel:9172464746"
+                  className="text-xs text-emerald-700 bg-emerald-50 py-2 rounded-xl font-medium hover:bg-emerald-100 transition-colors"
+                >
+                  9172464746
+                </a>
+              </div>
+            </div>
             <Link
               href="/admin/login"
               onClick={() => setMobileMenuOpen(false)}

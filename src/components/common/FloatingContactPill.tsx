@@ -28,7 +28,7 @@ export function FloatingContactPill() {
                 Aarunodya Reception
               </span>
               <span className="text-[10px] text-[#86868b] block">
-                Yuvaraj Malave (Host)
+                Appasaheb Malve (Host)
               </span>
             </div>
             <button
@@ -41,7 +41,7 @@ export function FloatingContactPill() {
 
           <div className="space-y-2 text-xs">
             <a
-              href="https://wa.me/918530000820?text=Namaskar%20Yuvaraj%20ji,%20I%20am%20inquiring%20about%20room%20availability%20at%20Aarunodya%20Residency."
+              href="https://wa.me/918530000820?text=Namaskar%20Appasaheb%20ji,%20I%20am%20inquiring%20about%20room%20availability%20at%20Aarunodya%20Residency."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2.5 p-2 rounded-2xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 transition-colors font-medium"
@@ -55,18 +55,34 @@ export function FloatingContactPill() {
               </div>
             </a>
 
-            <a
-              href="tel:8530000820"
-              className="flex items-center space-x-2.5 p-2 rounded-2xl bg-[#f5f5f7] hover:bg-stone-200 text-[#1d1d1f] transition-colors font-medium"
-            >
-              <div className="w-7 h-7 rounded-full bg-[#1d1d1f] text-white flex items-center justify-center shrink-0">
-                <Phone className="w-3.5 h-3.5 text-white" />
+            <div className="p-2.5 rounded-2xl bg-[#f5f5f7] border border-black/[0.04] space-y-1.5">
+              <div className="flex items-center space-x-2">
+                <div className="w-6 h-6 rounded-full bg-[#1d1d1f] text-white flex items-center justify-center shrink-0">
+                  <Phone className="w-3 h-3 text-white" />
+                </div>
+                <span className="font-semibold text-[11px] text-[#1d1d1f]">Call Appasaheb Malve</span>
               </div>
-              <div className="flex-1">
-                <span className="block font-semibold">Call Yuvaraj Malave</span>
-                <span className="text-[10px] text-[#86868b] font-mono">8530000820 / 9172464746</span>
+              <div className="grid grid-cols-3 gap-1 pt-1">
+                <a
+                  href="tel:8530000820"
+                  className="py-1.5 px-1 bg-white hover:bg-stone-200 text-[#1d1d1f] font-mono text-[10px] text-center rounded-lg border border-black/[0.06] transition-colors"
+                >
+                  8530000820
+                </a>
+                <a
+                  href="tel:9822298822"
+                  className="py-1.5 px-1 bg-white hover:bg-stone-200 text-[#1d1d1f] font-mono text-[10px] text-center rounded-lg border border-black/[0.06] transition-colors"
+                >
+                  9822298822
+                </a>
+                <a
+                  href="tel:9172464746"
+                  className="py-1.5 px-1 bg-white hover:bg-stone-200 text-[#1d1d1f] font-mono text-[10px] text-center rounded-lg border border-black/[0.06] transition-colors"
+                >
+                  9172464746
+                </a>
               </div>
-            </a>
+            </div>
 
             <a
               href="https://maps.google.com/?q=Nath+Chowk+Pandharpur+Maharashtra"

@@ -70,7 +70,7 @@ export function DarshanGuide() {
         {/* Local Tips Banner */}
         <div className="p-6 rounded-3xl bg-[#f5f5f7] border border-black/[0.06] flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-[#1d1d1f]">
           <div className="space-y-1">
-            <span className="font-semibold text-sm block">Pandharpur Pilgrimage Tip from Host Yuvaraj:</span>
+            <span className="font-semibold text-sm block">Pandharpur Pilgrimage Tip from Host Appasaheb Malve:</span>
             <p className="text-[#86868b]">
               For Charansparsh Darshan (touching lotus feet), morning hours between 5:30 AM and 7:00 AM usually have shorter waiting queues. Mobile phones and luggage can be safely stored at our reception before leaving for the temple.
             </p>

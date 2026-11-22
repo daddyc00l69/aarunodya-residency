@@ -3,7 +3,7 @@
 
 A comprehensive, production-ready, full-stack Lodge Booking and Management System designed and built for **Aarunodya Residency Bhakt Niwas** (1563 Ghongade Galli, Nath Chowk, Pandharpur, Maharashtra - 413304).
 
-Managed by: **Yuvaraj Malave** (📞 8530000820 / 9172464746 / 8801242005)
+Managed by: **Appasaheb Malve** (📞 8530000820 / 9172464746 / 9822298822)
 
 ---
 
@@ -23,10 +23,10 @@ Managed by: **Yuvaraj Malave** (📞 8530000820 / 9172464746 / 8801242005)
 - **Digital Stay Voucher with QR Code:** Printable official voucher with embedded QR code (`BookingQrCode.tsx`) for instant scan-to-verify at the reception desk.
 - **Government-Compliant GST Tax Invoice:** Full tax invoice at `/booking/invoice/[reference]` with SAC Code `996311` (Accommodation), 6% CGST + 6% SGST, authorized signatory, and print formatting.
 - **Dedicated Pandharpur Darshan Guide:** `/darshan` route featuring complete temple schedule (Kakad Aarti to Shej Aarti), Padsparsh & Mukh Darshan advice, Chandrabhaga River Ghat snan guide, and transit directions from Pandharpur Railway Station (PVR) and ST Bus Stand.
-- **WhatsApp Share & Instant Host Calling:** 1-click WhatsApp booking summary share and floating contact pill for direct contact with Yuvaraj Malave.
+- **WhatsApp Share & Instant Host Calling:** 1-click WhatsApp booking summary share and floating contact pill for direct contact with Appasaheb Malve.
 
 ### Staff Administrative & PMS Operations
-- **Role-Based Access Control (RBAC):** `super_admin` (Yuvaraj Malave), `manager` (Nitin Shinde), `front_desk`, and `housekeeping`.
+- **Role-Based Access Control (RBAC):** `super_admin` (Appasaheb Malve), `manager` (Nitin Shinde), `front_desk`, and `housekeeping`.
 - **Executive Operations Deck:** Real-time occupancy %, revenue ledger, today's arrivals, departures, and dirty rooms.
 - **Master Reservations Desk:** Filter by status, search by name/reference, execute check-ins/check-outs, and open guest folios.
 - **Devotee Police Register & ID Proof Recording:** Staff can record Aadhaar Card / Voter ID / Driving License numbers during check-in as required by Maharashtra police regulations.
@@ -84,7 +84,7 @@ Access the Staff PMS Portal at [http://localhost:3000/admin/login](http://localh
 
 | Name | Role | Email | Password |
 | :--- | :--- | :--- | :--- |
-| **Yuvaraj Malave** | Owner / Super Admin | `yuvaraj@aarunodya.com` | `Aarunodya@2026` |
+| **Appasaheb Malve** | Owner / Super Admin | `appasaheb@aarunodya.com` | `Aarunodya@2026` |
 | **Nitin Shinde** | Operations Manager | `manager@aarunodya.com` | `Manager@2026` |
 | **Ganesh Pawar** | Front Desk Lead | `frontdesk@aarunodya.com` | `Desk@2026` |
 | **Sunil Jadhav** | Housekeeping Lead | `housekeeping@aarunodya.com` | `Clean@2026` |

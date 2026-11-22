@@ -523,7 +523,7 @@ export default function ReceptionWalkinPage() {
                   `*Cash Received:* ${formatPaise(b.amountPaidPaise)}\n` +
                   `*Balance Due:* ${formatPaise(b.balanceDuePaise)}\n\n` +
                   `View official digital receipt: https://devtushar.uk/booking/invoice/${b.bookingReference}\n\n` +
-                  `Host Contact: Yuvaraj Malave (8530000820 / 9172464746)\n` +
+                  `Host Contact: Appasaheb Malve (8530000820 / 9822298822 / 9172464746)\n` +
                   `1563 Ghongade Galli, Nath Chowk, Pandharpur.\n` +
                   `May Lord Vitthal bless your stay!`
                 );

@@ -84,15 +84,15 @@ export function Footer() {
           <div>
             <h4 className="text-[12px] font-semibold text-[#1d1d1f] mb-3">Direct Contact &amp; Address</h4>
             <p className="leading-relaxed text-[#1d1d1f]">
-              <strong>Yuvaraj Malave</strong>
+              <strong>Appasaheb Malve</strong>
             </p>
             <p className="mt-1">
               1563 Ghongade Galli, Nath Chowk, Pandharpur, Maharashtra - 413304
             </p>
-            <div className="mt-2 space-y-1 text-[#1d1d1f] font-mono text-xs">
-              <p>📞 8530000820</p>
-              <p>📞 9172464746</p>
-              <p>📞 8801242005</p>
+            <div className="mt-2 space-y-1 font-mono text-xs">
+              <p><a href="tel:8530000820" className="text-[#1d1d1f] hover:text-[#0071e3] transition-colors">📞 8530000820</a></p>
+              <p><a href="tel:9822298822" className="text-[#1d1d1f] hover:text-[#0071e3] transition-colors">📞 9822298822</a></p>
+              <p><a href="tel:9172464746" className="text-[#1d1d1f] hover:text-[#0071e3] transition-colors">📞 9172464746</a></p>
             </div>
           </div>
         </div>

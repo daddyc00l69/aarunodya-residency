@@ -54,26 +54,30 @@ export default async function RoomDetailPage({ params }: RoomDetailPageProps) {
       </div>
 
       <main className="flex-1 max-w-6xl mx-auto px-4 sm:px-6 pb-20 w-full space-y-12">
-        {/* Gallery Grid - Apple Clean */}
-        <section className="grid grid-cols-1 md:grid-cols-12 gap-4 rounded-3xl overflow-hidden">
-          <div className="md:col-span-8 h-[360px] md:h-[480px] relative rounded-2xl overflow-hidden shadow-sm">
+        {/* Gallery Grid - Responsive & Mobile-Optimized */}
+        <section className={`grid grid-cols-1 ${room.images.length > 1 ? 'md:grid-cols-12' : ''} gap-4 rounded-3xl overflow-hidden`}>
+          <div className={`${room.images.length > 1 ? 'md:col-span-8' : 'w-full'} h-[300px] sm:h-[420px] md:h-[480px] relative rounded-2xl overflow-hidden shadow-sm bg-stone-100`}>
             <img
               src={room.images[0]?.url || 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80'}
               alt={room.images[0]?.alt || room.name}
               className="w-full h-full object-cover"
+              loading="eager"
             />
           </div>
-          <div className="md:col-span-4 grid grid-cols-2 md:grid-cols-1 gap-4 h-[240px] md:h-[480px]">
-            {room.images.slice(1, 3).map((img, i) => (
-              <div key={i} className="relative h-full overflow-hidden rounded-2xl shadow-sm">
-                <img
-                  src={img.url}
-                  alt={img.alt}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            ))}
-          </div>
+          {room.images.length > 1 && (
+            <div className="md:col-span-4 grid grid-cols-2 md:grid-cols-1 gap-4 h-[200px] sm:h-[240px] md:h-[480px]">
+              {room.images.slice(1, 3).map((img, i) => (
+                <div key={i} className="relative h-full overflow-hidden rounded-2xl shadow-sm bg-stone-100">
+                  <img
+                    src={img.url}
+                    alt={img.alt || `${room.name} photo ${i + 2}`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
         </section>
 
         {/* Content & Booking Sticky Sidebar */}
