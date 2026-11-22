@@ -213,7 +213,7 @@ class LodgeRepository {
   }
 
   private async syncToPrisma(): Promise<void> {
-    if (!this.inMemoryDb) return;
+    if (!this.inMemoryDb || !process.env.DATABASE_URL) return;
     try {
       const { prisma } = await import('./prisma');
       for (const rm of this.inMemoryDb.rooms) {
@@ -224,7 +224,55 @@ class LodgeRepository {
             isOperational: rm.isOperational,
             notes: rm.notes || null
           }
-        });
+        }).catch(() => {});
+      }
+
+      const latestBookings = this.inMemoryDb.bookings.slice(0, 15);
+      for (const b of latestBookings) {
+        await prisma.booking.upsert({
+          where: { id: b.id },
+          update: {
+            status: b.status,
+            paymentStatus: b.paymentStatus || null,
+            assignedRoomId: b.assignedRoomId || null,
+            assignedRoomNumber: b.assignedRoomNumber || null,
+            paidAmountPaise: b.paidAmountPaise || 0,
+            remainingBalancePaise: b.remainingBalancePaise || b.balanceDuePaise || 0,
+            checkedInAt: b.checkedInAt || null,
+            checkedOutAt: b.checkedOutAt || null,
+            cancelledAt: b.cancelledAt || null,
+            cancellationReason: b.cancellationReason || null
+          },
+          create: {
+            id: b.id,
+            bookingReference: b.bookingReference,
+            guestId: b.guestId,
+            customerId: b.customerId || null,
+            checkInDate: b.checkInDate,
+            checkOutDate: b.checkOutDate,
+            numNights: b.numNights,
+            numAdults: b.numAdults,
+            numChildren: b.numChildren || 0,
+            numRooms: b.numRooms || 1,
+            roomTypeId: b.roomTypeId,
+            assignedRoomId: b.assignedRoomId || null,
+            assignedRoomNumber: b.assignedRoomNumber || null,
+            status: b.status,
+            paymentStatus: b.paymentStatus || null,
+            subtotalPaise: b.subtotalPaise,
+            extraGuestFeePaise: b.extraGuestFeePaise || 0,
+            resortFeePaise: b.resortFeePaise || 0,
+            taxPaise: b.taxPaise || 0,
+            discountPaise: b.discountPaise || 0,
+            totalAmountPaise: b.totalAmountPaise,
+            paidAmountPaise: b.paidAmountPaise || 0,
+            remainingBalancePaise: b.remainingBalancePaise || b.balanceDuePaise || 0,
+            source: b.source || 'online',
+            couponCode: b.couponCode || null,
+            couponDiscountPaise: b.couponDiscountPaise || null,
+            holdExpiresAt: b.holdExpiresAt || null
+          }
+        }).catch(() => {});
       }
     } catch {
       // Safe non-blocking sync
