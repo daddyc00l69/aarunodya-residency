@@ -206,6 +206,29 @@ class LodgeRepository {
     } catch (err) {
       console.warn('Repository file persist warning:', err);
     }
+
+    if (process.env.DATABASE_URL) {
+      this.syncToPrisma().catch(() => {});
+    }
+  }
+
+  private async syncToPrisma(): Promise<void> {
+    if (!this.inMemoryDb) return;
+    try {
+      const { prisma } = await import('./prisma');
+      for (const rm of this.inMemoryDb.rooms) {
+        await prisma.room.updateMany({
+          where: { id: rm.id },
+          data: {
+            housekeepingStatus: rm.housekeepingStatus,
+            isOperational: rm.isOperational,
+            notes: rm.notes || null
+          }
+        });
+      }
+    } catch {
+      // Safe non-blocking sync
+    }
   }
 
   /**

@@ -1,0 +1,315 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Property {
+  id                 String   @id
+  name               String
+  tagline            String
+  slug               String   @unique
+  description        String
+  address            String
+  city               String
+  state              String
+  country            String
+  postalCode         String
+  phone              String
+  email              String
+  checkInTime        String
+  checkOutTime       String
+  currency           String   @default("INR")
+  taxRatePercent     Float    @default(12.0)
+  resortFeePercent   Float    @default(0.0)
+  cancellationPolicy String
+  amenities          String[]
+}
+
+model RoomType {
+  id                 String   @id
+  propertyId         String
+  name               String
+  slug               String   @unique
+  shortDescription   String
+  fullDescription    String
+  baseOccupancy      Int
+  maxOccupancy       Int
+  bedConfig          String
+  roomSizeSqFt       Int
+  viewType           String
+  basePricePaise     Int
+  extraGuestFeePaise Int
+  amenities          String[]
+  features           String[]
+  images             Json
+  isActive           Boolean  @default(true)
+  rooms              Room[]
+}
+
+model Room {
+  id                 String   @id
+  roomTypeId         String
+  roomType           RoomType @relation(fields: [roomTypeId], references: [id])
+  roomNumber         String   @unique
+  floor              Int
+  housekeepingStatus String   @default("clean")
+  isOperational      Boolean  @default(true)
+  notes              String?
+}
+
+model Customer {
+  id                  String                     @id
+  fullName            String
+  dateOfBirth         String?
+  gender              String?
+  phone               String
+  altPhone            String?
+  email               String
+  addressLine1        String?
+  city                String?
+  state               String?
+  country             String?
+  postalCode          String?
+  totalVisits         Int                        @default(0)
+  totalSpentPaise     BigInt                     @default(0)
+  vipStatus           Boolean                    @default(false)
+  notes               String?
+  isMerged            Boolean                    @default(false)
+  mergedIntoCustomerId String?
+  createdAt           DateTime                   @default(now())
+  updatedAt           DateTime                   @updatedAt
+  documents           CustomerIdentityDocument[]
+}
+
+model CustomerIdentityDocument {
+  id                      String   @id
+  customerId              String
+  customer                Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  documentType            String
+  documentNumberMasked    String
+  documentNumberEncrypted String?
+  issuingCountry          String   @default("India")
+  expiryDate              String?
+  filePath                String?
+  fileMimeType            String?
+  fileSizeBytes           Int?
+  originalFileName        String?
+  verificationStatus      String   @default("pending")
+  verifiedByStaffId       String?
+  verifiedByStaffName     String?
+  verifiedAt              String?
+  createdAt               DateTime @default(now())
+}
+
+model Guest {
+  id              String    @id
+  fullName        String
+  email           String
+  phone           String
+  idProofType     String?
+  idProofNumber   String?
+  specialRequests String?
+  city            String?
+  state           String?
+  createdAt       DateTime  @default(now())
+  bookings        Booking[]
+}
+
+model Booking {
+  id                   String        @id
+  bookingReference     String        @unique
+  guestId              String
+  guest                Guest         @relation(fields: [guestId], references: [id])
+  customerId           String?
+  checkInDate          String
+  checkOutDate         String
+  numNights            Int
+  numAdults            Int
+  numChildren          Int           @default(0)
+  numRooms             Int           @default(1)
+  roomTypeId           String
+  assignedRoomId       String?
+  assignedRoomNumber   String?
+  status               String        @default("confirmed")
+  paymentStatus        String?
+  subtotalPaise        Int
+  extraGuestFeePaise   Int           @default(0)
+  resortFeePaise       Int           @default(0)
+  taxPaise             Int
+  discountPaise        Int           @default(0)
+  totalAmountPaise     Int
+  paidAmountPaise      Int           @default(0)
+  remainingBalancePaise Int          @default(0)
+  source               String?       @default("online")
+  couponCode           String?
+  couponDiscountPaise  Int?
+  additionalGuests     Json?
+  holdExpiresAt        String?
+  specialRequests      String?
+  cancellationReason   String?
+  cancelledAt          String?
+  checkedInAt          String?
+  checkedOutAt         String?
+  createdByStaffId     String?
+  createdByStaffName   String?
+  checkedInByStaffName String?
+  checkedOutByStaffName String?
+  createdAt            DateTime      @default(now())
+  updatedAt            DateTime      @updatedAt
+  payments             Payment[]
+}
+
+model Payment {
+  id                   String    @id
+  bookingId            String
+  booking              Booking   @relation(fields: [bookingId], references: [id])
+  bookingReference     String?
+  receiptNumber        String?
+  amountPaise          Int
+  currency             String    @default("INR")
+  paymentMethod        String
+  status               String
+  razorpayOrderId      String?
+  razorpayPaymentId    String?
+  razorpaySignature    String?
+  transactionReference String    @unique
+  failureReason        String?
+  gatewayResponse      Json?
+  cashierId            String?
+  cashierName          String?
+  notes                String?
+  createdAt            DateTime  @default(now())
+  capturedAt           String?
+}
+
+model CashTransaction {
+  id                     String   @id
+  receiptNumber          String   @unique
+  bookingId              String?
+  bookingReference       String?
+  transactionType        String
+  amountPaise            Int
+  cashierId              String
+  cashierName            String
+  notes                  String?
+  authorizedByManagerId  String?
+  authorizedByManagerName String?
+  createdAt              DateTime @default(now())
+}
+
+model CashShiftReconciliation {
+  id                      String   @id
+  shiftDate               String
+  openedByStaffId         String
+  openedByStaffName       String
+  openedAt                String
+  openingFloatPaise       Int
+  closedByStaffId         String?
+  closedByStaffName       String?
+  closedAt                String?
+  expectedClosingCashPaise Int?
+  actualClosingCashPaise   Int?
+  discrepancyPaise        Int?
+  notes                   String?
+  status                  String   @default("open")
+}
+
+model Coupon {
+  id                        String             @id
+  code                      String             @unique
+  description               String
+  discountType              String
+  discountValue             Int
+  maxDiscountPaise          Int?
+  minBookingValuePaise      Int                @default(0)
+  startDate                 String
+  expiryDate                String
+  maxTotalRedemptions       Int                @default(100)
+  currentRedemptionsCount   Int                @default(0)
+  maxRedemptionsPerCustomer Int                @default(1)
+  eligibleRoomTypeIds       String[]
+  customerEligibility       String             @default("all")
+  specificCustomerIds       String[]
+  eligibleCustomerEmail     String?
+  eligibleCustomerPhone     String?
+  minStayNights             Int?
+  isActive                  Boolean            @default(true)
+  adminNotes                String?
+  campaignId                String?
+  createdAt                 DateTime           @default(now())
+  updatedAt                 DateTime           @updatedAt
+  redemptions               CouponRedemption[]
+}
+
+model CouponRedemption {
+  id                             String   @id
+  couponId                       String
+  coupon                         Coupon   @relation(fields: [couponId], references: [id])
+  couponCode                     String
+  bookingId                      String
+  bookingReference               String
+  customerId                     String?
+  customerEmail                  String
+  customerPhone                  String?
+  discountAppliedPaise           Int
+  bookingTotalBeforeDiscountPaise Int
+  status                         String
+  reservedAt                     String
+  consumedAt                     String?
+  releasedAt                     String?
+}
+
+model PostCheckoutCampaign {
+  id                                   String   @id
+  name                                 String
+  isEnabled                            Boolean  @default(true)
+  discountType                         String   @default("percentage")
+  discountValue                        Int
+  maxDiscountPaise                     Int?
+  minBookingValuePaise                 Int      @default(0)
+  validityDays                         Int      @default(60)
+  emailSubject                         String
+  promotionalMessage                   String
+  generateUniqueCodePerCustomer        Boolean  @default(true)
+  allowRepeatedIssuanceAfterFutureStays Boolean  @default(false)
+  cooldownDaysBetweenIssuance          Int      @default(30)
+  createdAt                            DateTime @default(now())
+  updatedAt                            DateTime @updatedAt
+}
+
+model EmailNotificationRecord {
+  id               String   @id
+  bookingId        String?
+  bookingReference String
+  customerEmail    String
+  customerName     String
+  couponCode       String?
+  emailType        String
+  sentAt           DateTime @default(now())
+  status           String   @default("sent")
+}
+
+model User {
+  id           String   @id
+  email        String   @unique
+  fullName     String
+  passwordHash String
+  role         String
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+}
+
+model AuditLog {
+  id        String   @id
+  action    String
+  userId    String?
+  userName  String?
+  resource  String
+  details   String?
+  ipAddress String?
+  createdAt DateTime @default(now())
+}
